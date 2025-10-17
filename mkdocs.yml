@@ -1,0 +1,35 @@
+site_name: "One Flow Operating Playbook"
+site_url: "https://<your-gh-username>.github.io/oneflow-operating-playbook"
+theme:
+  name: material
+  palette:
+    primary: blue
+  font:
+    text: Inter
+nav:
+  - Home: index.md
+  - Introduction:
+      - Mission: introduction/mission.md
+      - Brand values: introduction/brand-values.md
+      - Leadership principles: introduction/leadership-principles.md
+  - Operating Practices:
+      - Foundational Journey:
+          - Overview: operating-practices/foundational-journey/overview.md
+          - Move-in SOP: operating-practices/foundational-journey/move-in-sop.md
+          - Pre-move-in check-in SOP: operating-practices/foundational-journey/pre-move-in-check-in-sop.md
+          - Unit readiness SOP: operating-practices/foundational-journey/unit-readiness-sop.md
+      - Care – Everyday Moments: operating-practices/care-everyday-moments.md
+      - Belong – Cultivated Community: operating-practices/belong-cultivated-community.md
+  - Team & Systems:
+      - Onsite staffing model: team-and-systems/onsite-staffing-model.md
+      - Onsite technology stack: team-and-systems/onsite-technology-stack.md
+  - SOP Library:
+      - Master SOP template: sop-library/master-sop-template.md
+      - SOP brief template: sop-library/sop-brief-template.md
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+plugins:
+  - search
