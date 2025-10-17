@@ -1,0 +1,45 @@
+{
+    "name": "One Flow Operating Playbook",
+    "logo": "/logo.svg",
+    "favicon": "/favicon.ico",
+    "colors": { "primary": "#2563EB" },
+    "navigation": [
+      { "group": "Home", "pages": ["index"] },
+      {
+        "group": "Introduction",
+        "pages": [
+          "introduction/mission",
+          "introduction/brand-values",
+          "introduction/leadership-principles"
+        ]
+      },
+      {
+        "group": "Operating Practices",
+        "pages": [
+          "operating-practices/foundational-journey/overview",
+          "operating-practices/foundational-journey/move-in-sop",
+          "operating-practices/foundational-journey/pre-move-in-check-in-sop",
+          "operating-practices/foundational-journey/unit-readiness-sop",
+          "operating-practices/care-everyday-moments",
+          "operating-practices/belong-cultivated-community"
+        ]
+      },
+      {
+        "group": "Team & Systems",
+        "pages": [
+          "team-and-systems/onsite-staffing-model",
+          "team-and-systems/onsite-technology-stack"
+        ]
+      },
+      {
+        "group": "SOP Library",
+        "pages": [
+          "sop-library/master-sop-template",
+          "sop-library/sop-brief-template"
+        ]
+      }
+    ],
+    "topbarLinks": [
+      { "name": "SOP Index", "url": "/sop-library/master-sop-template" }
+    ]
+  }
