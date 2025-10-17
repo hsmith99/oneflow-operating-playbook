@@ -1,0 +1,9 @@
+# Cursor Rules for One Flow Operating Playbook
+
+- Always follow the Move-In SOP (v1.2) structure, tone, and rigor.
+- Maintain 75/25 operational/experiential tone.
+- Include: single owner, escalation ladder, readiness gates, KPIs, and integration notes.
+- Use placeholders like [Insert link to ...] where assets are missing.
+- Use official system names: Yardi Voyager, Moved, Carson/Flow App, Sigma, Zendesk, etc.
+- For Process tables, include **Operator** and **Neighbor** columns.
+- Version Control tables must be updated on each revision.
