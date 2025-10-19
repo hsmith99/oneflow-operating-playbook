@@ -39,7 +39,7 @@ theme:
     warning: material/alert
     error: material/alert-circle
     success: material/check-circle
-  logo: public/images/icons/flow-logo.png
+  logo: public/images/icons/flow-logo.svg
   favicon: public/images/icons/flow-logo.png
   custom_dir: docs/overrides
 nav:
