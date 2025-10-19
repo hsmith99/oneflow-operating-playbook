@@ -65,11 +65,6 @@ nav:
           - Neighbor Communication SOP: operating-manual-sops/care-everyday-moments/neighbor-communication-sop.md
       - Belong – Cultivated Community:
           - Ambassador Program SOP: operating-manual-sops/belong-cultivated-community/ambassador-program-sop.md
-  - SOP Library:
-      - Master SOP Template: sop-library/master-sop-template.md
-      - SOP Brief Template: sop-library/sop-brief-template.md
-  - Resources:
-      - How Flow Uses Yardi: resources/How Flow uses Yardi.md
 markdown_extensions:
   - admonition
   - pymdownx.details
