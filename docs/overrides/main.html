@@ -3,6 +3,9 @@
 {% block styles %}
     {{ super() }}
     <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
         /* Flow Brand Colors - Simplified */
         :root {
             --moonlight: #F3EDDF;        /* Original Moonlight */
@@ -42,6 +45,35 @@
         /* All text should be Midnight */
         body, .md-content, .md-typeset {
             color: var(--midnight) !important;
+        }
+
+        /* Typography - Poppins for navigation, Inter for content */
+        .md-header,
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title,
+        .md-sidebar--primary,
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar--primary .md-nav__link,
+        .md-footer {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        /* Inter for main content */
+        .md-main__inner,
+        .md-content,
+        .md-typeset,
+        .md-typeset h1,
+        .md-typeset h2,
+        .md-typeset h3,
+        .md-typeset h4,
+        .md-typeset h5,
+        .md-typeset h6,
+        .md-typeset p,
+        .md-typeset li,
+        .md-typeset table,
+        .md-typeset blockquote {
+            font-family: 'Inter', sans-serif !important;
         }
 
         /* Header (top nav) - darker Moonlight - full width */
