@@ -106,6 +106,44 @@ Attached within **Moved** prior to key release:
 
 ---
 
+## Move-In Experience Agent Preparation Checklist (Typeform Draft)
+
+**Purpose:** Ensure Move-In Experience Agent completes all preparation tasks for seamless Neighbor integration and move-in day execution.
+
+### Preparation Checklist:
+
+#### Personalization Review
+- [ ] **Design Your Flow Data Reviewed** - Accessed Sigma dashboard and reviewed Neighbor's survey responses
+- [ ] **Welcome Gift Selected** - Chose appropriate gift based on Neighbor's interests and preferences
+- [ ] **Personalized Card Written** - Crafted warm, personal welcome message referencing their interests
+- [ ] **Special Requests Noted** - Documented any specific accommodations or preferences from survey
+
+#### Access & Logistics Preparation
+- [ ] **Digital Keys Tested** - Verified Carson access credentials work properly
+- [ ] **Elevator Booking Confirmed** - Confirmed scheduled time slot in Google Calendar
+- [ ] **Parking Assignment Verified** - Confirmed parking spot and prepared access instructions
+- [ ] **Move-In Day Timeline Shared** - Sent detailed logistics email to Neighbor
+
+#### Community Integration Planning
+- [ ] **Flow Groups Identified** - Reviewed Neighbor interests and matched to relevant Flow Groups
+- [ ] **Ambassador Connections** - Identified appropriate Ambassadors for introductions
+- [ ] **Welcome Event Scheduled** - Confirmed Neighbor's inclusion in upcoming New Neighbor Event
+- [ ] **Coffee Meeting Planned** - Scheduled Week-One coffee with relevant community members
+
+#### Communication & Follow-up Setup
+- [ ] **Neighbor Notified** - Sent confirmation message with move-in day details
+- [ ] **Team Briefed** - Updated Front Desk and Operations on any special considerations
+- [ ] **Follow-up Scheduled** - Set calendar reminder for 48-hour check-in
+- [ ] **Integration Milestones Set** - Planned 30-day integration goals and checkpoints
+
+### Completion Requirements:
+- All items must be checked before move-in day
+- Neighbor must receive comprehensive preparation communication
+- Team must be fully briefed on special accommodations
+- Community integration plan must be documented in Sigma
+
+---
+
 ## Resources & Templates
 - Welcome Email Template (Moved)  
 - Unit Readiness Checklist (Maintenance & Housekeeping)  
@@ -114,6 +152,7 @@ Attached within **Moved** prior to key release:
 - Sigma Dashboard – Move-In Personalization  
 - New Neighbor Welcome Event SOP  
 - One-Pager – Front Desk Move-In Quick Guide
+- [Placeholder: Link to Move-In Experience Agent Preparation Checklist (Typeform)]
 
 ---
 

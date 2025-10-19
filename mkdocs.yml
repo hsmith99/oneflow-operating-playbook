@@ -1,35 +1,102 @@
 site_name: "One Flow Operating Playbook"
-site_url: "https://<your-gh-username>.github.io/oneflow-operating-playbook"
+site_url: "https://hsmith99.github.io/oneflow-operating-playbook"
+site_description: "The comprehensive operating system for Flow's hospitality excellence. Mission, values, SOPs, and best practices for world-class neighbor experiences."
+site_author: "Flow"
+repo_url: "https://github.com/hsmith99/oneflow-operating-playbook"
+repo_name: "hsmith99/oneflow-operating-playbook"
+edit_uri: "edit/main/docs/"
 theme:
   name: material
   palette:
     primary: blue
+    accent: light blue
+    scheme: default
   font:
     text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    previous: material/chevron-left
+    next: material/chevron-right
+    edit: material/pencil
+    view: material/eye
+    search: material/magnify
+    home: material/home
+    menu: material/menu
+    language: material/translate
+    expand: material/chevron-down
+    collapse: material/chevron-up
+    directory: material/folder
+    file: material/file
+    info: material/information
+    warning: material/alert
+    error: material/alert-circle
+    success: material/check-circle
+  logo: public/logo.svg
+  favicon: public/favicon.ico
 nav:
   - Home: index.md
   - Introduction:
       - Mission: introduction/mission.md
-      - Brand values: introduction/brand-values.md
-      - Leadership principles: introduction/leadership-principles.md
+      - Brand Values: introduction/brand-values.md
+      - Leadership Principles: introduction/leadership-principles.md
+      - The Flow Experience: introduction/the-flow-experience.md
+  - Team & Systems:
+      - Onsite Staffing Model: team-and-systems/onsite-staffing-model.md
+      - Onsite Technology Stack: team-and-systems/onsite-technology-stack.md
+      - Yardi Operational Guide: team-and-systems/yardi-operational-guide.md
   - Operating Practices:
-      - Foundational Journey:
-          - Overview: operating-practices/foundational-journey/overview.md
-          - Move-in SOP: operating-practices/foundational-journey/move-in-sop.md
-          - Pre-move-in check-in SOP: operating-practices/foundational-journey/pre-move-in-check-in-sop.md
-          - Unit readiness SOP: operating-practices/foundational-journey/unit-readiness-sop.md
+      - Foundational Neighbor Journey: operating-practices/foundational-neighbor-journey.md
       - Care – Everyday Moments: operating-practices/care-everyday-moments.md
       - Belong – Cultivated Community: operating-practices/belong-cultivated-community.md
-  - Team & Systems:
-      - Onsite staffing model: team-and-systems/onsite-staffing-model.md
-      - Onsite technology stack: team-and-systems/onsite-technology-stack.md
+  - Operating Manual - SOPs:
+      - Foundational Journey:
+          - Move-in SOP: operating-manual-sops/foundational-journey/move-in-sop.md
+          - Unit Move-in Readiness SOP: operating-manual-sops/foundational-journey/unit-move-in-readiness-sop.md
+      - Care – Everyday Moments:
+          - Neighbor Communication SOP: operating-manual-sops/care-everyday-moments/neighbor-communication-sop.md
+      - Belong – Cultivated Community:
+          - Ambassador Program SOP: operating-manual-sops/belong-cultivated-community/ambassador-program-sop.md
   - SOP Library:
-      - Master SOP template: sop-library/master-sop-template.md
-      - SOP brief template: sop-library/sop-brief-template.md
+      - Master SOP Template: sop-library/master-sop-template.md
+      - SOP Brief Template: sop-library/sop-brief-template.md
+  - Resources:
+      - How Flow Uses Yardi: resources/How Flow uses Yardi.md
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - tables
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
+      title: "On this page"
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 plugins:
-  - search
+  - search:
+      lang: en
+  - git-revision-date-localized:
+      enable_creation_date: true

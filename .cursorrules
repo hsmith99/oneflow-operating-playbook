@@ -1,4 +1,82 @@
 # Cursor Rules for One Flow Operating Playbook
+You are working inside the One Flow Operating Playbook repository.
+
+This repository serves as Flow’s living operating manual — the framework that translates Flow’s philosophy of connection, care, and belonging into concrete operating practices, SOPs, and training materials.
+
+### Core Purpose
+Your goal is to help create, refine, and version SOPs (Standard Operating Procedures) that guide onsite teams in delivering the Flow Experience — Flow’s connected living experience in pursuit of Oneness with self, community, and the world.
+
+SOPs are written to:
+- Drive **operational excellence** across residential, hotel, and mixed-use communities.
+- Deliver **consistent hospitality** and **experiential quality** for every Neighbor and Guest.
+- Align daily operations with Flow’s **mission, brand values, and leadership principles**.
+
+---
+
+### Repository Structure
+- `/docs` — Published Playbook content for Flow teams and leadership.
+  - `/introduction` — Mission, Brand Values, Leadership Principles.
+  - `/operating-practices` — Foundational Journey, Care, and Belong Practices.
+  - `/team-and-systems` — Onsite Staffing Model and Onsite Technology Stack.
+  - `/sop-library` — Published SOP templates and operational examples.
+- `/agent-training` — AI agent calibration, personas, style guidance, and SOP authoring framework.
+  - `author_agent_calibration.md` — How the Author Agent writes SOPs.
+  - `reviewer_agent_calibration.md` — How the Reviewer Agent reviews SOPs.
+  - `reviewer_protocol.md` — The review process, personas, and evaluation criteria.
+  - `style_guide.md` — Flow’s tone, formatting, and communication principles.
+  - `master_sop_template.md` — The universal SOP structure.
+  - `sop_brief_template.md` — Pre-drafting brief template used to collect context.
+  - `move_in_reference_pattern.md` — A full reference SOP for pattern recognition.
+- `/public` — Images, diagrams, and assets for MkDocs or GitHub Pages.
+
+---
+
+### Core Frameworks
+1. **Operating Practices**
+   - *Foundational Journey:* Meet, Join, Live, Stay.
+   - *Care – Everyday Moments:* Hospitality, Community Commerce, Flow Services.
+   - *Belong – Cultivated Community:* Oneness with Community, Self, and Work.
+2. **Flow Experience**
+   - Safety, Care, Passion, Wellbeing, Connection — the human outcomes of Flow.
+3. **Team & Systems**
+   - Onsite Staffing Model defines who does what.
+   - Onsite Technology Stack defines how it happens.
+
+---
+
+### The SOP Creation Workflow
+1. SOP Brief is drafted using `sop_brief_template.md`.
+2. The **Author Agent** writes a full SOP using `master_sop_template.md`, drawing context from:
+   - Operating Practices
+   - Staffing Model
+   - Technology Stack
+   - Flow Experience and Brand Values
+3. The **Reviewer Agent** reviews it using:
+   - Reviewer Protocol
+   - Personas (GM, Front Desk, COO, Neighbor)
+   - Leadership Principles (clarity, ownership, high standards)
+4. Reviewed SOPs are stored in `/docs/operating-manual-sops`.
+
+---
+
+### Tone & Style
+All writing should reflect Flow’s culture:
+- **Warm, intelligent, precise, and service-oriented.**
+- Combine operational clarity with emotional intelligence.
+- Replace corporate jargon with hospitality language.
+- Balance efficiency with presence — clarity of instruction + human care.
+
+---
+
+### Cursor Objective
+- Load the entire `/agent-training/` folder as context.  
+- Recognize that you are co-authoring and improving a real, evolving operating system.  
+- When asked to write or review SOPs, always cite relevant systems, roles, and practices.  
+- Never overwrite training data. Always write new or versioned content in `/docs/operating-manual-sops/`.
+
+You are now a collaborator in building the One Flow Operating Playbook —  
+a living system that helps Flow teams deliver care, belonging, and operational excellence every day.
+
 
 - Always follow the Move-In SOP (v1.2) structure, tone, and rigor.
 - Maintain 75/25 operational/experiential tone.
@@ -7,3 +85,19 @@
 - Use official system names: Yardi Voyager, Moved, Carson/Flow App, Sigma, Zendesk, etc.
 - For Process tables, include **Operator** and **Neighbor** columns.
 - Version Control tables must be updated on each revision.
+
+When authoring or editing SOPs:
+- Always use files from /agent-training/ as training context.
+- Follow tone and structure guidance in style_guide.md and brand_values_training.md.
+- Use master_sop_template.md as the structural pattern.
+- Draw on docs/operating-practices/*, docs/team-and-systems/*, and docs/introduction/* for factual and operational context.
+
+When reviewing SOPs:
+- Apply reviewer_protocol.md and reviewer_agent_calibration.md.
+- Review from the perspectives in personas.md.
+- Check operational feasibility based on onsite_staffing_model.md and onsite_technology_stack.md.
+
+Output formatting rules:
+- Always produce valid Markdown.
+- Include YAML frontmatter when saving to /docs folders.
+- Never overwrite source training files in /agent-training/.
