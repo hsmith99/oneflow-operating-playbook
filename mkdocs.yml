@@ -39,8 +39,8 @@ theme:
     warning: material/alert
     error: material/alert-circle
     success: material/check-circle
-  logo: public/logo.svg
-  favicon: public/favicon.ico
+  logo: public/images/icons/flow-logo.png
+  favicon: public/images/icons/flow-logo.png
   custom_dir: docs/overrides
 nav:
   - Home: index.md
