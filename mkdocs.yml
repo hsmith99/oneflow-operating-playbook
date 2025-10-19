@@ -16,10 +16,8 @@ theme:
     code: JetBrains Mono
   features:
     - navigation.footer
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
-    - navigation.top
     - search.highlight
     - search.share
     - content.code.copy
