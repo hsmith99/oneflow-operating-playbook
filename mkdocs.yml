@@ -41,6 +41,7 @@ theme:
     success: material/check-circle
   logo: public/logo.svg
   favicon: public/favicon.ico
+  custom_dir: docs/overrides
 nav:
   - Home: index.md
   - Introduction:

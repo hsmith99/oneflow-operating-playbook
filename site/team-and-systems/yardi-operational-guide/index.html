@@ -1,0 +1,3375 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive guide to how Flow uses Yardi across all teams and functions">
+      
+      
+        <meta name="author" content="Flow">
+      
+      
+        <link rel="canonical" href="https://hsmith99.github.io/oneflow-operating-playbook/team-and-systems/yardi-operational-guide/">
+      
+      
+        <link rel="prev" href="../onsite-technology-stack/">
+      
+      
+        <link rel="next" href="../../operating-practices/foundational-neighbor-journey/">
+      
+      
+      <link rel="icon" href="../../public/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Yardi Operational Guide - One Flow Operating Playbook</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    <style>
+        /* Custom sidebar styling */
+        .md-sidebar--primary {
+            background-color: #f8f9fa !important;
+            border-right: 1px solid #e9ecef;
+        }
+        
+        .md-sidebar--primary .md-nav__title {
+            background-color: #f1f3f4 !important;
+            color: #495057 !important;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .md-sidebar--primary .md-nav__item {
+            border-bottom: 1px solid #f1f3f4;
+        }
+        
+        .md-sidebar--primary .md-nav__link {
+            color: #495057 !important;
+            padding: 8px 16px;
+        }
+        
+        .md-sidebar--primary .md-nav__link:hover {
+            background-color: #e9ecef !important;
+            color: #212529 !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link--active {
+            background-color: #e3f2fd !important;
+            color: #1976d2 !important;
+            font-weight: 600;
+        }
+        
+        .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+            font-weight: 500;
+        }
+        
+        .md-sidebar--primary .md-nav__item--nested .md-nav__item .md-nav__link {
+            padding-left: 32px;
+            font-size: 0.9em;
+        }
+        
+        .md-sidebar--primary .md-nav__item--nested .md-nav__item .md-nav__item .md-nav__link {
+            padding-left: 48px;
+        }
+        
+        /* Improve overall contrast */
+        .md-content {
+            background-color: #ffffff;
+        }
+        
+        .md-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .md-tabs {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+    </style>
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#yardi-operational-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="One Flow Operating Playbook" class="md-header__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../public/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            One Flow Operating Playbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Yardi Operational Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="One Flow Operating Playbook" class="md-nav__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../public/logo.svg" alt="logo">
+
+    </a>
+    One Flow Operating Playbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/mission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mission
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/brand-values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brand Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/leadership-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Leadership Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/the-flow-experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Flow Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Team & Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Team & Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onsite-staffing-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Staffing Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onsite-technology-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Technology Stack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Yardi Operational Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Yardi Operational Guide
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#most-common-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Most Common Tasks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-contacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emergency Contacts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yardi-ecosystem-at-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi Ecosystem at Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Yardi Ecosystem at Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Points
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Usage Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Team Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-management-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Property Management Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Property Management Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-managers-gms" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Managers (GMs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistant-general-managers-agms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assistant General Managers (AGMs)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏠 Leasing Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏠 Leasing Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasing-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Managers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-specialists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Specialists
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Maintenance Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Maintenance Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#facilities-maintenance-directors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Facilities &amp; Maintenance Directors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-technicians" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Technicians
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Accounting Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Accounting Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Controllers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apar-specialists" class="md-nav__link">
+    <span class="md-ellipsis">
+      AP/AR Specialists
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricing-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Pricing Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Pricing Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revenue-directors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revenue Directors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engineering-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Engineering Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Engineering Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Engineers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Critical Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-in-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-out-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-Out Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoice-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invoice Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Integration Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Integration Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yardi-moved" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi ↔ Moved
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yardi-carsonflow-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi ↔ Carson/Flow App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yardi-sigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi ↔ Sigma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yardi-waves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi ↔ Waves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues &amp; Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues &amp; Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-sync-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Sync Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pain-points-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pain Points &amp; Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Pain Points &amp; Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-sync-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Sync Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Processes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limited-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limited Notifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Entry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-size-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Size Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Size Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#small-properties-100-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Small Properties (&lt;100 units)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-properties-100-300-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium Properties (100-300 units)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-properties-300-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large Properties (300+ units)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weekend-after-hours-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weekend &amp; After-Hours Access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Weekend &amp; After-Hours Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Availability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emergency Procedures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training &amp; Onboarding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training &amp; Onboarding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-team-member-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Team Member Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-development-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Development Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neighbor-impact-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neighbor Impact &amp; Experience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neighbor Impact &amp; Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-yardi-improves-neighbor-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Yardi Improves Neighbor Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neighbor-facing-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neighbor-Facing Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Recovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-team-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Team Members
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ongoing Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Improvements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Improvements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Opportunities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Practices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-practices/foundational-neighbor-journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundational Neighbor Journey
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-practices/care-everyday-moments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-practices/belong-cultivated-community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Manual - SOPs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Manual - SOPs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundational Journey
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Foundational Journey
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/foundational-journey/move-in-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move-in SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/foundational-journey/unit-move-in-readiness-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unit Move-in Readiness SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Care – Everyday Moments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/neighbor-communication-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbor Communication SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Belong – Cultivated Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/belong-cultivated-community/ambassador-program-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ambassador Program SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    SOP Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            SOP Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sop-library/master-sop-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Master SOP Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sop-library/sop-brief-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SOP Brief Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/How%20Flow%20uses%20Yardi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Flow Uses Yardi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#most-common-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Most Common Tasks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-contacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emergency Contacts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yardi-ecosystem-at-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi Ecosystem at Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Yardi Ecosystem at Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Points
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Usage Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Team Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-management-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Property Management Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Property Management Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-managers-gms" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Managers (GMs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistant-general-managers-agms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assistant General Managers (AGMs)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏠 Leasing Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏠 Leasing Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasing-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Managers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-specialists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Specialists
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Maintenance Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Maintenance Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#facilities-maintenance-directors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Facilities &amp; Maintenance Directors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-technicians" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Technicians
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Accounting Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Accounting Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#property-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Controllers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apar-specialists" class="md-nav__link">
+    <span class="md-ellipsis">
+      AP/AR Specialists
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricing-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Pricing Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Pricing Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revenue-directors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revenue Directors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engineering-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Engineering Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Engineering Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend Engineers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Critical Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#move-in-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-out-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-Out Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoice-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invoice Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Integration Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Integration Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yardi-moved" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi ↔ Moved
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yardi-carsonflow-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi ↔ Carson/Flow App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yardi-sigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi ↔ Sigma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yardi-waves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yardi ↔ Waves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues &amp; Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues &amp; Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-sync-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Sync Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pain-points-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pain Points &amp; Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Pain Points &amp; Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-sync-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Sync Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Processes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limited-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limited Notifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Entry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-size-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Size Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Property Size Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#small-properties-100-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Small Properties (&lt;100 units)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-properties-100-300-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium Properties (100-300 units)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-properties-300-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large Properties (300+ units)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weekend-after-hours-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weekend &amp; After-Hours Access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Weekend &amp; After-Hours Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Availability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emergency Procedures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training &amp; Onboarding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training &amp; Onboarding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-team-member-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Team Member Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-development-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Development Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neighbor-impact-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neighbor Impact &amp; Experience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neighbor Impact &amp; Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-yardi-improves-neighbor-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Yardi Improves Neighbor Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neighbor-facing-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neighbor-Facing Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Recovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-team-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Team Members
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ongoing Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Improvements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Improvements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Opportunities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="yardi-operational-guide">Yardi Operational Guide<a class="headerlink" href="#yardi-operational-guide" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Yardi is Flow's central property management system, serving as the source of truth for all property operations, financial data, and resident information. This guide documents how each team across Flow leverages Yardi's various modules and tools to fulfill their responsibilities.</p>
+<p><strong>Key Principle:</strong> "If it didn't happen in Yardi, it didn't happen." — Jason, Director of Residential Revenue</p>
+<hr />
+<h2 id="quick-reference">Quick Reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
+<h3 id="most-common-tasks">Most Common Tasks<a class="headerlink" href="#most-common-tasks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Module</th>
+<th>Path</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Check resident ledger</td>
+<td>Voyager</td>
+<td>Resident Profile → Ledger</td>
+<td>Front Desk</td>
+</tr>
+<tr>
+<td>Process move-in</td>
+<td>Voyager</td>
+<td>Move-ins → Future</td>
+<td>AGM</td>
+</tr>
+<tr>
+<td>Approve invoice</td>
+<td>Voyager</td>
+<td>Workflow Dashboard</td>
+<td>GM/AGM</td>
+</tr>
+<tr>
+<td>Update unit availability</td>
+<td>Voyager</td>
+<td>Unit Availability</td>
+<td>Leasing</td>
+</tr>
+<tr>
+<td>Add resident charge</td>
+<td>Voyager</td>
+<td>Resident Profile → Quick Charge</td>
+<td>AGM</td>
+</tr>
+<tr>
+<td>Check work order status</td>
+<td>Maintenance IQ</td>
+<td>Work Order Dashboard</td>
+<td>Maintenance</td>
+</tr>
+<tr>
+<td>Process payment</td>
+<td>Voyager</td>
+<td>CheckScan</td>
+<td>AGM</td>
+</tr>
+<tr>
+<td>Update resident info</td>
+<td>CRM Flex</td>
+<td>Resident Profile</td>
+<td>Leasing/Support</td>
+</tr>
+</tbody>
+</table>
+<h3 id="emergency-contacts">Emergency Contacts<a class="headerlink" href="#emergency-contacts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Yardi Technical Issues:</strong> Yardi Team (Slack #yardi-support)</li>
+<li><strong>System Down:</strong> Regional Operations</li>
+<li><strong>Data Sync Issues:</strong> Llu (Backend Engineer)</li>
+<li><strong>Training Questions:</strong> Department Lead</li>
+</ul>
+<hr />
+<h2 id="yardi-ecosystem-at-flow">Yardi Ecosystem at Flow<a class="headerlink" href="#yardi-ecosystem-at-flow" title="Permanent link">&para;</a></h2>
+<h3 id="core-modules">Core Modules<a class="headerlink" href="#core-modules" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Yardi Voyager</strong> — The central database and primary interface for most operations</li>
+<li><strong>CRM Flex</strong> — Leasing-focused interface for prospect and resident management</li>
+<li><strong>Maintenance IQ</strong> — Mobile-first maintenance work order management</li>
+<li><strong>SiteManager</strong> — Website and marketing management</li>
+<li><strong>VendorCafe</strong> — Vendor management and invoice processing</li>
+<li><strong>ScreeningWorks</strong> — Application screening and approval</li>
+<li><strong>RentCafe APIs</strong> — Website integration and resident portal</li>
+<li><strong>Yardi APIs</strong> — Backend integration for Flow's custom applications</li>
+</ul>
+<h3 id="integration-points">Integration Points<a class="headerlink" href="#integration-points" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Moved</strong> — Syncs nightly with Yardi for move-in/move-out workflows</li>
+<li><strong>Carson/Flow App</strong> — Connects to Yardi for resident data and payments</li>
+<li><strong>Sigma</strong> — Pulls data from Yardi for advanced analytics</li>
+<li><strong>Waves</strong> — Maintenance work orders sync with Yardi</li>
+<li><strong>Zendesk</strong> — Support tickets reference Yardi resident data</li>
+</ul>
+<hr />
+<h2 id="team-usage-patterns">Team Usage Patterns<a class="headerlink" href="#team-usage-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="property-management-teams">🏢 <strong>Property Management Teams</strong><a class="headerlink" href="#property-management-teams" title="Permanent link">&para;</a></h3>
+<h4 id="general-managers-gms">General Managers (GMs)<a class="headerlink" href="#general-managers-gms" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Voyager Community Dashboard, Reports, Financials</p>
+<p><strong>Daily Workflow:</strong>
+- Start with <strong>Community Dashboard</strong> for property overview and key metrics
+- Review <strong>Resident Activity</strong> reports for move-ins, move-outs, and renewals
+- Check <strong>Unit Statistics</strong> for rent growth and market analysis
+- Use <strong>BoxScore Summary</strong> as primary leasing dashboard
+- Process <strong>Invoice Register</strong> for AP approvals
+- Monitor <strong>Work Order Reports</strong> for maintenance status</p>
+<p><strong>Key Reports:</strong>
+- <strong>Unit Statistics Report</strong> — Most important for rent growth analysis
+- <strong>BoxScore Summary</strong> — Leasing funnel and conversion metrics
+- <strong>Budget Comparison</strong> — Monthly variance analysis with notes
+- <strong>Aged Receivables</strong> — Delinquency management
+- <strong>Eviction Report</strong> — Legal proceedings tracking</p>
+<p><strong>Pain Points:</strong>
+- 12-month occupancy reports don't work reliably
+- Need better elevator reservation and vendor scheduling visibility
+- Manual processes for variance report compilation</p>
+<h4 id="assistant-general-managers-agms">Assistant General Managers (AGMs)<a class="headerlink" href="#assistant-general-managers-agms" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Voyager, Move-in/Move-out workflows, Collections</p>
+<p><strong>Daily Workflow:</strong>
+- Process <strong>Move-ins</strong> — verify requirements, post charges, update status
+- Handle <strong>Move-outs</strong> — create statements, process deposits
+- Manage <strong>Deposit Accounting</strong> — close ledgers within 5 days
+- Process <strong>CheckScan</strong> for cashier's check payments
+- Monitor <strong>Delinquency Reports</strong> — post late fees and notices
+- Use <strong>Quick Charge</strong> for resident fees and charges</p>
+<p><strong>Key Functions:</strong>
+- <strong>Move-in Processing</strong> — Verify all requirements before key release
+- <strong>Collections Management</strong> — Late fees, notices, eviction tracking
+- <strong>Deposit Accounting</strong> — Final statements and refund processing
+- <strong>Resident Ledger Management</strong> — Charges, payments, adjustments</p>
+<p><strong>Critical Workflows:</strong>
+- Move-in statement reconciliation
+- Utility charge verification with Conservice
+- Security deposit refund processing
+- Late fee application and notice generation</p>
+<hr />
+<h3 id="leasing-teams">🏠 <strong>Leasing Teams</strong><a class="headerlink" href="#leasing-teams" title="Permanent link">&para;</a></h3>
+<h4 id="leasing-managers">Leasing Managers<a class="headerlink" href="#leasing-managers" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> CRM Flex, Voyager Reports, ScreeningWorks</p>
+<p><strong>Daily Workflow:</strong>
+- Start with <strong>CRM Dashboard</strong> for leasing metrics and occupancy
+- Manage <strong>CRM Queue</strong> for prospect communication
+- Review <strong>Documents Tab</strong> for application progress
+- Use <strong>ScreeningWorks</strong> for application approvals
+- Pull <strong>BoxScore Summary</strong> and <strong>Rent Roll</strong> for analysis
+- Process <strong>Agent Performance Reports</strong> for commissions</p>
+<p><strong>Key Functions:</strong>
+- <strong>Prospect Management</strong> — CRM queue, guest cards, applications
+- <strong>Lease Execution</strong> — Digital signing through CRM Flex
+- <strong>Commission Tracking</strong> — Agent performance and bonus calculations
+- <strong>Market Analysis</strong> — Rent roll analysis and pricing insights</p>
+<p><strong>Pain Points:</strong>
+- No email notifications from Yardi
+- Limited analytics for quality control
+- Manual commission reconciliation process</p>
+<h4 id="leasing-specialists">Leasing Specialists<a class="headerlink" href="#leasing-specialists" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> CRM Flex, Voyager (limited)</p>
+<p><strong>Daily Workflow:</strong>
+- Check <strong>CRM Calendar</strong> for daily appointments
+- Process <strong>CRM Queue</strong> for prospect communication
+- Use <strong>Guest Card Management</strong> for application tracking
+- Calculate charges with <strong>Prorated Calculator</strong>
+- Search prospects using <strong>CRM Search</strong> function
+- Update <strong>Unit Availability</strong> for prospect alternatives</p>
+<p><strong>Key Functions:</strong>
+- <strong>Prospect Communication</strong> — Emails, texts, calls
+- <strong>Application Processing</strong> — Document collection and verification
+- <strong>Unit Selection</strong> — Availability checking and alternatives
+- <strong>Lease Preparation</strong> — Terms, charges, move-in scheduling</p>
+<hr />
+<h3 id="maintenance-teams">🛠️ <strong>Maintenance Teams</strong><a class="headerlink" href="#maintenance-teams" title="Permanent link">&para;</a></h3>
+<h4 id="facilities-maintenance-directors">Facilities &amp; Maintenance Directors<a class="headerlink" href="#facilities-maintenance-directors" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Maintenance IQ, Voyager Reports, VendorCafe</p>
+<p><strong>Daily Workflow:</strong>
+- Review <strong>Unit Turn Dashboard</strong> for make-ready management
+- Use <strong>Make Ready Manager</strong> for project coordination
+- Monitor <strong>Work Order Dashboard</strong> for team workload
+- Process <strong>VendorCafe</strong> invitations and approvals
+- Track <strong>Weekly Trend Analytics</strong> for performance metrics
+- Coordinate with <strong>VENDORShield</strong> for insurance verification</p>
+<p><strong>Key Functions:</strong>
+- <strong>Unit Turn Management</strong> — Make-ready project coordination
+- <strong>Work Order Analytics</strong> — Team performance and completion rates
+- <strong>Vendor Management</strong> — Insurance verification and approval
+- <strong>Maintenance Scheduling</strong> — Technician assignment and prioritization</p>
+<p><strong>Pain Points:</strong>
+- Voyager and Maintenance IQ sync issues
+- No journey from inspection to ledger charges
+- Limited work order status tracking</p>
+<h4 id="maintenance-technicians">Maintenance Technicians<a class="headerlink" href="#maintenance-technicians" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Maintenance IQ Mobile App</p>
+<p><strong>Daily Workflow:</strong>
+- Receive work orders via <strong>Maintenance IQ Mobile</strong>
+- Update work order status and completion
+- Upload photos and resolution notes
+- Coordinate with <strong>VendorCafe</strong> for third-party work
+- Use <strong>Work Order Management</strong> for categorization</p>
+<hr />
+<h3 id="accounting-teams">💰 <strong>Accounting Teams</strong><a class="headerlink" href="#accounting-teams" title="Permanent link">&para;</a></h3>
+<h4 id="property-controllers">Property Controllers<a class="headerlink" href="#property-controllers" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Voyager Financial Reports, Workflow Dashboard</p>
+<p><strong>Daily Workflow:</strong>
+- Review <strong>Financial Reports</strong> — Income Statement, Budget Comparison
+- Process <strong>Workflow Dashboard</strong> for invoice approvals
+- Monitor <strong>Aged Receivables</strong> for collections
+- Use <strong>General Ledger</strong> for journal entries
+- Reconcile <strong>Bank Functions</strong> daily
+- Process <strong>Payables</strong> for vendor payments</p>
+<p><strong>Key Functions:</strong>
+- <strong>Financial Reporting</strong> — Monthly P&amp;L and variance analysis
+- <strong>Invoice Processing</strong> — Workflow approvals and payments
+- <strong>Bank Reconciliation</strong> — Daily cash management
+- <strong>Journal Entries</strong> — Manual adjustments and accruals</p>
+<h4 id="apar-specialists">AP/AR Specialists<a class="headerlink" href="#apar-specialists" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Payables, VendorCafe, CheckScan</p>
+<p><strong>Daily Workflow:</strong>
+- Process <strong>Payable Analytics Aging Report</strong> for payment prioritization
+- Use <strong>Commit Payments</strong> for vendor payment processing
+- Manage <strong>VendorCafe</strong> for vendor onboarding and insurance
+- Process <strong>CheckScan</strong> for check payments
+- Monitor <strong>Invoice Register Dashboard</strong> for new invoices
+- Track <strong>Aged Payables</strong> for outstanding payments</p>
+<p><strong>Key Functions:</strong>
+- <strong>Vendor Management</strong> — Onboarding, insurance verification, payments
+- <strong>Invoice Processing</strong> — Scanning, coding, workflow management
+- <strong>Payment Processing</strong> — ACH, checks, payment methods
+- <strong>VendorCafe Management</strong> — Insurance compliance and documentation</p>
+<hr />
+<h3 id="pricing-teams">📊 <strong>Pricing Teams</strong><a class="headerlink" href="#pricing-teams" title="Permanent link">&para;</a></h3>
+<h4 id="revenue-directors">Revenue Directors<a class="headerlink" href="#revenue-directors" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Voyager Reports, SiteManager</p>
+<p><strong>Daily Workflow:</strong>
+- Analyze <strong>Unit Statistics</strong> for rent growth analysis
+- Review <strong>Rent Roll</strong> for market vs actual rent
+- Use <strong>Lease Expiration</strong> for renewal planning
+- Process <strong>Concession Burn Off</strong> for effective rent calculation
+- Update <strong>Market Rent Schedule</strong> for pricing changes
+- Manage <strong>ILS Special Override</strong> for marketing</p>
+<p><strong>Key Functions:</strong>
+- <strong>Pricing Analysis</strong> — Market rent vs actual rent analysis
+- <strong>Renewal Management</strong> — Lease expiration and renewal offers
+- <strong>Concession Management</strong> — Specials and effective rent calculation
+- <strong>Marketing Integration</strong> — Website and ILS pricing updates</p>
+<hr />
+<h3 id="engineering-teams">🔧 <strong>Engineering Teams</strong><a class="headerlink" href="#engineering-teams" title="Permanent link">&para;</a></h3>
+<h4 id="backend-engineers">Backend Engineers<a class="headerlink" href="#backend-engineers" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Yardi APIs, RentCafe APIs</p>
+<p><strong>Key APIs Used:</strong>
+- <strong>GetResidentData</strong> — Resident ledger history
+- <strong>GetUnitInformation</strong> — Unit data for applications
+- <strong>GetUserPropertyAccess</strong> — User permissions
+- <strong>ImportResidentTransactions</strong> — Charge and payment processing
+- <strong>RentCafe APIs</strong> — Website integration and prospect management</p>
+<p><strong>Integration Work:</strong>
+- <strong>Flow App Integration</strong> — Resident data and payment processing
+- <strong>Website Integration</strong> — Floorplans, pricing, availability
+- <strong>Data Pipeline</strong> — Yardi to Snowflake for analytics
+- <strong>API Development</strong> — Custom integrations and automations</p>
+<hr />
+<h2 id="critical-workflows">Critical Workflows<a class="headerlink" href="#critical-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="move-in-process">Move-In Process<a class="headerlink" href="#move-in-process" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Leasing</strong> creates application in CRM Flex</li>
+<li><strong>ScreeningWorks</strong> processes background check</li>
+<li><strong>Leasing Manager</strong> approves application</li>
+<li><strong>Assistant PM</strong> processes move-in in Voyager</li>
+<li><strong>Moved</strong> syncs with Yardi for checklist</li>
+<li><strong>Maintenance</strong> completes unit readiness</li>
+<li><strong>Front Desk</strong> provides keys and access</li>
+</ol>
+<h3 id="move-out-process">Move-Out Process<a class="headerlink" href="#move-out-process" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Assistant PM</strong> processes move-out in Voyager</li>
+<li><strong>Maintenance</strong> completes inspection via Google Form</li>
+<li><strong>Assistant PM</strong> creates move-out statement</li>
+<li><strong>Deposit Accounting</strong> processes refund</li>
+<li><strong>Accounting</strong> cuts and sends check</li>
+</ol>
+<h3 id="invoice-processing">Invoice Processing<a class="headerlink" href="#invoice-processing" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Vendor</strong> submits invoice via VendorCafe or email</li>
+<li><strong>AP Team</strong> codes and routes through workflow</li>
+<li><strong>Property Manager</strong> approves based on amount</li>
+<li><strong>Controller</strong> approves high-value invoices</li>
+<li><strong>AP Team</strong> processes payment via ACH or check</li>
+</ol>
+<hr />
+<h2 id="system-integration-points">System Integration Points<a class="headerlink" href="#system-integration-points" title="Permanent link">&para;</a></h2>
+<h3 id="yardi-moved">Yardi ↔ Moved<a class="headerlink" href="#yardi-moved" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sync:</strong> Nightly data synchronization</li>
+<li><strong>Purpose:</strong> Move-in/move-out checklist management</li>
+<li><strong>Key Data:</strong> Resident info, unit status, requirements</li>
+</ul>
+<h3 id="yardi-carsonflow-app">Yardi ↔ Carson/Flow App<a class="headerlink" href="#yardi-carsonflow-app" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Integration:</strong> Real-time resident data</li>
+<li><strong>Purpose:</strong> Resident portal and payment processing</li>
+<li><strong>Key Data:</strong> Ledger, payments, access control</li>
+</ul>
+<h3 id="yardi-sigma">Yardi ↔ Sigma<a class="headerlink" href="#yardi-sigma" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Integration:</strong> Data pipeline to Snowflake</li>
+<li><strong>Purpose:</strong> Advanced analytics and reporting</li>
+<li><strong>Key Data:</strong> All operational and financial metrics</li>
+</ul>
+<h3 id="yardi-waves">Yardi ↔ Waves<a class="headerlink" href="#yardi-waves" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Integration:</strong> Work order synchronization</li>
+<li><strong>Purpose:</strong> Maintenance request management</li>
+<li><strong>Key Data:</strong> Work orders, completion status, charges</li>
+</ul>
+<hr />
+<h2 id="common-issues-solutions">Common Issues &amp; Solutions<a class="headerlink" href="#common-issues-solutions" title="Permanent link">&para;</a></h2>
+<h3 id="data-sync-problems">Data Sync Problems<a class="headerlink" href="#data-sync-problems" title="Permanent link">&para;</a></h3>
+<p><strong>Issue:</strong> Voyager and Maintenance IQ out of sync
+<strong>Solution:</strong> 
+1. Check last sync time in Maintenance IQ
+2. Contact Yardi Team if &gt;24 hours
+3. Manual reconciliation if critical</p>
+<p><strong>Prevention:</strong> Regular data validation checks</p>
+<h3 id="system-performance">System Performance<a class="headerlink" href="#system-performance" title="Permanent link">&para;</a></h3>
+<p><strong>Issue:</strong> Yardi running slowly
+<strong>Solution:</strong>
+1. Clear browser cache
+2. Check internet connection
+3. Contact Yardi Team if persistent
+4. Use alternative browser</p>
+<h3 id="access-issues">Access Issues<a class="headerlink" href="#access-issues" title="Permanent link">&para;</a></h3>
+<p><strong>Issue:</strong> Can't access specific module
+<strong>Solution:</strong>
+1. Check user permissions with Yardi Team
+2. Verify property access rights
+3. Contact Department Lead for role verification</p>
+<h3 id="login-problems">Login Problems<a class="headerlink" href="#login-problems" title="Permanent link">&para;</a></h3>
+<p><strong>Issue:</strong> Can't log into Yardi
+<strong>Solution:</strong>
+1. Reset password via Yardi Team
+2. Check if account is locked
+3. Verify correct URL and property selection
+4. Contact Yardi Team for account issues</p>
+<hr />
+<h2 id="common-pain-points-solutions">Common Pain Points &amp; Solutions<a class="headerlink" href="#common-pain-points-solutions" title="Permanent link">&para;</a></h2>
+<h3 id="data-sync-issues">Data Sync Issues<a class="headerlink" href="#data-sync-issues" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Voyager and Maintenance IQ out of sync on completed work orders
+<strong>Solution:</strong> Regular data validation and manual reconciliation</p>
+<h3 id="manual-processes">Manual Processes<a class="headerlink" href="#manual-processes" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Variance report compilation takes 3-4 hours monthly
+<strong>Solution:</strong> Automated reporting and template standardization</p>
+<h3 id="limited-notifications">Limited Notifications<a class="headerlink" href="#limited-notifications" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> No email alerts from Yardi for critical events
+<strong>Solution:</strong> External monitoring and manual check processes</p>
+<h3 id="search-limitations">Search Limitations<a class="headerlink" href="#search-limitations" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Voyager search is less powerful than CRM Flex
+<strong>Solution:</strong> Use CRM Flex for resident searches, Voyager for reports</p>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="data-entry">Data Entry<a class="headerlink" href="#data-entry" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Always use <strong>Quick Charge</strong> for resident fees</li>
+<li>Update <strong>Resident Profile</strong> with current contact information</li>
+<li>Add detailed <strong>Memos</strong> for resident interactions</li>
+<li>Use <strong>Attachments</strong> for important documents</li>
+</ul>
+<h3 id="reporting">Reporting<a class="headerlink" href="#reporting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Set up <strong>Favorite Reports</strong> for daily use</li>
+<li>Export to Excel for detailed analysis</li>
+<li>Use <strong>Hyperlinks</strong> to drill down into details</li>
+<li>Cross-reference with <strong>Sigma</strong> for validation</li>
+</ul>
+<h3 id="workflow-management">Workflow Management<a class="headerlink" href="#workflow-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Process <strong>Workflow Dashboard</strong> daily</li>
+<li>Add detailed <strong>Notes</strong> to invoices</li>
+<li>Use <strong>VendorCafe</strong> for all vendor management</li>
+<li>Follow <strong>Escalation Protocols</strong> for approvals</li>
+</ul>
+<hr />
+<h2 id="property-size-considerations">Property Size Considerations<a class="headerlink" href="#property-size-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="small-properties-100-units">Small Properties (&lt;100 units)<a class="headerlink" href="#small-properties-100-units" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>GM:</strong> May handle both GM and AGM functions</li>
+<li><strong>Leasing:</strong> Single Leasing Agent may handle all functions</li>
+<li><strong>Maintenance:</strong> Limited Maintenance IQ usage, focus on Voyager</li>
+<li><strong>Support:</strong> Front Desk handles most resident inquiries</li>
+<li><strong>Key Focus:</strong> Essential functions only, simplified workflows</li>
+</ul>
+<h3 id="medium-properties-100-300-units">Medium Properties (100-300 units)<a class="headerlink" href="#medium-properties-100-300-units" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Standard roles:</strong> Follow guide as written</li>
+<li><strong>Backup coverage:</strong> Cross-train key functions</li>
+<li><strong>System usage:</strong> Full Yardi module utilization</li>
+<li><strong>Support:</strong> Dedicated Support team with specialized functions</li>
+<li><strong>Key Focus:</strong> Full Yardi capabilities with backup procedures</li>
+</ul>
+<h3 id="large-properties-300-units">Large Properties (300+ units)<a class="headerlink" href="#large-properties-300-units" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Specialized roles:</strong> Dedicated team members for each function</li>
+<li><strong>Advanced features:</strong> Full utilization of all Yardi capabilities</li>
+<li><strong>Reporting:</strong> Enhanced analytics and custom reports</li>
+<li><strong>Support:</strong> Multiple specialized support roles</li>
+<li><strong>Key Focus:</strong> Advanced features, automation, and optimization</li>
+</ul>
+<hr />
+<h2 id="weekend-after-hours-access">Weekend &amp; After-Hours Access<a class="headerlink" href="#weekend-after-hours-access" title="Permanent link">&para;</a></h2>
+<h3 id="system-availability">System Availability<a class="headerlink" href="#system-availability" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Yardi Voyager:</strong> 24/7 access</li>
+<li><strong>CRM Flex:</strong> 24/7 access</li>
+<li><strong>Maintenance IQ:</strong> 24/7 access</li>
+<li><strong>Support:</strong> Yardi Team available via Slack #yardi-support</li>
+</ul>
+<h3 id="emergency-procedures">Emergency Procedures<a class="headerlink" href="#emergency-procedures" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>System Down:</strong> Contact Regional Operations immediately</li>
+<li><strong>Data Issues:</strong> Contact Yardi Team via Slack</li>
+<li><strong>Critical Functions:</strong> Use backup procedures (paper-based)</li>
+<li><strong>Escalation:</strong> GM → Regional Operations → Yardi Team</li>
+</ol>
+<h3 id="backup-procedures">Backup Procedures<a class="headerlink" href="#backup-procedures" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Move-ins:</strong> Paper-based checklist if Yardi unavailable</li>
+<li><strong>Maintenance:</strong> Phone-based work order management</li>
+<li><strong>Invoices:</strong> Manual approval process with email confirmations</li>
+<li><strong>Payments:</strong> CheckScan backup with manual ledger updates</li>
+</ul>
+<hr />
+<h2 id="training-onboarding">Training &amp; Onboarding<a class="headerlink" href="#training-onboarding" title="Permanent link">&para;</a></h2>
+<h3 id="new-team-member-checklist">New Team Member Checklist<a class="headerlink" href="#new-team-member-checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>Yardi Team Setup</strong> - User account and permissions</li>
+<li>[ ] <strong>Role-Specific Training</strong> - Department-specific workflows</li>
+<li>[ ] <strong>System Access</strong> - All required modules and functions</li>
+<li>[ ] <strong>Backup Procedures</strong> - Emergency protocols</li>
+<li>[ ] <strong>Escalation Paths</strong> - Who to contact for issues</li>
+</ul>
+<h3 id="skill-development-path">Skill Development Path<a class="headerlink" href="#skill-development-path" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Basic User</strong> - Essential functions for role</li>
+<li><strong>Intermediate User</strong> - Advanced features and reporting</li>
+<li><strong>Power User</strong> - Cross-functional knowledge and training</li>
+<li><strong>System Admin</strong> - Yardi Team level access and support</li>
+</ol>
+<h3 id="training-resources">Training Resources<a class="headerlink" href="#training-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Yardi Team</strong> - System setup and basic training</li>
+<li><strong>Department Leads</strong> - Role-specific workflows</li>
+<li><strong>ClientCentral</strong> - Yardi knowledge base</li>
+<li><strong>Internal Documentation</strong> - Flow-specific processes</li>
+</ul>
+<hr />
+<h2 id="neighbor-impact-experience">Neighbor Impact &amp; Experience<a class="headerlink" href="#neighbor-impact-experience" title="Permanent link">&para;</a></h2>
+<h3 id="how-yardi-improves-neighbor-service">How Yardi Improves Neighbor Service<a class="headerlink" href="#how-yardi-improves-neighbor-service" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Faster Response Times</strong> - Quick access to resident information</li>
+<li><strong>Accurate Billing</strong> - Automated charge calculations and payments</li>
+<li><strong>Better Communication</strong> - Centralized resident data and preferences</li>
+<li><strong>Proactive Service</strong> - Maintenance tracking and preventive care</li>
+</ul>
+<h3 id="neighbor-facing-functions">Neighbor-Facing Functions<a class="headerlink" href="#neighbor-facing-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Move-in Process</strong> - Streamlined requirements and documentation</li>
+<li><strong>Maintenance Requests</strong> - Real-time status updates and tracking</li>
+<li><strong>Payment Processing</strong> - Secure, convenient payment options</li>
+<li><strong>Lease Management</strong> - Digital lease signing and document storage</li>
+</ul>
+<h3 id="service-recovery">Service Recovery<a class="headerlink" href="#service-recovery" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Data Issues</strong> - How to handle Neighbor concerns about billing</li>
+<li><strong>System Downtime</strong> - Communication protocols for service interruptions</li>
+<li><strong>Access Problems</strong> - Alternative methods for critical functions</li>
+</ul>
+<hr />
+<h2 id="training-resources_1">Training Resources<a class="headerlink" href="#training-resources_1" title="Permanent link">&para;</a></h2>
+<h3 id="new-team-members">New Team Members<a class="headerlink" href="#new-team-members" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Yardi Team</strong> — System setup and basic training</li>
+<li><strong>Role-Specific Training</strong> — Department-specific workflows</li>
+<li><strong>ClientCentral</strong> — Yardi knowledge base and support</li>
+<li><strong>Internal Documentation</strong> — Flow-specific processes</li>
+</ol>
+<h3 id="ongoing-support">Ongoing Support<a class="headerlink" href="#ongoing-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Yardi Team</strong> — Technical issues and system updates</li>
+<li><strong>Department Leads</strong> — Workflow and process questions</li>
+<li><strong>ClientCentral</strong> — Self-service support and documentation</li>
+</ul>
+<h3 id="screenshots-visuals">Screenshots &amp; Visuals<a class="headerlink" href="#screenshots-visuals" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[Placeholder: Voyager - Community Dashboard view]</li>
+<li>[Placeholder: CRM Flex - Dashboard interface]</li>
+<li>[Placeholder: Maintenance IQ - Mobile app interface]</li>
+<li>[Placeholder: Workflow Dashboard - Invoice approval screen]</li>
+<li>[Placeholder: CheckScan - Payment processing interface]</li>
+</ul>
+<hr />
+<h2 id="future-improvements">Future Improvements<a class="headerlink" href="#future-improvements" title="Permanent link">&para;</a></h2>
+<h3 id="planned-enhancements">Planned Enhancements<a class="headerlink" href="#planned-enhancements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Workflow Dashboard</strong> improvements for H2</li>
+<li><strong>My Approvals</strong> interface for better approval management</li>
+<li><strong>Invoice Register Dashboard</strong> enhancements</li>
+<li><strong>Maintenance IQ</strong> sync improvements</li>
+</ul>
+<h3 id="integration-opportunities">Integration Opportunities<a class="headerlink" href="#integration-opportunities" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Automated Reporting</strong> — Reduce manual variance report compilation</li>
+<li><strong>Real-time Sync</strong> — Improve data consistency across systems</li>
+<li><strong>Mobile Optimization</strong> — Better mobile interfaces for field teams</li>
+<li><strong>API Expansion</strong> — More robust integration capabilities</li>
+</ul>
+<hr />
+<blockquote>
+<p>This guide serves as the definitive reference for how Flow leverages Yardi across all teams and functions. For specific technical questions or system issues, contact the Yardi Team or refer to ClientCentral for additional resources.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../onsite-technology-stack/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Onsite Technology Stack">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Onsite Technology Stack
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../operating-practices/foundational-neighbor-journey/" class="md-footer__link md-footer__link--next" aria-label="Next: Foundational Neighbor Journey">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Foundational Neighbor Journey
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.sections", "navigation.expand", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
