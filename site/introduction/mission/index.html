@@ -21,7 +21,7 @@
         <link rel="next" href="../brand-values/">
       
       
-      <link rel="icon" href="../../public/images/icons/flow-logo.png">
+      <link rel="icon" href="../../images/flow-logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
@@ -44,7 +44,7 @@
         /* Import Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-        /* Flow Brand Colors - Simplified */
+        /* Flow Brand Colors - Clean and Professional */
         :root {
             --moonlight: #F3EDDF;        /* Original Moonlight */
             --moonlight-dark: #E8E0D1;   /* Darker shade of Moonlight */
@@ -52,7 +52,7 @@
             --midnight: #3D3D3D;         /* Midnight for all text */
         }
 
-        /* Remove white outer margins - make background full width */
+        /* Flow brand background - full width */
         body {
             background-color: var(--moonlight-light) !important;
         }
@@ -61,7 +61,7 @@
             background-color: var(--moonlight-light) !important;
         }
 
-        /* Main content area - lighter Moonlight - full width */
+        /* Main content area - Flow style */
         .md-main {
             background-color: var(--moonlight-light) !important;
         }
@@ -80,8 +80,17 @@
             max-width: none !important;
         }
 
-        /* All text should be Midnight */
+        /* Flow text colors */
         body, .md-content, .md-typeset {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset h1, .md-typeset h2, .md-typeset h3, 
+        .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset p, .md-typeset li, .md-typeset blockquote {
             color: var(--midnight) !important;
         }
 
@@ -114,7 +123,7 @@
             font-family: 'Inter', sans-serif !important;
         }
 
-        /* Header (top nav) - darker Moonlight - full width */
+        /* Header (top nav) - Flow style */
         .md-header {
             background-color: var(--moonlight-dark) !important;
             border-bottom: 1px solid var(--midnight);
@@ -142,7 +151,7 @@
             width: auto;
         }
 
-        /* Left sidebar - darker Moonlight */
+        /* Left sidebar - Flow style */
         .md-sidebar--primary {
             background-color: var(--moonlight-dark) !important;
             border-right: 1px solid var(--midnight);
@@ -170,7 +179,7 @@
             font-weight: 600;
         }
 
-        /* Nested navigation items */
+        /* Nested navigation items - Flow style */
         .md-sidebar--primary .md-nav__item .md-nav__link {
             padding-left: 32px;
             color: var(--midnight) !important;
@@ -180,7 +189,7 @@
             padding-left: 48px;
         }
 
-        /* Footer - darker Moonlight */
+        /* Footer - Flow style */
         .md-footer {
             background-color: var(--moonlight-dark) !important;
             border-top: 1px solid var(--midnight);
@@ -191,13 +200,13 @@
             color: var(--midnight) !important;
         }
 
-        /* Code blocks - subtle background */
+        /* Code blocks - Flow style */
         .md-typeset code {
             background-color: var(--moonlight) !important;
             color: var(--midnight) !important;
         }
 
-        /* Tables - clean styling */
+        /* Tables - Flow clean styling */
         .md-typeset table {
             border: 1px solid var(--midnight);
         }
@@ -212,7 +221,7 @@
             border-bottom: 1px solid var(--moonlight-dark);
         }
 
-        /* Remove all other colors - keep it minimal */
+        /* Admonitions - Flow style */
         .md-typeset .admonition {
             background-color: var(--moonlight-light) !important;
             border-left: 4px solid var(--midnight) !important;
@@ -279,7 +288,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="One Flow Operating Playbook" class="md-header__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
       
-  <img src="../../public/images/icons/flow-logo.svg" alt="logo">
+  <img src="../../images/flow-logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -393,7 +402,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="One Flow Operating Playbook" class="md-nav__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
       
-  <img src="../../public/images/icons/flow-logo.svg" alt="logo">
+  <img src="../../images/flow-logo.svg" alt="logo">
 
     </a>
     One Flow Operating Playbook
