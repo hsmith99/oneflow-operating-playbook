@@ -6,35 +6,41 @@
         /* Import Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-        /* Flow Brand Colors - Simplified */
+        /* Waves DeepSky Inspired Colors */
         :root {
-            --moonlight: #F3EDDF;        /* Original Moonlight */
-            --moonlight-dark: #E8E0D1;   /* Darker shade of Moonlight */
-            --moonlight-light: #F8F4ED;  /* Lighter shade of Moonlight */
-            --midnight: #3D3D3D;         /* Midnight for all text */
+            --primary-bg: #F8F7F4;       /* Light cream background like DeepSky */
+            --sidebar-bg: #F5F4F1;       /* Slightly darker for sidebar */
+            --header-bg: #F0EFEC;        /* Even darker for header */
+            --text-primary: #3D3D3D;     /* Dark grey text */
+            --text-secondary: #6C757D;   /* Lighter grey for secondary text */
+            --border-light: #E0E0E0;     /* Light borders */
+            --accent-blue: #007BFF;      /* Blue accents like DeepSky */
+            --accent-orange: #FD7E14;    /* Orange accents */
+            --accent-pink: #E83E8C;      /* Pink accents */
+            --accent-green: #28A745;     /* Green accents */
         }
 
-        /* Remove white outer margins - make background full width */
+        /* DeepSky inspired background - full width */
         body {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--primary-bg) !important;
         }
 
         .md-container {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--primary-bg) !important;
         }
 
-        /* Main content area - lighter Moonlight - full width */
+        /* Main content area - DeepSky style */
         .md-main {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--primary-bg) !important;
         }
 
         .md-main__inner {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--primary-bg) !important;
             max-width: none !important;
         }
 
         .md-content {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--primary-bg) !important;
         }
 
         /* Ensure the main grid layout uses full width */
@@ -42,9 +48,18 @@
             max-width: none !important;
         }
 
-        /* All text should be Midnight */
+        /* DeepSky text colors */
         body, .md-content, .md-typeset {
-            color: var(--midnight) !important;
+            color: var(--text-primary) !important;
+        }
+
+        .md-typeset h1, .md-typeset h2, .md-typeset h3, 
+        .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+            color: var(--text-primary) !important;
+        }
+
+        .md-typeset p, .md-typeset li, .md-typeset blockquote {
+            color: var(--text-primary) !important;
         }
 
         /* Typography - Poppins for navigation, Inter for content */
@@ -76,21 +91,22 @@
             font-family: 'Inter', sans-serif !important;
         }
 
-        /* Header (top nav) - darker Moonlight - full width */
+        /* Header (top nav) - DeepSky style */
         .md-header {
-            background-color: var(--moonlight-dark) !important;
-            border-bottom: 1px solid var(--midnight);
+            background-color: var(--header-bg) !important;
+            border-bottom: 1px solid var(--border-light);
             width: 100% !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         .md-header__inner {
-            background-color: var(--moonlight-dark) !important;
+            background-color: var(--header-bg) !important;
         }
 
         .md-header__topic,
         .md-header__button,
         .md-header__title {
-            color: var(--midnight) !important;
+            color: var(--text-primary) !important;
         }
 
         /* Logo styling */
@@ -104,85 +120,110 @@
             width: auto;
         }
 
-        /* Left sidebar - darker Moonlight */
+        /* Left sidebar - DeepSky style */
         .md-sidebar--primary {
-            background-color: var(--moonlight-dark) !important;
-            border-right: 1px solid var(--midnight);
+            background-color: var(--sidebar-bg) !important;
+            border-right: 1px solid var(--border-light);
         }
         
         .md-sidebar--primary .md-nav__title {
-            background-color: var(--moonlight-dark) !important;
-            color: var(--midnight) !important;
-            border-bottom: 1px solid var(--midnight);
+            background-color: var(--sidebar-bg) !important;
+            color: var(--text-primary) !important;
+            border-bottom: 1px solid var(--border-light);
+            font-weight: 600;
         }
         
         .md-sidebar--primary .md-nav__link {
-            color: var(--midnight) !important;
-            padding: 8px 16px;
+            color: var(--text-primary) !important;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin: 2px 8px;
+            transition: all 0.2s ease;
         }
         
         .md-sidebar--primary .md-nav__link:hover {
-            background-color: var(--moonlight) !important;
-            color: var(--midnight) !important;
+            background-color: rgba(0, 123, 255, 0.1) !important;
+            color: var(--accent-blue) !important;
         }
         
         .md-sidebar--primary .md-nav__link--active {
-            background-color: var(--moonlight) !important;
-            color: var(--midnight) !important;
+            background-color: var(--accent-blue) !important;
+            color: white !important;
             font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
         }
 
-        /* Nested navigation items */
+        /* Nested navigation items - DeepSky style */
         .md-sidebar--primary .md-nav__item .md-nav__link {
             padding-left: 32px;
-            color: var(--midnight) !important;
+            color: var(--text-primary) !important;
         }
 
         .md-sidebar--primary .md-nav__item .md-nav__item .md-nav__link {
             padding-left: 48px;
         }
 
-        /* Footer - darker Moonlight */
+        /* Footer - DeepSky style */
         .md-footer {
-            background-color: var(--moonlight-dark) !important;
-            border-top: 1px solid var(--midnight);
-            color: var(--midnight) !important;
+            background-color: var(--sidebar-bg) !important;
+            border-top: 1px solid var(--border-light);
+            color: var(--text-primary) !important;
         }
 
         .md-footer-nav__link {
-            color: var(--midnight) !important;
+            color: var(--text-primary) !important;
         }
 
-        /* Code blocks - subtle background */
+        /* Code blocks - DeepSky style */
         .md-typeset code {
-            background-color: var(--moonlight) !important;
-            color: var(--midnight) !important;
+            background-color: rgba(0, 123, 255, 0.1) !important;
+            color: var(--accent-blue) !important;
+            padding: 2px 6px;
+            border-radius: 4px;
         }
 
-        /* Tables - clean styling */
+        /* Tables - DeepSky clean styling */
         .md-typeset table {
-            border: 1px solid var(--midnight);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         .md-typeset table th {
-            background-color: var(--moonlight-dark) !important;
-            color: var(--midnight) !important;
-            border-bottom: 1px solid var(--midnight);
+            background-color: var(--sidebar-bg) !important;
+            color: var(--text-primary) !important;
+            border-bottom: 1px solid var(--border-light);
+            font-weight: 600;
         }
 
         .md-typeset table td {
-            border-bottom: 1px solid var(--moonlight-dark);
+            border-bottom: 1px solid var(--border-light);
         }
 
-        /* Remove all other colors - keep it minimal */
+        /* Admonitions - DeepSky style */
         .md-typeset .admonition {
-            background-color: var(--moonlight-light) !important;
-            border-left: 4px solid var(--midnight) !important;
+            background-color: var(--primary-bg) !important;
+            border-left: 4px solid var(--accent-blue) !important;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         .md-typeset .admonition-title {
-            background-color: var(--moonlight-dark) !important;
-            color: var(--midnight) !important;
+            background-color: var(--sidebar-bg) !important;
+            color: var(--text-primary) !important;
+            font-weight: 600;
+        }
+
+        /* Search styling - DeepSky style */
+        .md-search__form {
+            background-color: var(--primary-bg) !important;
+            border: 1px solid var(--border-light) !important;
+            border-radius: 8px;
+        }
+
+        .md-search__input {
+            color: var(--text-primary) !important;
         }
     </style>
 {% endblock %}
