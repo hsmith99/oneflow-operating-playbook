@@ -11,13 +11,32 @@
             --midnight: #3D3D3D;         /* Midnight for all text */
         }
 
-        /* Main content area - lighter Moonlight */
+        /* Remove white outer margins - make background full width */
+        body {
+            background-color: var(--moonlight-light) !important;
+        }
+
+        .md-container {
+            background-color: var(--moonlight-light) !important;
+        }
+
+        /* Main content area - lighter Moonlight - full width */
+        .md-main {
+            background-color: var(--moonlight-light) !important;
+        }
+
         .md-main__inner {
             background-color: var(--moonlight-light) !important;
+            max-width: none !important;
         }
 
         .md-content {
             background-color: var(--moonlight-light) !important;
+        }
+
+        /* Ensure the main grid layout uses full width */
+        .md-grid {
+            max-width: none !important;
         }
 
         /* All text should be Midnight */
@@ -25,10 +44,15 @@
             color: var(--midnight) !important;
         }
 
-        /* Header (top nav) - darker Moonlight */
+        /* Header (top nav) - darker Moonlight - full width */
         .md-header {
             background-color: var(--moonlight-dark) !important;
             border-bottom: 1px solid var(--midnight);
+            width: 100% !important;
+        }
+
+        .md-header__inner {
+            background-color: var(--moonlight-dark) !important;
         }
 
         .md-header__topic,
