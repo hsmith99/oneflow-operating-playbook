@@ -53,6 +53,7 @@ nav:
       - Onsite Staffing Model: team-and-systems/onsite-staffing-model.md
       - Onsite Technology Stack: team-and-systems/onsite-technology-stack.md
       - Yardi Operational Guide: team-and-systems/yardi-operational-guide.md
+      - Zendesk Operational Guide: team-and-systems/zendesk-operational-guide.md
   - Operating Practices:
       - Foundational Neighbor Journey: operating-practices/foundational-neighbor-journey.md
       - Care – Everyday Moments: operating-practices/care-everyday-moments.md
@@ -63,6 +64,8 @@ nav:
           - Unit Move-in Readiness SOP: operating-manual-sops/foundational-journey/unit-move-in-readiness-sop.md
       - Care – Everyday Moments:
           - Neighbor Communication SOP: operating-manual-sops/care-everyday-moments/neighbor-communication-sop.md
+          - Fair Housing Act Compliance SOP: operating-manual-sops/care-everyday-moments/fair-housing-act-compliance-sop.md
+          - Flow Minibar Experience SOP: operating-manual-sops/care-everyday-moments/flow-minibar-experience-sop.md
       - Belong – Cultivated Community:
           - Ambassador Program SOP: operating-manual-sops/belong-cultivated-community/ambassador-program-sop.md
 markdown_extensions:
