@@ -40,6 +40,9 @@ Yardi is Flow's central property management system, serving as the source of tru
 
 ## Yardi Ecosystem at Flow
 
+### Yardi Functionality - Business Function Importance Map
+[**Yardi Feature & Business Function Importance Map**](https://docs.google.com/spreadsheets/d/13O5BLxcCKWxYFkBzA7EsrcwtecraN4i8IfQlkITg5ec/edit?gid=0#gid=0) - Comprehensive mapping of Yardi tools, their descriptions, roles, and importance levels across Flow's operations.
+
 ### Core Modules
 - **Yardi Voyager** — The central database and primary interface for most operations
 - **CRM Flex** — Leasing-focused interface for prospect and resident management

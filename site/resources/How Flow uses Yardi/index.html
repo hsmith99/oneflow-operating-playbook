@@ -15,8 +15,6 @@
         <link rel="canonical" href="https://hsmith99.github.io/oneflow-operating-playbook/resources/How%20Flow%20uses%20Yardi/">
       
       
-        <link rel="prev" href="../../sop-library/sop-brief-template/">
-      
       
       
       <link rel="icon" href="../../images/flow-logo.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>How Flow Uses Yardi - One Flow Operating Playbook</title>
+        <title>How Flow uses Yardi - One Flow Operating Playbook</title>
       
     
     
@@ -45,9 +43,18 @@
         /* Flow Brand Colors - Clean and Professional */
         :root {
             --moonlight: #F3EDDF;        /* Original Moonlight */
-            --moonlight-dark: #E8E0D1;   /* Darker shade of Moonlight */
+            --moonlight-dark: #D4C9B8;   /* Much darker shade of Moonlight for sidebar */
+            --moonlight-darker: #C5B8A3; /* Even darker for better contrast */
             --moonlight-light: #F8F4ED;  /* Lighter shade of Moonlight */
             --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-dark) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-light) !important;
         }
 
         /* Flow brand background - full width */
@@ -59,17 +66,26 @@
             background-color: var(--moonlight-light) !important;
         }
 
-        /* Main content area - Flow style */
-        .md-main {
+        /* Main content area - Flow style - Force override */
+        .md-main,
+        .md-main[data-md-state="open"] {
             background-color: var(--moonlight-light) !important;
         }
 
-        .md-main__inner {
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
             background-color: var(--moonlight-light) !important;
             max-width: none !important;
         }
 
-        .md-content {
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-light) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
             background-color: var(--moonlight-light) !important;
         }
 
@@ -149,30 +165,35 @@
             width: auto;
         }
 
-        /* Left sidebar - Flow style */
-        .md-sidebar--primary {
-            background-color: var(--moonlight-dark) !important;
-            border-right: 1px solid var(--midnight);
+        /* Left sidebar - Flow style - Force override with darker Moonlight */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-darker) !important;
+            border-right: 1px solid var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__title {
-            background-color: var(--moonlight-dark) !important;
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-darker) !important;
             color: var(--midnight) !important;
-            border-bottom: 1px solid var(--midnight);
+            border-bottom: 1px solid var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__link {
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
             color: var(--midnight) !important;
             padding: 8px 16px;
         }
         
-        .md-sidebar--primary .md-nav__link:hover {
-            background-color: var(--moonlight) !important;
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__link--active {
-            background-color: var(--moonlight) !important;
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
             font-weight: 600;
         }
@@ -303,7 +324,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How Flow Uses Yardi
+              How Flow uses Yardi
             
           </span>
         </div>
@@ -1109,640 +1130,6 @@
             
           </ul>
         </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    SOP Library
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            SOP Library
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sop-library/master-sop-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Master SOP Template
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sop-library/sop-brief-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    SOP Brief Template
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    Resources
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Resources
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    How Flow Uses Yardi
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    How Flow Uses Yardi
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#meeting-recordings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Meeting Recordings
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#meeting-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Meeting Notes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#yardi-team" class="md-nav__link">
-    <span class="md-ellipsis">
-      Yardi Team
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Yardi Team">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hila-head-of-yardi" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hila - Head of Yardi
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jamie-yardi-frontend-engineer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Jamie - Yardi Frontend Engineer
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#llu-yardi-backend-engineer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Llu - Yardi Backend Engineer
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#property-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Property Management
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Property Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dor-head-of-operations-revenue" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dor - Head of Operations &amp; Revenue
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chris-b-gm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chris B - GM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#johnny-assistant-pm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Johnny - Assistant PM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#roxana-gm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Roxana - GM
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#michelle-assistant-gm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Michelle - Assistant GM
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#leasing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Leasing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Leasing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#peter-d-leasing-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Peter D - Leasing Manager
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adrian-leasing-specialist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adrian - Leasing Specialist
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support-rx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Support &amp; RX
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Support &amp; RX">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#eyad-rx-director" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eyad - RX Director
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ria-rx-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ria - RX Manager
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bobbi-resident-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bobbi - Resident Support
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#facilities-maintenance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Facilities &amp; Maintenance
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Facilities &amp; Maintenance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#andy-facilities-maintenance-director" class="md-nav__link">
-    <span class="md-ellipsis">
-      Andy - Facilities &amp; Maintenance Director
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#orlando-facilities-maintenance-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Orlando - Facilities &amp; Maintenance Manager
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transitions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Transitions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#keith-taylor-transitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Keith / Taylor - Transitions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pricing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pricing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Pricing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jason-director-of-residential-revenue" class="md-nav__link">
-    <span class="md-ellipsis">
-      Jason - Director of Residential Revenue
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#derek-pricing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Derek - Pricing
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#property-accounting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Property Accounting
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Property Accounting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#eyal-head-of-property-accounting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eyal - Head of Property Accounting
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#robert-property-controller" class="md-nav__link">
-    <span class="md-ellipsis">
-      Robert - Property Controller
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#evelyn-property-ap-ar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Evelyn - Property AP / AR
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#physical-capex" class="md-nav__link">
-    <span class="md-ellipsis">
-      Physical / CapEx
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Physical / CapEx">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ayda-head-of-capex-projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ayda - Head of CapEx Projects
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-analytics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data &amp; Analytics
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data &amp; Analytics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#xuan-mai-head-of-data-analytics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Xuan Mai - Head of Data &amp; Analytics
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#engineering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Engineering
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Engineering">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#asa-engineering-lead-website" class="md-nav__link">
-    <span class="md-ellipsis">
-      Asa - Engineering Lead, Website
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#arjuna-backend-engineer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arjuna - Backend Engineer
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3678,28 +3065,6 @@ Status: <strong>Draft</strong> | In-Review | Final</p>
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../../sop-library/sop-brief-template/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SOP Brief Template">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                SOP Brief Template
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

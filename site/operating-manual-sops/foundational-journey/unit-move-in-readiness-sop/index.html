@@ -47,9 +47,18 @@
         /* Flow Brand Colors - Clean and Professional */
         :root {
             --moonlight: #F3EDDF;        /* Original Moonlight */
-            --moonlight-dark: #E8E0D1;   /* Darker shade of Moonlight */
+            --moonlight-dark: #D4C9B8;   /* Much darker shade of Moonlight for sidebar */
+            --moonlight-darker: #C5B8A3; /* Even darker for better contrast */
             --moonlight-light: #F8F4ED;  /* Lighter shade of Moonlight */
             --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-dark) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-light) !important;
         }
 
         /* Flow brand background - full width */
@@ -61,17 +70,26 @@
             background-color: var(--moonlight-light) !important;
         }
 
-        /* Main content area - Flow style */
-        .md-main {
+        /* Main content area - Flow style - Force override */
+        .md-main,
+        .md-main[data-md-state="open"] {
             background-color: var(--moonlight-light) !important;
         }
 
-        .md-main__inner {
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
             background-color: var(--moonlight-light) !important;
             max-width: none !important;
         }
 
-        .md-content {
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-light) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
             background-color: var(--moonlight-light) !important;
         }
 
@@ -151,30 +169,35 @@
             width: auto;
         }
 
-        /* Left sidebar - Flow style */
-        .md-sidebar--primary {
-            background-color: var(--moonlight-dark) !important;
-            border-right: 1px solid var(--midnight);
+        /* Left sidebar - Flow style - Force override with darker Moonlight */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-darker) !important;
+            border-right: 1px solid var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__title {
-            background-color: var(--moonlight-dark) !important;
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-darker) !important;
             color: var(--midnight) !important;
-            border-bottom: 1px solid var(--midnight);
+            border-bottom: 1px solid var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__link {
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
             color: var(--midnight) !important;
             padding: 8px 16px;
         }
         
-        .md-sidebar--primary .md-nav__link:hover {
-            background-color: var(--moonlight) !important;
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__link--active {
-            background-color: var(--moonlight) !important;
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
             font-weight: 600;
         }
@@ -1330,179 +1353,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    SOP Library
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            SOP Library
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../sop-library/master-sop-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Master SOP Template
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../sop-library/sop-brief-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    SOP Brief Template
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    Resources
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Resources
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../resources/How%20Flow%20uses%20Yardi/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    How Flow Uses Yardi
-    
-  </span>
-  
-
-      </a>
     </li>
   
 

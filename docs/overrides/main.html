@@ -9,7 +9,8 @@
         /* Flow Brand Colors - Clean and Professional */
         :root {
             --moonlight: #F3EDDF;        /* Original Moonlight */
-            --moonlight-dark: #E8E0D1;   /* Darker shade of Moonlight */
+            --moonlight-dark: #D4C9B8;   /* Much darker shade of Moonlight for sidebar */
+            --moonlight-darker: #C5B8A3; /* Even darker for better contrast */
             --moonlight-light: #F8F4ED;  /* Lighter shade of Moonlight */
             --midnight: #3D3D3D;         /* Midnight for all text */
         }
@@ -130,16 +131,16 @@
             width: auto;
         }
 
-        /* Left sidebar - Flow style - Force override */
+        /* Left sidebar - Flow style - Force override with darker Moonlight */
         .md-sidebar--primary,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary {
-            background-color: var(--moonlight-dark) !important;
+            background-color: var(--moonlight-darker) !important;
             border-right: 1px solid var(--midnight) !important;
         }
         
         .md-sidebar--primary .md-nav__title,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title {
-            background-color: var(--moonlight-dark) !important;
+            background-color: var(--moonlight-darker) !important;
             color: var(--midnight) !important;
             border-bottom: 1px solid var(--midnight) !important;
         }
@@ -152,13 +153,13 @@
         
         .md-sidebar--primary .md-nav__link:hover,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
-            background-color: var(--moonlight) !important;
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
         }
         
         .md-sidebar--primary .md-nav__link--active,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
-            background-color: var(--moonlight) !important;
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
             font-weight: 600;
         }

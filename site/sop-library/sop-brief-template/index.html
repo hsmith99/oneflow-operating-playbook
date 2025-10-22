@@ -15,10 +15,6 @@
         <link rel="canonical" href="https://hsmith99.github.io/oneflow-operating-playbook/sop-library/sop-brief-template/">
       
       
-        <link rel="prev" href="../master-sop-template/">
-      
-      
-        <link rel="next" href="../../resources/How%20Flow%20uses%20Yardi/">
       
       
       <link rel="icon" href="../../images/flow-logo.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>SOP Brief Template - One Flow Operating Playbook</title>
+        <title>Sop brief template - One Flow Operating Playbook</title>
       
     
     
@@ -47,9 +43,18 @@
         /* Flow Brand Colors - Clean and Professional */
         :root {
             --moonlight: #F3EDDF;        /* Original Moonlight */
-            --moonlight-dark: #E8E0D1;   /* Darker shade of Moonlight */
+            --moonlight-dark: #D4C9B8;   /* Much darker shade of Moonlight for sidebar */
+            --moonlight-darker: #C5B8A3; /* Even darker for better contrast */
             --moonlight-light: #F8F4ED;  /* Lighter shade of Moonlight */
             --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-dark) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-light) !important;
         }
 
         /* Flow brand background - full width */
@@ -61,17 +66,26 @@
             background-color: var(--moonlight-light) !important;
         }
 
-        /* Main content area - Flow style */
-        .md-main {
+        /* Main content area - Flow style - Force override */
+        .md-main,
+        .md-main[data-md-state="open"] {
             background-color: var(--moonlight-light) !important;
         }
 
-        .md-main__inner {
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
             background-color: var(--moonlight-light) !important;
             max-width: none !important;
         }
 
-        .md-content {
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-light) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
             background-color: var(--moonlight-light) !important;
         }
 
@@ -151,30 +165,35 @@
             width: auto;
         }
 
-        /* Left sidebar - Flow style */
-        .md-sidebar--primary {
-            background-color: var(--moonlight-dark) !important;
-            border-right: 1px solid var(--midnight);
+        /* Left sidebar - Flow style - Force override with darker Moonlight */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-darker) !important;
+            border-right: 1px solid var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__title {
-            background-color: var(--moonlight-dark) !important;
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-darker) !important;
             color: var(--midnight) !important;
-            border-bottom: 1px solid var(--midnight);
+            border-bottom: 1px solid var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__link {
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
             color: var(--midnight) !important;
             padding: 8px 16px;
         }
         
-        .md-sidebar--primary .md-nav__link:hover {
-            background-color: var(--moonlight) !important;
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__link--active {
-            background-color: var(--moonlight) !important;
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
             font-weight: 600;
         }
@@ -305,7 +324,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SOP Brief Template
+              Sop brief template
             
           </span>
         </div>
@@ -1124,313 +1143,6 @@
   
 
     
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    SOP Library
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            SOP Library
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../master-sop-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Master SOP Template
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    SOP Brief Template
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    SOP Brief Template
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Information
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Goals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#triggers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Triggers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-roles-involved" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Roles Involved
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#systems-used" class="md-nav__link">
-    <span class="md-ellipsis">
-      Systems Used
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes-stream-of-consciousness" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes / Stream of Consciousness
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attachments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Attachments
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    Resources
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Resources
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../resources/How%20Flow%20uses%20Yardi/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    How Flow Uses Yardi
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1677,44 +1389,6 @@ Example: “This SOP should describe both the individual and group experience wh
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../master-sop-template/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Master SOP Template">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Master SOP Template
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../../resources/How%20Flow%20uses%20Yardi/" class="md-footer__link md-footer__link--next" aria-label="Next: How Flow Uses Yardi">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                How Flow Uses Yardi
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

@@ -45,9 +45,18 @@
         /* Flow Brand Colors - Clean and Professional */
         :root {
             --moonlight: #F3EDDF;        /* Original Moonlight */
-            --moonlight-dark: #E8E0D1;   /* Darker shade of Moonlight */
+            --moonlight-dark: #D4C9B8;   /* Much darker shade of Moonlight for sidebar */
+            --moonlight-darker: #C5B8A3; /* Even darker for better contrast */
             --moonlight-light: #F8F4ED;  /* Lighter shade of Moonlight */
             --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-dark) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-light) !important;
         }
 
         /* Flow brand background - full width */
@@ -59,17 +68,26 @@
             background-color: var(--moonlight-light) !important;
         }
 
-        /* Main content area - Flow style */
-        .md-main {
+        /* Main content area - Flow style - Force override */
+        .md-main,
+        .md-main[data-md-state="open"] {
             background-color: var(--moonlight-light) !important;
         }
 
-        .md-main__inner {
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
             background-color: var(--moonlight-light) !important;
             max-width: none !important;
         }
 
-        .md-content {
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-light) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
             background-color: var(--moonlight-light) !important;
         }
 
@@ -149,30 +167,35 @@
             width: auto;
         }
 
-        /* Left sidebar - Flow style */
-        .md-sidebar--primary {
-            background-color: var(--moonlight-dark) !important;
-            border-right: 1px solid var(--midnight);
+        /* Left sidebar - Flow style - Force override with darker Moonlight */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-darker) !important;
+            border-right: 1px solid var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__title {
-            background-color: var(--moonlight-dark) !important;
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-darker) !important;
             color: var(--midnight) !important;
-            border-bottom: 1px solid var(--midnight);
+            border-bottom: 1px solid var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__link {
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
             color: var(--midnight) !important;
             padding: 8px 16px;
         }
         
-        .md-sidebar--primary .md-nav__link:hover {
-            background-color: var(--moonlight) !important;
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
         }
         
-        .md-sidebar--primary .md-nav__link--active {
-            background-color: var(--moonlight) !important;
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: var(--moonlight-dark) !important;
             color: var(--midnight) !important;
             font-weight: 600;
         }
@@ -436,6 +459,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -447,6 +483,87 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-playbook-contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What This Playbook Contains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 What This Playbook Contains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Team &amp; Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Operating Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-manual-sops" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Operating Manual - SOPs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 How to Use This Playbook
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1132,179 +1249,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    SOP Library
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            SOP Library
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="sop-library/master-sop-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Master SOP Template
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="sop-library/sop-brief-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    SOP Brief Template
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    Resources
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Resources
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="resources/How%20Flow%20uses%20Yardi/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    How Flow Uses Yardi
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1327,6 +1271,74 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-playbook-contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 What This Playbook Contains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 What This Playbook Contains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Team &amp; Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Operating Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-manual-sops" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Operating Manual - SOPs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 How to Use This Playbook
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1345,12 +1357,44 @@
 
 
 <h1 id="one-flow-operating-playbook">One Flow Operating Playbook<a class="headerlink" href="#one-flow-operating-playbook" title="Permanent link">&para;</a></h1>
-<p>Welcome. This site houses Flow’s operating philosophy, team structures, systems, and SOP library.</p>
-<ul>
-<li>Start with <strong>Introduction</strong> for mission, values, and leadership principles.</li>
-<li>Explore <strong>Operating Practices</strong> for Foundational Journey, Care, and Belong.</li>
-<li>Use the <strong>SOP Library</strong> for templates and authoring briefs.</li>
-</ul>
+<p>Welcome to Flow's comprehensive operating system — the definitive guide to delivering world-class hospitality experiences across all Flow properties.</p>
+<p>This playbook contains everything your team needs to understand Flow's philosophy, execute our operating practices, and maintain the high standards that make Flow communities exceptional places to live.</p>
+<h2 id="what-this-playbook-contains">🎯 What This Playbook Contains<a class="headerlink" href="#what-this-playbook-contains" title="Permanent link">&para;</a></h2>
+<h3 id="introduction">📋 <strong>Introduction</strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
+<p>Our foundational philosophy and principles that guide every decision and interaction.
+- <strong>Mission</strong> - Our purpose and vision for connected living
+- <strong>Brand Values</strong> - Core principles that define Flow's culture
+- <strong>Leadership Principles</strong> - How we lead and develop our teams
+- <strong>The Flow Experience</strong> - What makes us unique in hospitality</p>
+<h3 id="team-systems">🏢 <strong>Team &amp; Systems</strong><a class="headerlink" href="#team-systems" title="Permanent link">&para;</a></h3>
+<p>The organizational structure and technology that powers our operations.
+- <strong>Onsite Staffing Model</strong> - How we structure our teams for success
+- <strong>Onsite Technology Stack</strong> - Tools and systems we use daily
+- <strong>Yardi Operational Guide</strong> - Property management system expertise</p>
+<h3 id="operating-practices">🌟 <strong>Operating Practices</strong><a class="headerlink" href="#operating-practices" title="Permanent link">&para;</a></h3>
+<p>The daily practices that create exceptional neighbor experiences.
+- <strong>Foundational Neighbor Journey</strong> - The complete neighbor experience from inquiry to move-in
+- <strong>Care – Everyday Moments</strong> - How we show care in daily interactions
+- <strong>Belong – Cultivated Community</strong> - Building meaningful connections and community</p>
+<h3 id="operating-manual-sops">📚 <strong>Operating Manual - SOPs</strong><a class="headerlink" href="#operating-manual-sops" title="Permanent link">&para;</a></h3>
+<p>Detailed standard operating procedures for consistent execution.
+- <strong>Foundational Journey SOPs</strong> - Move-in and readiness procedures
+- <strong>Care SOPs</strong> - Communication and service standards
+- <strong>Community SOPs</strong> - Ambassador programs and community building</p>
+<h2 id="how-to-use-this-playbook">🚀 How to Use This Playbook<a class="headerlink" href="#how-to-use-this-playbook" title="Permanent link">&para;</a></h2>
+<p><strong>New to Flow?</strong> Start with our <strong>Introduction</strong> section to understand our mission, values, and leadership principles.</p>
+<p><strong>Looking for daily practices?</strong> Explore <strong>Operating Practices</strong> to learn how we deliver exceptional experiences.</p>
+<p><strong>Need specific procedures?</strong> Check <strong>Operating Manual - SOPs</strong> for step-by-step guidance.</p>
+<p><strong>Understanding our systems?</strong> Review <strong>Team &amp; Systems</strong> to learn about our technology and organizational structure.</p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Living Document</p>
+<p>This playbook is continuously updated to reflect our evolving best practices and operational improvements. It's your single source of truth for Flow's operating excellence.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Quick Navigation</p>
+<p>Use the sidebar to explore any section, or use the search feature to find specific information quickly.</p>
+</div>
 
 
 
