@@ -229,9 +229,16 @@
             color: var(--midnight) !important;
         }
         
-        /* Hide the sidebar title completely */
-        .md-sidebar--primary .md-nav__title {
+        /* Hide the sidebar title completely - multiple selectors for persistence */
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title,
+        [dir] .md-sidebar--primary .md-nav__title {
             display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
         }
         
         /* Make section headers collapsible */

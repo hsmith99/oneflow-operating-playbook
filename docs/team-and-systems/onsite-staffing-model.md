@@ -66,10 +66,15 @@ Manages check-ins, deliveries, access, and Level 1 Neighbor support.
 
 ## 🛠 Maintenance, Housekeeping & Security
 
-### Maintenance Team
+### Chief Engineer / Maintenance Manager
 **Reports to:** Assistant General Manager  
-**Purpose:** Maintains units, amenities, and shared spaces to Flow’s standards.  
-Responds promptly to requests, coordinates with Waves for maintenance tracking, and upholds preventive maintenance schedules.
+**Purpose:** Leads the maintenance team and ensures all unit readiness standards are met.  
+Conducts pre-maintenance inspections, creates work orders in Waves, completes maintenance work, conducts post-maintenance inspections, and updates unit readiness status. Owns technical quality and functionality of all units.
+
+### Maintenance Team
+**Reports to:** Chief Engineer / Maintenance Manager or Assistant General Manager  
+**Purpose:** Maintains units, amenities, and shared spaces to Flow's standards.  
+Responds promptly to requests, completes work orders assigned by Maintenance Manager in Waves, and upholds preventive maintenance schedules.
 
 ### Housekeeping (Contracted)
 **Reports to:** Operations Manager or Assistant General Manager  
@@ -107,7 +112,8 @@ Flow properties use a shared Slack workspace organized by function:
 | Experience | Community Engagement Lead | General Manager |
 | Front Desk | Front Desk Lead | AGM / GM |
 | Front Desk | Front Desk Agent | Front Desk Lead / Ops Manager / AGM |
-| Maintenance | Maintenance Team | Assistant General Manager |
+| Maintenance | Chief Engineer / Maintenance Manager | Assistant General Manager |
+| Maintenance | Maintenance Team | Chief Engineer / Maintenance Manager / AGM |
 | Housekeeping | Contracted Housekeeping | Ops Manager / AGM |
 | Security | Contracted Security | AGM / GM |
 

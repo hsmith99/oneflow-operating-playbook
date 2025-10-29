@@ -44,53 +44,53 @@
         /* Import Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-        /* Flow Brand Colors - Clean and Professional */
+        /* Flow Brand Colors - Minimalist and Clean */
         :root {
             --moonlight: #F3EDDF;        /* Original Moonlight */
-            --moonlight-dark: #D4C9B8;   /* Much darker shade of Moonlight for sidebar */
-            --moonlight-darker: #C5B8A3; /* Even darker for better contrast */
-            --moonlight-light: #F8F4ED;  /* Lighter shade of Moonlight */
+            --moonlight-light: #FDFCF9;  /* Very light, almost white Moonlight */
+            --moonlight-subtle: #F9F7F3; /* Subtle Moonlight for sidebar */
+            --moonlight-minimal: #FEFEFD; /* Minimal Moonlight for main content */
             --midnight: #3D3D3D;         /* Midnight for all text */
         }
 
         /* Force override of default Material theme colors */
         [data-md-color-scheme] {
             --md-primary-fg-color: var(--midnight) !important;
-            --md-primary-bg-color: var(--moonlight-dark) !important;
+            --md-primary-bg-color: var(--moonlight-subtle) !important;
             --md-default-fg-color: var(--midnight) !important;
-            --md-default-bg-color: var(--moonlight-light) !important;
+            --md-default-bg-color: var(--moonlight-minimal) !important;
         }
 
-        /* Flow brand background - full width */
+        /* Minimalist background - full width */
         body {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--moonlight-minimal) !important;
         }
 
         .md-container {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--moonlight-minimal) !important;
         }
 
-        /* Main content area - Flow style - Force override */
+        /* Main content area - Minimalist style */
         .md-main,
         .md-main[data-md-state="open"] {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--moonlight-minimal) !important;
         }
 
         .md-main__inner,
         .md-main[data-md-state="open"] .md-main__inner {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--moonlight-minimal) !important;
             max-width: none !important;
         }
 
         .md-content,
         .md-main[data-md-state="open"] .md-content {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--moonlight-minimal) !important;
         }
 
         /* Force override for all content areas */
         .md-content__inner,
         .md-typeset {
-            background-color: var(--moonlight-light) !important;
+            background-color: var(--moonlight-minimal) !important;
         }
 
         /* Ensure the main grid layout uses full width */
@@ -141,15 +141,15 @@
             font-family: 'Inter', sans-serif !important;
         }
 
-        /* Header (top nav) - Flow style */
+        /* Header (top nav) - Minimalist style */
         .md-header {
-            background-color: var(--moonlight-dark) !important;
-            border-bottom: 1px solid var(--midnight);
+            background-color: var(--moonlight-subtle) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
             width: 100% !important;
         }
 
         .md-header__inner {
-            background-color: var(--moonlight-dark) !important;
+            background-color: var(--moonlight-subtle) !important;
         }
 
         .md-header__topic,
@@ -169,35 +169,47 @@
             width: auto;
         }
 
-        /* Left sidebar - Flow style - Force override with darker Moonlight */
+        /* Left sidebar - Minimalist style with darker shade and tight spacing */
         .md-sidebar--primary,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary {
-            background-color: var(--moonlight-darker) !important;
-            border-right: 1px solid var(--midnight) !important;
+            background-color: #F5F3F0 !important; /* Slightly darker Moonlight */
+            border-right: 1px solid rgba(61, 61, 61, 0.1);
         }
         
-        .md-sidebar--primary .md-nav__title,
-        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title {
-            background-color: var(--moonlight-darker) !important;
+        /* Remove strange top spacing and tighten title */
+        .md-sidebar--primary .md-nav__title {
+            background-color: #F5F3F0 !important;
             color: var(--midnight) !important;
-            border-bottom: 1px solid var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            padding-top: 0.8rem !important;
+            padding-bottom: 0.6rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
         }
         
+        /* Tighten spacing for all navigation links */
         .md-sidebar--primary .md-nav__link,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
             color: var(--midnight) !important;
-            padding: 8px 16px;
+            padding: 4px 16px !important;
+            margin: 0 !important;
+        }
+        
+        /* Remove extra spacing from navigation items */
+        .md-sidebar--primary .md-nav__item {
+            margin: 0 !important;
+            padding: 0 !important;
         }
         
         .md-sidebar--primary .md-nav__link:hover,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
-            background-color: var(--moonlight-dark) !important;
+            background-color: rgba(61, 61, 61, 0.05) !important;
             color: var(--midnight) !important;
         }
         
         .md-sidebar--primary .md-nav__link--active,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
-            background-color: var(--moonlight-dark) !important;
+            background-color: rgba(61, 61, 61, 0.08) !important;
             color: var(--midnight) !important;
             font-weight: 600;
         }
@@ -212,10 +224,10 @@
             padding-left: 48px;
         }
 
-        /* Footer - Flow style */
+        /* Footer - Minimalist style */
         .md-footer {
-            background-color: var(--moonlight-dark) !important;
-            border-top: 1px solid var(--midnight);
+            background-color: var(--moonlight-subtle) !important;
+            border-top: 1px solid rgba(61, 61, 61, 0.1);
             color: var(--midnight) !important;
         }
 
@@ -223,36 +235,53 @@
             color: var(--midnight) !important;
         }
 
-        /* Code blocks - Flow style */
+        /* Code blocks - Minimalist style */
         .md-typeset code {
-            background-color: var(--moonlight) !important;
+            background-color: rgba(61, 61, 61, 0.05) !important;
             color: var(--midnight) !important;
         }
 
-        /* Tables - Flow clean styling */
+        /* Tables - Minimalist clean styling */
         .md-typeset table {
-            border: 1px solid var(--midnight);
+            border: 1px solid rgba(61, 61, 61, 0.1);
         }
 
         .md-typeset table th {
-            background-color: var(--moonlight-dark) !important;
+            background-color: var(--moonlight-subtle) !important;
             color: var(--midnight) !important;
-            border-bottom: 1px solid var(--midnight);
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
         }
 
         .md-typeset table td {
-            border-bottom: 1px solid var(--moonlight-dark);
+            border-bottom: 1px solid rgba(61, 61, 61, 0.05);
         }
 
-        /* Admonitions - Flow style */
+        /* Admonitions - Minimalist style */
         .md-typeset .admonition {
-            background-color: var(--moonlight-light) !important;
-            border-left: 4px solid var(--midnight) !important;
+            background-color: var(--moonlight-minimal) !important;
+            border-left: 4px solid rgba(61, 61, 61, 0.2) !important;
         }
 
         .md-typeset .admonition-title {
-            background-color: var(--moonlight-dark) !important;
+            background-color: var(--moonlight-subtle) !important;
             color: var(--midnight) !important;
+        }
+        
+        /* Hide the sidebar title completely - multiple selectors for persistence */
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title,
+        [dir] .md-sidebar--primary .md-nav__title {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Make section headers collapsible */
+        .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+            cursor: pointer !important;
         }
     </style>
 
@@ -475,6 +504,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -487,9 +526,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -619,6 +656,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -631,9 +678,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -725,6 +770,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/zendesk-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zendesk Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -740,6 +808,14 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -752,9 +828,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -863,6 +937,14 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -907,6 +989,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
     
@@ -1073,12 +1161,87 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cleaning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-final-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Final Inspection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#handoff" class="md-nav__link">
+  <a href="#typeform-structures" class="md-nav__link">
     <span class="md-ellipsis">
-      Handoff
+      Typeform Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typeform Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-maintenance-inspection-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Maintenance Inspection Typeform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cleaning-completion-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cleaning Completion Typeform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-final-unit-inspection-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Final Unit Inspection Typeform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handoff-to-move-in-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handoff to Move-In SOP
     </span>
   </a>
   
@@ -1090,81 +1253,6 @@
       Quality Standards &amp; Metrics
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#move-in-experience-agent-unit-inspection-check-typeform-draft" class="md-nav__link">
-    <span class="md-ellipsis">
-      Move-In Experience Agent Unit Inspection Check (Typeform Draft)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Move-In Experience Agent Unit Inspection Check (Typeform Draft)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unit-inspection-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unit Inspection Checklist:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Unit Inspection Checklist:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#appliances-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      Appliances &amp; Systems
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cleanliness-presentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cleanliness &amp; Presentation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safety-functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safety &amp; Functionality
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#welcome-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Welcome Preparation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inspection-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inspection Requirements:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1220,6 +1308,14 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -1229,9 +1325,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -1277,6 +1371,52 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/fair-housing-act-compliance-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fair Housing Act Compliance SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/flow-minibar-experience-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow Minibar Experience SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1293,6 +1433,10 @@
   
     
     
+      
+        
+      
+    
     
     
       
@@ -1302,9 +1446,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -1445,12 +1587,87 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cleaning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-final-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Final Inspection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#handoff" class="md-nav__link">
+  <a href="#typeform-structures" class="md-nav__link">
     <span class="md-ellipsis">
-      Handoff
+      Typeform Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typeform Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-maintenance-inspection-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Maintenance Inspection Typeform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cleaning-completion-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cleaning Completion Typeform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-final-unit-inspection-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Final Unit Inspection Typeform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handoff-to-move-in-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handoff to Move-In SOP
     </span>
   </a>
   
@@ -1462,81 +1679,6 @@
       Quality Standards &amp; Metrics
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#move-in-experience-agent-unit-inspection-check-typeform-draft" class="md-nav__link">
-    <span class="md-ellipsis">
-      Move-In Experience Agent Unit Inspection Check (Typeform Draft)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Move-In Experience Agent Unit Inspection Check (Typeform Draft)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unit-inspection-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unit Inspection Checklist:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Unit Inspection Checklist:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#appliances-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      Appliances &amp; Systems
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cleanliness-presentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cleanliness &amp; Presentation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safety-functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safety &amp; Functionality
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#welcome-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Welcome Preparation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inspection-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inspection Requirements:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1608,12 +1750,12 @@
 </table>
 <hr />
 <h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h2>
-<p>Applies to <strong>all residential units</strong> preparing for move-in across all Flow-managed properties. This SOP covers the 48-hour readiness window before Neighbor arrival, ensuring every unit meets Flow's hospitality standards for cleanliness, functionality, and presentation.</p>
+<p>Applies to <strong>all residential units</strong> preparing for move-in across all Flow-managed properties. This SOP covers the unit turn/make ready process ensuring every unit meets Flow's hospitality standards for cleanliness, functionality, and presentation.</p>
 <hr />
 <h2 id="roles-responsibilities">Roles &amp; Responsibilities<a class="headerlink" href="#roles-responsibilities" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Owner:</strong> <strong>Assistant General Manager (AGM)</strong> — accountable for end-to-end unit readiness outcome</li>
-<li><strong>Deputy:</strong> <strong>Operations Manager</strong> (where staffed) or <strong>Front Desk Lead</strong></li>
+<li><strong>Deputy:</strong> <strong>Chief Engineer / Maintenance Manager</strong></li>
 </ul>
 <table>
 <thead>
@@ -1624,133 +1766,255 @@
 </thead>
 <tbody>
 <tr>
+<td><strong>Chief Engineer / Maintenance Manager</strong></td>
+<td>Conduct pre-maintenance inspection, create work orders in Waves, complete maintenance work, conduct post-maintenance inspection, update Neighbor CRM via typeform.</td>
+</tr>
+<tr>
 <td><strong>Maintenance Team</strong></td>
-<td>Complete punch list items, test all appliances and systems, conduct final inspection, upload photos to Moved, confirm "Unit Ready" status.</td>
+<td>Complete work orders assigned by Maintenance Manager in Waves, address technical issues, ensure all systems operational.</td>
 </tr>
 <tr>
-<td><strong>Housekeeping (Contracted)</strong></td>
-<td>Deep clean unit, stage furniture and amenities, conduct final cleanliness inspection, place welcome touches if delegated.</td>
+<td><strong>Cleaning Company (Third-Party)</strong></td>
+<td>Deep clean unit per AGM instructions, complete cleaning typeform upon completion.</td>
 </tr>
 <tr>
-<td><strong>Operations Manager</strong></td>
-<td>Coordinate readiness timeline, verify completion in Moved, conduct final walkthrough, approve "Go" status.</td>
+<td><strong>Assistant General Manager (AGM)</strong></td>
+<td>Coordinate with cleaning company via Slack, conduct post-cleaning inspection via Final Unit Inspection typeform, approve "Unit Ready" status in Neighbor CRM.</td>
 </tr>
 <tr>
-<td><strong>Move-In Experience Agent</strong></td>
-<td>Review Design Your Flow data in Sigma for personalization, prepare welcome gift and card, test access credentials.</td>
-</tr>
-<tr>
-<td><strong>Front Desk Lead</strong></td>
-<td>Verify access systems, confirm elevator booking, prepare move-in day logistics.</td>
+<td><strong>Leasing Agent</strong></td>
+<td>Conduct final pre-move-in unit inspection via Final Unit Inspection typeform, verify readiness before move-in.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Escalation Ladder:</strong><br />
-Maintenance/Housekeeping → Operations Manager → AGM → GM → Regional Operations</p>
+Maintenance/Cleaning → Chief Engineer / Maintenance Manager → AGM → GM → Regional Operations</p>
+<p><strong>Weekend/After-Hours:</strong> On-duty Maintenance Manager handles readiness operations with AGM backup. All readiness issues logged in Zendesk with "Unit Readiness" tag.</p>
 <hr />
 <h2 id="systems-tools">Systems &amp; Tools<a class="headerlink" href="#systems-tools" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Yardi Voyager:</strong> Unit status and move-in scheduling</li>
-<li><strong>Moved:</strong> Readiness checklist and photo documentation</li>
-<li><strong>Waves:</strong> Maintenance work order tracking and completion</li>
-<li><strong>Carson:</strong> Access system testing and key preparation</li>
-<li><strong>Sigma:</strong> Design Your Flow survey data for personalization</li>
+<li><strong>Neighbor CRM &amp; Move-in Tracker</strong> — Source of truth for unit turn/make ready status (Google Sheets)</li>
+<li><strong>Typeform</strong> — Three inspection forms: Maintenance, Cleaning, Final Unit Inspection</li>
+<li><strong>Slack</strong> — Real-time notifications from typeform submissions to dedicated channels</li>
+<li><strong>Yardi Voyager</strong> — Unit status and move-in scheduling (status updated when unit ready)</li>
+<li><strong>Waves</strong> — Maintenance work order tracking and completion</li>
+<li><strong>Google Scripts</strong> — Automated status updates to Neighbor CRM &amp; Move-in Tracker</li>
 </ul>
 <blockquote>
-<p>🔹 <strong>Tech Note:</strong> Moved syncs nightly with Yardi Voyager. Unit cannot be marked "Ready" until all checklist items are complete and photos uploaded.</p>
+<p>🔹 <strong>Tech Note:</strong> Typeform responses automatically flow to Slack and update Neighbor CRM &amp; Move-in Tracker via Google Scripts. Unit status in Yardi is updated when unit is marked ready.<br />
+🔹 <strong>Data Flow:</strong> Typeform → Slack → Google Scripts → Neighbor CRM &amp; Move-in Tracker → Yardi</p>
 </blockquote>
 <hr />
 <h2 id="triggers">Triggers<a class="headerlink" href="#triggers" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Primary Trigger:</strong> Move-in scheduled 48 hours in advance in Yardi Voyager</li>
-<li><strong>System Chain:</strong> Yardi syncs overnight → Moved generates readiness checklist → tasks assigned to Maintenance and Housekeeping</li>
-<li><strong>Fail-Safe:</strong> If sync fails by 8 AM local, Operations Manager manually creates Moved record and alerts AGM</li>
-<li><strong>Readiness Gate:</strong> Unit cannot be released until Moved shows "Unit Ready" status and AGM approves "Go"</li>
+<li><strong>Primary Trigger:</strong> Unit needs to be prepared for move-in (either post-construction in lease-up or unit turn after previous resident)</li>
+<li><strong>System Chain:</strong> Neighbor CRM &amp; Move-in Tracker identifies unit → Work orders created in Waves → Typeform inspections completed → Status updates via Google Scripts</li>
+<li><strong>Fail-Safe:</strong> If typeform submissions fail, manual status updates can be made directly in Neighbor CRM &amp; Move-in Tracker</li>
+<li><strong>Readiness Gate:</strong> Unit cannot be marked ready until:</li>
+<li>All Waves work orders completed</li>
+<li>Post-maintenance inspection passed (Maintenance Manager)</li>
+<li>Cleaning completed and confirmed</li>
+<li>Final inspections passed (AGM &amp; Leasing Agent)</li>
 </ul>
 <hr />
 <h2 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h2>
+<p>There are three critical phases to making a unit ready: <strong>Maintenance</strong>, <strong>Cleaning</strong>, and <strong>Inspection</strong>. Inspections take place before and after each phase to ensure quality standards are met throughout the process.</p>
+<h3 id="1-maintenance"><strong>1. Maintenance</strong><a class="headerlink" href="#1-maintenance" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th style="text-align: right;"><strong>#</strong></th>
 <th><strong>Step / Action</strong></th>
+<th><strong>Responsible</strong></th>
 <th><strong>System(s)</strong></th>
 <th><strong>Operator Experience</strong></th>
-<th><strong>Neighbor Experience</strong></th>
+<th><strong>Deliverable</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: right;">1</td>
-<td>Generate readiness checklist</td>
-<td>Yardi, Moved</td>
-<td>Operations Manager receives automated checklist 48h before move-in.</td>
-<td>[ASSUMPTION: Neighbor receives confirmation email with move-in timeline]</td>
+<td><strong>Pre-Maintenance Inspection</strong></td>
+<td>Chief Engineer / Maintenance Manager</td>
+<td>Waves, Typeform</td>
+<td>Identify what needs to be fixed/set up, create work orders in Waves</td>
+<td>Waves work orders created</td>
 </tr>
 <tr>
 <td style="text-align: right;">2</td>
-<td>Complete maintenance punch list</td>
-<td>Waves, Moved</td>
-<td>Maintenance Team addresses all work orders, tests appliances, uploads completion photos.</td>
-<td>[ASSUMPTION: Neighbor receives updates on unit preparation progress]</td>
+<td><strong>Complete Maintenance Work</strong></td>
+<td>Maintenance Team</td>
+<td>Waves</td>
+<td>Address all work orders, ensure everything operational</td>
+<td>All work orders marked complete</td>
 </tr>
 <tr>
 <td style="text-align: right;">3</td>
-<td>Conduct deep clean and staging</td>
-<td>Moved</td>
-<td>Housekeeping performs deep clean, stages furniture, conducts final inspection, uploads photos.</td>
-<td>[ASSUMPTION: Neighbor feels confident unit will be spotless]</td>
+<td><strong>Post-Maintenance Inspection</strong></td>
+<td>Chief Engineer / Maintenance Manager</td>
+<td>Typeform, Neighbor CRM</td>
+<td>Inspect completed work via Maintenance Inspection typeform, create additional work orders if needed</td>
+<td>Typeform submitted → Status updated in Neighbor CRM</td>
 </tr>
+</tbody>
+</table>
+<h3 id="2-cleaning"><strong>2. Cleaning</strong><a class="headerlink" href="#2-cleaning" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>#</strong></th>
+<th><strong>Step / Action</strong></th>
+<th><strong>Responsible</strong></th>
+<th><strong>System(s)</strong></th>
+<th><strong>Operator Experience</strong></th>
+<th><strong>Deliverable</strong></th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td style="text-align: right;">4</td>
-<td>Test access systems and keys</td>
-<td>Carson, Moved</td>
-<td>Front Desk Lead tests digital keys, confirms elevator access, verifies parking assignment.</td>
-<td>[ASSUMPTION: Neighbor receives access instructions and parking details]</td>
+<td><strong>Daily Coordination with Cleaning Company</strong></td>
+<td>AGM</td>
+<td>Slack</td>
+<td>AGM messages cleaning company with units to clean tomorrow via Slack</td>
+<td>Cleaning assignments communicated</td>
 </tr>
 <tr>
 <td style="text-align: right;">5</td>
-<td>Prepare personalized welcome touches</td>
-<td>Sigma, Moved</td>
-<td>Move-In Experience Agent reviews Design Your Flow data, prepares welcome gift and personalized card.</td>
-<td>[ASSUMPTION: Neighbor discovers thoughtful welcome gift upon arrival]</td>
+<td><strong>Complete Deep Clean</strong></td>
+<td>Cleaning Company</td>
+<td>N/A</td>
+<td>Perform comprehensive deep cleaning of unit</td>
+<td>Unit cleaned to luxury standards</td>
 </tr>
 <tr>
 <td style="text-align: right;">6</td>
-<td>Conduct final readiness inspection</td>
-<td>Moved, Yardi</td>
-<td>Operations Manager performs comprehensive walkthrough, verifies all checklist items complete.</td>
-<td>[ASSUMPTION: Neighbor enters a perfectly prepared home]</td>
+<td><strong>Confirm Cleaning Completion</strong></td>
+<td>Cleaning Company</td>
+<td>Typeform</td>
+<td>Complete cleaning typeform with unit number, cleaner name, time details, and checklist</td>
+<td>Typeform submitted → Status updated in Neighbor CRM</td>
 </tr>
+</tbody>
+</table>
+<h3 id="3-final-inspection"><strong>3. Final Inspection</strong><a class="headerlink" href="#3-final-inspection" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>#</strong></th>
+<th><strong>Step / Action</strong></th>
+<th><strong>Responsible</strong></th>
+<th><strong>System(s)</strong></th>
+<th><strong>Operator Experience</strong></th>
+<th><strong>Deliverable</strong></th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td style="text-align: right;">7</td>
-<td>Approve "Unit Ready" status</td>
-<td>Moved</td>
-<td>AGM reviews all documentation, approves "Go" status for key release.</td>
-<td>[ASSUMPTION: Neighbor receives final confirmation of readiness]</td>
+<td><strong>Post-Cleaning Inspection</strong></td>
+<td>AGM</td>
+<td>Typeform, Neighbor CRM</td>
+<td>Inspect cleaned unit via Final Unit Inspection typeform</td>
+<td>Typeform submitted → Status updated in Neighbor CRM</td>
 </tr>
 <tr>
 <td style="text-align: right;">8</td>
-<td>Complete handoff to Move-In SOP</td>
-<td>Moved, Carson</td>
-<td>Operations Manager confirms readiness in Moved, notifies Front Desk of "Go" status.</td>
-<td>[ASSUMPTION: Neighbor experiences seamless transition to move-in day]</td>
+<td><strong>Final Pre-Move-In Inspection</strong></td>
+<td>Leasing Agent</td>
+<td>Typeform, Neighbor CRM</td>
+<td>Final unit inspection via Final Unit Inspection typeform before move-in day</td>
+<td>Typeform submitted → Status updated in Neighbor CRM</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><strong>Approve "Unit Ready"</strong></td>
+<td>AGM</td>
+<td>Neighbor CRM, Yardi</td>
+<td>Review all completed typeforms in Neighbor CRM, update unit status to "Ready" in Yardi</td>
+<td>Unit status: "Ready" in Yardi</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>🔹 <strong>Tech Note:</strong> All photos must be uploaded to Moved before "Unit Ready" approval.<br />
-🔹 <strong>Cross-Reference:</strong> [Insert link to Move-In SOP]<br />
-🔹 <strong>Placeholder:</strong> [Insert link to Unit Readiness Checklist]</p>
+<p>🔹 <strong>Cross-Reference:</strong> This process runs synchronously with pre-move-in steps in the <a href="../move-in-sop/">Move-In SOP</a><br />
+🔹 <strong>Readiness Definition:</strong> A unit is ready when all three phases are complete (maintenance work done, cleaning done, inspections passed)<br />
+🔹 <strong>Documentation:</strong> Every inspection must be completed via typeform, with responses automatically updating Neighbor CRM &amp; Move-in Tracker status</p>
 </blockquote>
 <hr />
-<h2 id="handoff">Handoff<a class="headerlink" href="#handoff" title="Permanent link">&para;</a></h2>
-<p><strong>Required Artifacts</strong> (completed in Moved before "Unit Ready" approval):
-1. Maintenance completion photos (all appliances, systems, fixtures)
-2. Housekeeping inspection photos (cleanliness, staging, presentation)
-3. Access system test confirmation
-4. Welcome gift placement photo
-5. Final walkthrough sign-off by Operations Manager</p>
+<h2 id="typeform-structures">Typeform Structures<a class="headerlink" href="#typeform-structures" title="Permanent link">&para;</a></h2>
+<h3 id="1-maintenance-inspection-typeform"><strong>1. Maintenance Inspection Typeform</strong><a class="headerlink" href="#1-maintenance-inspection-typeform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Pre-maintenance and post-maintenance inspections by Chief Engineer / Maintenance Manager</p>
+<p><strong>Technical Focus Items:</strong>
+- Water Meter Installed
+- CWE hardware Installed
+- Thermostat Installed
+- Wire Closet Demo/Patched
+- Closet Installed
+- Shades Installed
+- Bedroom Blackouts + Metal Chain Confirmed
+- Refrigerator - Clean, cold, ice maker working, no odors
+- Stove - Clean, all burners working, oven heats properly
+- Dishwasher - Clean, cycles complete properly, no leaks
+- Washer &amp; Dryer - Clean, no lint, functioning properly
+- Microwave - Clean, heats properly, door seals correctly
+- HVAC - Air conditioning/heating working, filters clean
+- Taps &amp; Shower - All faucets work, no leaks, hot water available
+- Lighting - All fixtures working, bulbs in every lamp</p>
+<h3 id="2-cleaning-completion-typeform"><strong>2. Cleaning Completion Typeform</strong><a class="headerlink" href="#2-cleaning-completion-typeform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Cleaning company confirms completion of deep clean</p>
+<p><strong>Fields:</strong>
+- Unit number
+- Name of cleaner
+- Date of cleaning
+- Time started
+- Time completed
+- Checklist: "Yes/No I cleaned this space" running through all normal deep cleaning items for luxury apartments
+- Are there any issues to report?</p>
+<h3 id="3-final-unit-inspection-typeform"><strong>3. Final Unit Inspection Typeform</strong><a class="headerlink" href="#3-final-unit-inspection-typeform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Final inspections by AGM and Leasing Agent</p>
+<p><strong>Questions:</strong>
+- Please confirm that you are inspecting [unit_number]
+- First name
+- Last name
+- Refrigerator - Clean, cold, ice maker working, no odors
+- Stove - Clean, all burners working, oven heats properly
+- Dishwasher - Clean, cycles complete properly, no leaks
+- Washer &amp; Dryer - Clean, no lint, functioning properly
+- Microwave - Clean, heats properly, door seals correctly
+- HVAC - Air conditioning/heating working, filters clean
+- Taps &amp; Shower - All faucets work, no leaks, hot water available
+- Lighting - All fixtures working, bulbs in every lamp
+- Are there any other issues with the Appliances &amp; Systems?
+- Floors - Clean, no stains, appropriate for flooring type
+- Walls - Clean, no scuffs or marks, touch-ups complete
+- Windows - Clean inside and out, screens intact, blinds working
+- Bathroom - Spotless, all fixtures working, no mold or mildew
+- Kitchen - Clean counters, cabinets, sink, no food residue
+- Closets - Clean, shelves wiped down, doors working properly
+- Are there any other issues with the Cleanliness &amp; Presentation of the Unit?
+- Smoke Detectors - Working, batteries fresh, no chirping
+- Locks - All doors and windows lock properly
+- Key Access - Neighbor keys are able to open and lock the door
+- Electrical Outlets - All working, no exposed wiring
+- Are there any other issues with the Safety &amp; Functionality of the Unit?
+- Is there anything else to report?
+- unit_number
+- move_in_date
+- Submitted At
+- Token</p>
+<blockquote>
+<p>🔹 <strong>Note:</strong> All three typeforms automatically post responses to Slack and update Neighbor CRM &amp; Move-in Tracker via Google Scripts</p>
+</blockquote>
+<hr />
+<h2 id="handoff-to-move-in-sop">Handoff to Move-In SOP<a class="headerlink" href="#handoff-to-move-in-sop" title="Permanent link">&para;</a></h2>
+<p><strong>Unit Ready Checklist</strong> (confirmed in Neighbor CRM &amp; favors status in Yardi):
+1. All Waves work orders completed ✓
+2. Post-maintenance inspection passed ✓
+3. Cleaning completed and confirmed ✓
+4. Final inspections passed (AGM &amp; Leasing) ✓
+5. Unit status updated to "Ready" in Yardi ✓</p>
+<p>Once all items are complete, unit status is updated in Yardi and move-in can proceed per Move-In SOP.</p>
 <hr />
 <h2 id="quality-standards-metrics">Quality Standards &amp; Metrics<a class="headerlink" href="#quality-standards-metrics" title="Permanent link">&para;</a></h2>
 <table>
@@ -1764,12 +2028,12 @@ Maintenance/Housekeeping → Operations Manager → AGM → GM → Regional Oper
 <tbody>
 <tr>
 <td><strong>Readiness</strong></td>
-<td>Units marked "Unit Ready" ≥ 24h before move-in</td>
+<td>Units marked "Ready" before move-in date</td>
 <td>100%</td>
 </tr>
 <tr>
 <td><strong>Completeness</strong></td>
-<td>All checklist items complete before approval</td>
+<td>All three dimensions complete before "Ready" status</td>
 <td>100%</td>
 </tr>
 <tr>
@@ -1779,78 +2043,33 @@ Maintenance/Housekeeping → Operations Manager → AGM → GM → Regional Oper
 </tr>
 <tr>
 <td><strong>Timeliness</strong></td>
-<td>Average readiness completion time</td>
-<td>≤ 4 hours</td>
+<td>Average time to complete all three dimensions</td>
+<td>≤ 48 hours</td>
 </tr>
 <tr>
 <td><strong>Documentation</strong></td>
-<td>All required photos uploaded to Moved</td>
+<td>All typeform inspections completed for each unit</td>
 <td>100%</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="move-in-experience-agent-unit-inspection-check-typeform-draft">Move-In Experience Agent Unit Inspection Check (Typeform Draft)<a class="headerlink" href="#move-in-experience-agent-unit-inspection-check-typeform-draft" title="Permanent link">&para;</a></h2>
-<p><strong>Purpose:</strong> Ensure Move-In Experience Agent conducts thorough unit inspection to verify readiness before Neighbor arrival.</p>
-<h3 id="unit-inspection-checklist">Unit Inspection Checklist:<a class="headerlink" href="#unit-inspection-checklist" title="Permanent link">&para;</a></h3>
-<h4 id="appliances-systems">Appliances &amp; Systems<a class="headerlink" href="#appliances-systems" title="Permanent link">&para;</a></h4>
-<ul>
-<li>[ ] <strong>Refrigerator</strong> - Clean, cold, ice maker working, no odors</li>
-<li>[ ] <strong>Stove/Oven</strong> - Clean, all burners working, oven heats properly</li>
-<li>[ ] <strong>Dishwasher</strong> - Clean, cycles complete properly, no leaks</li>
-<li>[ ] <strong>Microwave</strong> - Clean, heats properly, door seals correctly</li>
-<li>[ ] <strong>HVAC</strong> - Air conditioning/heating working, filters clean</li>
-<li>[ ] <strong>Water Systems</strong> - All faucets work, no leaks, hot water available</li>
-<li>[ ] <strong>Lighting</strong> - All fixtures working, bulbs replaced as needed</li>
-</ul>
-<h4 id="cleanliness-presentation">Cleanliness &amp; Presentation<a class="headerlink" href="#cleanliness-presentation" title="Permanent link">&para;</a></h4>
-<ul>
-<li>[ ] <strong>Floors</strong> - Clean, no stains, appropriate for flooring type</li>
-<li>[ ] <strong>Walls</strong> - Clean, no scuffs or marks, touch-ups complete</li>
-<li>[ ] <strong>Windows</strong> - Clean inside and out, screens intact, blinds working</li>
-<li>[ ] <strong>Bathroom</strong> - Spotless, all fixtures working, no mold or mildew</li>
-<li>[ ] <strong>Kitchen</strong> - Clean counters, cabinets, sink, no food residue</li>
-<li>[ ] <strong>Closets</strong> - Clean, shelves wiped down, doors working properly</li>
-</ul>
-<h4 id="safety-functionality">Safety &amp; Functionality<a class="headerlink" href="#safety-functionality" title="Permanent link">&para;</a></h4>
-<ul>
-<li>[ ] <strong>Smoke Detectors</strong> - Working, batteries fresh, no chirping</li>
-<li>[ ] <strong>Carbon Monoxide Detectors</strong> - Present and functional</li>
-<li>[ ] <strong>Locks</strong> - All doors and windows lock properly</li>
-<li>[ ] <strong>Electrical Outlets</strong> - All working, no exposed wiring</li>
-<li>[ ] <strong>Emergency Equipment</strong> - Fire extinguisher present and charged</li>
-</ul>
-<h4 id="welcome-preparation">Welcome Preparation<a class="headerlink" href="#welcome-preparation" title="Permanent link">&para;</a></h4>
-<ul>
-<li>[ ] <strong>Welcome Gift Placed</strong> - Positioned appropriately, card visible</li>
-<li>[ ] <strong>Keys/Access</strong> - Digital keys tested, physical keys ready if needed</li>
-<li>[ ] <strong>Unit Information</strong> - Welcome packet or instructions visible</li>
-<li>[ ] <strong>Final Photos</strong> - Unit state documented in Moved</li>
-</ul>
-<h3 id="inspection-requirements">Inspection Requirements:<a class="headerlink" href="#inspection-requirements" title="Permanent link">&para;</a></h3>
-<ul>
-<li>All items must be checked and verified functional</li>
-<li>Any issues must be reported to Maintenance immediately</li>
-<li>Unit cannot be marked "Ready" until all items pass inspection</li>
-<li>Photos must be uploaded to Moved for documentation</li>
-</ul>
-<hr />
 <h2 id="resources-templates">Resources &amp; Templates<a class="headerlink" href="#resources-templates" title="Permanent link">&para;</a></h2>
 <ul>
-<li>[Placeholder: Link to Unit Readiness Checklist]</li>
-<li>[Placeholder: Link to Maintenance Punch List Template]</li>
-<li>[Placeholder: Link to Housekeeping Standards Guide]</li>
-<li>[Placeholder: Link to Welcome Gift Preparation Guide]</li>
-<li>[Placeholder: Link to Access System Testing Checklist]</li>
-<li>[Placeholder: Link to Move-In Experience Agent Readiness Check (Typeform)]</li>
+<li>[Maintenance Inspection Typeform]</li>
+<li>[Cleaning Completion Typeform]</li>
+<li>[Final Unit Inspection Typeform]</li>
+<li>[Unit Readiness Checklist]</li>
+<li>[Maintenance Punch List Template]</li>
+<li>[Housekeeping Standards Guide]</li>
 </ul>
 <hr />
 <h2 id="screenshots-visuals">Screenshots &amp; Visuals<a class="headerlink" href="#screenshots-visuals" title="Permanent link">&para;</a></h2>
 <ul>
-<li>[Placeholder: Moved - Unit Readiness Checklist view]</li>
-<li>[Placeholder: Waves - Maintenance completion interface]</li>
-<li>[Placeholder: Carson - Access system testing screen]</li>
-<li>[Placeholder: Sigma - Design Your Flow data dashboard]</li>
+<li>[Placeholder: Neighbor CRM &amp; Move-in Tracker - Unit readiness status view]</li>
+<li>[Placeholder: Waves - Work order interface]</li>
+<li>[Placeholder: Typeform - Inspection forms]</li>
+<li>[Placeholder: Slack - Typeform notifications]</li>
 </ul>
 <hr />
 <h2 id="version-control">Version Control<a class="headerlink" href="#version-control" title="Permanent link">&para;</a></h2>
@@ -1868,6 +2087,18 @@ Maintenance/Housekeeping → Operations Manager → AGM → GM → Regional Oper
 <td>Flow SOP Author Agent</td>
 <td>—</td>
 <td>v1.0</td>
+<td>2025-01-27</td>
+</tr>
+<tr>
+<td>Harrison Smith</td>
+<td>—</td>
+<td>v2.0</td>
+<td>2025-01-27</td>
+</tr>
+<tr>
+<td>Flow SOP Reviewer Agent</td>
+<td>—</td>
+<td>v2.1</td>
 <td>2025-01-27</td>
 </tr>
 </tbody>
@@ -1967,7 +2198,7 @@ Maintenance/Housekeeping → Operations Manager → AGM → GM → Regional Oper
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.sections", "navigation.expand", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.sections", "navigation.indexes", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
