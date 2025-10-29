@@ -18,6 +18,7 @@ theme:
     - navigation.footer
     - navigation.sections
     - navigation.indexes
+    - navigation.tracking
     - search.highlight
     - search.share
     - content.code.copy
