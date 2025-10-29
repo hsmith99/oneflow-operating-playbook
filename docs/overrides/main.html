@@ -131,24 +131,36 @@
             width: auto;
         }
 
-        /* Left sidebar - Minimalist style with subtle contrast */
+        /* Left sidebar - Minimalist style with darker shade and tight spacing */
         .md-sidebar--primary,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary {
-            background-color: var(--moonlight-subtle) !important;
+            background-color: #F5F3F0 !important; /* Slightly darker Moonlight */
             border-right: 1px solid rgba(61, 61, 61, 0.1);
         }
         
-        .md-sidebar--primary .md-nav__title,
-        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title {
-            background-color: var(--moonlight-subtle) !important;
+        /* Remove strange top spacing and tighten title */
+        .md-sidebar--primary .md-nav__title {
+            background-color: #F5F3F0 !important;
             color: var(--midnight) !important;
             border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            padding-top: 0.8rem !important;
+            padding-bottom: 0.6rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
         }
         
+        /* Tighten spacing for all navigation links */
         .md-sidebar--primary .md-nav__link,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
             color: var(--midnight) !important;
-            padding: 8px 16px;
+            padding: 4px 16px !important;
+            margin: 0 !important;
+        }
+        
+        /* Remove extra spacing from navigation items */
+        .md-sidebar--primary .md-nav__item {
+            margin: 0 !important;
+            padding: 0 !important;
         }
         
         .md-sidebar--primary .md-nav__link:hover,
