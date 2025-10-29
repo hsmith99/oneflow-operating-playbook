@@ -252,14 +252,4 @@ The Unit Turn/Make Ready process runs **synchronously** with pre-move-in steps (
 
 ---
 
-## Version Control
-| **Author** | **Reviewer(s)** | **Version** | **Date** |
-|-------------|------------------|--------------|-----------|
-| Flow SOP Author Agent | Flow SOP Reviewer Agent | v1.0 | 2025-10-18 |
-| Flow SOP Reviewer Agent | COO, GM, Front Desk, Neighbor Personas | v1.1 | 2025-10-18 |
-| Harrison Smith | — | v1.2 | 2025-01-27 |
-| Flow SOP Reviewer Agent | — | v1.3 | 2025-01-27 |
-
----
-
 > Delivering this SOP ensures that every Neighbor’s first day at Flow feels like coming home—not moving house.

@@ -167,16 +167,16 @@
             width: auto;
         }
 
-        /* Left sidebar - Minimalist style with darker shade and tight spacing */
+        /* Left sidebar - Minimalist style matching top menu color */
         .md-sidebar--primary,
         .md-sidebar[data-md-state="open"] .md-sidebar--primary {
-            background-color: #F5F3F0 !important; /* Slightly darker Moonlight */
+            background-color: var(--moonlight-subtle) !important; /* Same as top menu */
             border-right: 1px solid rgba(61, 61, 61, 0.1);
         }
         
         /* Remove strange top spacing and tighten title */
         .md-sidebar--primary .md-nav__title {
-            background-color: #F5F3F0 !important;
+            background-color: var(--moonlight-subtle) !important;
             color: var(--midnight) !important;
             border-bottom: 1px solid rgba(61, 61, 61, 0.1);
             padding-top: 0.8rem !important;

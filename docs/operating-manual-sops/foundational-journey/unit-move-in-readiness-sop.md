@@ -216,13 +216,4 @@ Once all items are complete, unit status is updated in Yardi and move-in can pro
 
 ---
 
-## Version Control
-| **Author** | **Reviewer(s)** | **Version** | **Date** |
-|-------------|------------------|--------------|-----------|
-| Flow SOP Author Agent | — | v1.0 | 2025-01-27 |
-| Harrison Smith | — | v2.0 | 2025-01-27 |
-| Flow SOP Reviewer Agent | — | v2.1 | 2025-01-27 |
-
----
-
 > Delivering this SOP ensures that every Neighbor's first moment in their Flow home feels like coming home — not moving house.
