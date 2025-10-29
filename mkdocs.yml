@@ -17,7 +17,7 @@ theme:
   features:
     - navigation.footer
     - navigation.sections
-    - navigation.expand
+    - navigation.expand: true
     - search.highlight
     - search.share
     - content.code.copy
