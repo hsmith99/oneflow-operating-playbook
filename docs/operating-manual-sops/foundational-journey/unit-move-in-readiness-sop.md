@@ -102,11 +102,13 @@ There are three critical phases to making a unit ready: **Maintenance**, **Clean
 
 ## Typeform Structures
 
+> 🔹 **Import Instructions:** Copy the formatted checklist text blocks below and paste them into Typeform's "Import questions" feature (Create new form → Start from scratch → Import questions tab). Typeform will automatically detect question types and format them appropriately.
+
 ### **1. Maintenance Inspection Typeform**
 
 **Purpose:** Pre-maintenance and post-maintenance inspections by Chief Engineer / Maintenance Manager
 
-**Technical Focus Items:**
+**Inspection Checklist Items (for reference):**
 - Water Meter Installed
 - CWE hardware Installed
 - Thermostat Installed
@@ -123,27 +125,159 @@ There are three critical phases to making a unit ready: **Maintenance**, **Clean
 - Taps & Shower - All faucets work, no leaks, hot water available
 - Lighting - All fixtures working, bulbs in every lamp
 
+**Typeform Import Format:**
+```
+Water Meter Installed?
+Yes
+No
+
+CWE hardware Installed?
+Yes
+No
+
+Thermostat Installed?
+Yes
+No
+
+Wire Closet Demo/Patched?
+Yes
+No
+
+Closet Installed?
+Yes
+No
+
+Shades Installed?
+Yes
+No
+
+Bedroom Blackouts + Metal Chain Confirmed?
+Yes
+No
+
+Refrigerator - Clean, cold, ice maker working, no odors?
+Yes
+No
+
+Stove - Clean, all burners working, oven heats properly?
+Yes
+No
+
+Dishwasher - Clean, cycles complete properly, no leaks?
+Yes
+No
+
+Washer & Dryer - Clean, no lint, functioning properly?
+Yes
+No
+
+Microwave - Clean, heats properly, door seals correctly?
+Yes
+No
+
+HVAC - Air conditioning/heating working, filters clean?
+Yes
+No
+
+Taps & Shower - All faucets work, no leaks, hot water available?
+Yes
+No
+
+Lighting - All fixtures working, bulbs in every lamp?
+Yes
+No
+```
+
 ### **2. Cleaning Completion Typeform**
 
 **Purpose:** Cleaning company confirms completion of deep clean
 
-**Fields:**
+**Required Fields (for reference):**
 - Unit number
 - Name of cleaner
 - Date of cleaning
 - Time started
 - Time completed
-- Checklist: "Yes/No I cleaned this space" running through all normal deep cleaning items for luxury apartments
+- Checklist: "Yes/No I cleaned this space" running through all normal deep cleaning items for luxury apartments:
+  - Living room
+  - Kitchen (counters, cabinets, appliances, sink)
+  - Bedroom(s)
+  - Bathroom(s) (fixtures, mirrors, surfaces, shower/tub)
+  - Closets
+  - Windows and window sills
+  - Floors (swept, mopped, vacuumed)
+  - Baseboards
+  - Light fixtures and switches
+  - Doors and door frames
 - Are there any issues to report?
+
+**Typeform Import Format:**
+```
+Unit number?
+
+Name of cleaner?
+
+Date of cleaning?
+
+Time started?
+
+Time completed?
+
+Did you clean the Living room?
+Yes
+No
+
+Did you clean the Kitchen (counters, cabinets, appliances, sink)?
+Yes
+No
+
+Did you clean the Bedroom(s)?
+Yes
+No
+
+Did you clean the Bathroom(s) (fixtures, mirrors, surfaces, shower/tub)?
+Yes
+No
+
+Did you clean the Closets?
+Yes
+No
+
+Did you clean the Windows and window sills?
+Yes
+No
+
+Did you clean the Floors (swept, mopped, vacuumed)?
+Yes
+No
+
+Did you clean the Baseboards?
+Yes
+No
+
+Did you clean the Light fixtures and switches?
+Yes
+No
+
+Did you clean the Doors and door frames?
+Yes
+No
+
+Are there any issues to report?
+```
 
 ### **3. Final Unit Inspection Typeform**
 
 **Purpose:** Final inspections by AGM and Leasing Agent
 
-**Questions:**
+**Inspection Checklist Items (for reference):**
+
+**Inspector Information:**
 - Please confirm that you are inspecting [unit_number]
 - First name
 - Last name
+
+**Appliances & Systems:**
 - Refrigerator - Clean, cold, ice maker working, no odors
 - Stove - Clean, all burners working, oven heats properly
 - Dishwasher - Clean, cycles complete properly, no leaks
@@ -153,6 +287,8 @@ There are three critical phases to making a unit ready: **Maintenance**, **Clean
 - Taps & Shower - All faucets work, no leaks, hot water available
 - Lighting - All fixtures working, bulbs in every lamp
 - Are there any other issues with the Appliances & Systems?
+
+**Cleanliness & Presentation:**
 - Floors - Clean, no stains, appropriate for flooring type
 - Walls - Clean, no scuffs or marks, touch-ups complete
 - Windows - Clean inside and out, screens intact, blinds working
@@ -160,16 +296,113 @@ There are three critical phases to making a unit ready: **Maintenance**, **Clean
 - Kitchen - Clean counters, cabinets, sink, no food residue
 - Closets - Clean, shelves wiped down, doors working properly
 - Are there any other issues with the Cleanliness & Presentation of the Unit?
+
+**Safety & Functionality:**
 - Smoke Detectors - Working, batteries fresh, no chirping
 - Locks - All doors and windows lock properly
 - Key Access - Neighbor keys are able to open and lock the door
 - Electrical Outlets - All working, no exposed wiring
 - Are there any other issues with the Safety & Functionality of the Unit?
+
+**Additional Information:**
 - Is there anything else to report?
 - unit_number
 - move_in_date
 - Submitted At
 - Token
+
+**Typeform Import Format:**
+```
+Please confirm that you are inspecting which unit number?
+
+First name?
+
+Last name?
+
+Refrigerator - Clean, cold, ice maker working, no odors?
+Yes
+No
+
+Stove - Clean, all burners working, oven heats properly?
+Yes
+No
+
+Dishwasher - Clean, cycles complete properly, no leaks?
+Yes
+No
+
+Washer & Dryer - Clean, no lint, functioning properly?
+Yes
+No
+
+Microwave - Clean, heats properly, door seals correctly?
+Yes
+No
+
+HVAC - Air conditioning/heating working, filters clean?
+Yes
+No
+
+Taps & Shower - All faucets work, no leaks, hot water available?
+Yes
+No
+
+Lighting - All fixtures working, bulbs in every lamp?
+Yes
+No
+
+Are there any other issues with the Appliances & Systems?
+
+Floors - Clean, no stains, appropriate for flooring type?
+Yes
+No
+
+Walls - Clean, no scuffs or marks, touch-ups complete?
+Yes
+No
+
+Windows - Clean inside and out, screens intact, blinds working?
+Yes
+No
+
+Bathroom - Spotless, all fixtures working, no mold or mildew?
+Yes
+No
+
+Kitchen - Clean counters, cabinets, sink, no food residue?
+Yes
+No
+
+Closets - Clean, shelves wiped down, doors working properly?
+Yes
+No
+
+Are there any other issues with the Cleanliness & Presentation of the Unit?
+
+Smoke Detectors - Working, batteries fresh, no chirping?
+Yes
+No
+
+Locks - All doors and windows lock properly?
+Yes
+No
+
+Key Access - Neighbor keys are able to open and lock the door?
+Yes
+No
+
+Electrical Outlets - All working, no exposed wiring?
+Yes
+No
+
+Are there any other issues with the Safety & Functionality of the Unit?
+
+Is there anything else to report?
+
+Unit number?
+
+Move-in date?
+```
 
 > 🔹 **Note:** All three typeforms automatically post responses to Slack and update Neighbor CRM & Move-in Tracker via Google Scripts
 
