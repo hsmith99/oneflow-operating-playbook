@@ -228,5 +228,15 @@
             background-color: var(--moonlight-subtle) !important;
             color: var(--midnight) !important;
         }
+        
+        /* Hide the sidebar title completely */
+        .md-sidebar--primary .md-nav__title {
+            display: none !important;
+        }
+        
+        /* Make section headers collapsible */
+        .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+            cursor: pointer !important;
+        }
     </style>
 {% endblock %}
