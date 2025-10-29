@@ -7,6 +7,8 @@ last_updated: "2025-10-18"
 
 # Move-In SOP (v1.1)
 
+> 🔗 **[Quick Link: Jump to Process](#process)**
+
 ## Goals
 | **Type** | **Goal** |
 |-----------|-----------|
@@ -27,11 +29,11 @@ Excludes short-stay, hotel, and condo operations covered under the *Stay* Journe
 
 | **Role** | **Responsibilities** |
 |-----------|----------------------|
-| **Leasing Agent** | Owns all pre–move-in steps: verifying requirements, scheduling, elevator booking, and sending the Welcome Email. Co-leads the unit walkthrough and marks completion in Moved before handoff. |
+| **Leasing Agent** | Owns all pre–move-in steps: verifying requirements, scheduling, and sending the Welcome Email. Co-leads the unit walkthrough and marks completion in Moved before handoff. |
 | **Move-In Experience Agent** | Acts as Move-In Advocate: prepares unit touches (gift, card, keys), conducts check-ins at 48 hours and Week One, and ensures the Neighbor’s integration milestones are achieved within 30 days using Sigma dashboards. |
-| **Assistant General Manager (AGM)** | Runs weekly Move-In readiness meetings, resolves blockers across functions, verifies readiness in Moved/Yardi, and approves “Go” status prior to key release to Neighbors, ensuring that all requirements are met before the Neighbor moves in. |
+| **Assistant General Manager (AGM)** | Runs weekly Move-In readiness meetings (Monday), assigns Move-In Advocates for all known move-ins, leads daily move-in huddles with key stakeholders to stay on top of upcoming move-ins and address blockers, resolves blockers across functions, verifies readiness in Moved/Yardi, and approves "Go" status prior to key release to Neighbors, ensuring that all requirements are met before the Neighbor moves in. |
 | **Operations Manager / Front Desk Lead** | Manages day-of logistics, elevator operations, and issue triage through Zendesk and Slack. Acts as on-duty executive for after-hours or weekend move-ins. |
-| **Front Desk Team** | Greets and orients Neighbors, helps to make keys, supports with 48 Check-ins, confirms access, assists with parking and elevator use, logs issues in Zendesk, and updates #fx and #move-ins Slack channels. |
+| **Front Desk Team** | Greets and orients Neighbors, helps to make keys, supports with 48 Check-ins, confirms access, assists with parking and elevator use, logs issues in Zendesk, and updates #fx and #move-ins Slack channels. Verifies elevator bookings by checking Moved and Google Calendar; adds reserved elevator times to Neighbor CRM & Move-in Tracker. **When trained and assigned as Move-In Advocate:** Supports and completes move-in requirements with Neighbors upon arrival if Leasing team is unavailable. |
 | **Chief Engineer / Maintenance Manager** | Conducts pre-maintenance inspection, creates work orders in Waves, completes maintenance work, conducts post-maintenance inspection, updates Neighbor CRM. |
 | **Maintenance Team** | Completes work orders assigned by Maintenance Manager in Waves, ensures all systems operational. |
 | **Cleaning Company (Third-Party)** | Deep cleans unit per AGM instructions, completes cleaning typeform upon completion. |
@@ -49,9 +51,9 @@ Front Desk → Operations Manager/Front Desk Lead → AGM → GM → Regional Op
 **When Move-In Experience Agent is not on the team, the following structure applies:**
 
 ### **Pre-Move-In Responsibilities (Leasing Agent)**
-- **Leasing Agent** handles all steps through Day 1 (Steps 1-8)
-- **Leasing Agent** conducts unit walkthrough and key handoff
-- **Leasing Agent** completes move-in confirmation
+- **Leasing Agent** handles all steps through Day 1 (Steps 2-4, 6-9, 11)
+- **Leasing Agent** conducts unit walkthrough and key handoff (or Front Desk Team if trained and assigned as Advocate)
+- **Leasing Agent** completes move-in confirmation (or Front Desk Team if trained and assigned as Advocate, with AGM verification)
 
 ### **Move-In Advocate Assignment**
 - **Move-In Advocate** assigned from **Front Desk Team**
@@ -60,7 +62,7 @@ Front Desk → Operations Manager/Front Desk Lead → AGM → GM → Regional Op
 - **AGM** assigns Front Desk Agent as Move-In Advocate in Moved/Sigma
 
 ### **Post-Move-In Responsibilities (Move-In Advocate)**
-- **Move-In Advocate** handles all post-Day 1 activities (Steps 10-12)
+- **Move-In Advocate** handles all post-Day 1 activities (Steps 12-14)
 - **Move-In Advocate** conducts 48-hour check-in
 - **Move-In Advocate** schedules Week 1 coffee chat during 48-hour check-in
 - **Coffee chat options:**
@@ -76,11 +78,12 @@ Front Desk → Operations Manager/Front Desk Lead → AGM → GM → Regional Op
 ### **Process Adjustments**
 | **Step** | **Original Responsible** | **Alternative Responsible** |
 |----------|-------------------------|------------------------------|
-| 6 | Move-In Experience Agent | **Leasing Agent** |
-| 8 | Leasing Agent + Move-In Experience Agent | **Leasing Agent** (solo) |
-| 10 | Move-In Experience Agent | **Move-In Advocate** (Front Desk Agent) |
-| 11 | Move-In Experience Agent + Community Engagement Lead | **Move-In Advocate** + **GM/AGM/Ambassador** |
-| 12 | AGM + Move-In Experience Agent | **AGM** + **Move-In Advocate** |
+| 7 | Move-In Experience Agent | **Leasing Agent** |
+| 10 | Leasing Agent + Move-In Experience Agent | **Leasing Agent** (solo) or **Front Desk Team** (if trained and assigned as Advocate) |
+| 11 | Leasing Agent (with AGM verification) | **Leasing Agent** (with AGM verification) or **Front Desk Team** (if trained and assigned as Advocate, with AGM verification) |
+| 12 | Move-In Experience Agent | **Move-In Advocate** (Front Desk Agent) |
+| 13 | Move-In Experience Agent + Community Engagement Lead | **Move-In Advocate** + **GM/AGM/Ambassador** |
+| 14 | AGM + Move-In Experience Agent | **AGM** + **Move-In Advocate** |
 
 ---
 
@@ -110,27 +113,43 @@ Front Desk → Operations Manager/Front Desk Lead → AGM → GM → Regional Op
 ---
 
 ## Process
+
+### Weekly & Daily Meetings
+
+**Weekly Move-In Meeting (Monday):**
+- **Led by:** Assistant General Manager (AGM)
+- **Attendees:** Leasing, Front Desk Lead, Operations Manager (if staffed), Chief Engineer / Maintenance Manager
+- **Purpose:** Review all known upcoming move-ins, assign Move-In Advocates for all move-ins scheduled for the coming week, identify blockers, and ensure coordination across functions.
+
+**Daily Move-In Huddle:**
+- **Led by:** Assistant General Manager (AGM)
+- **Attendees:** Key stakeholders from all functions (Leasing, Front Desk, Operations, Maintenance)
+- **Purpose:** Review upcoming move-ins, address blockers, hold each other accountable for readiness tasks, and update Neighbor CRM & Move-in Tracker with current status.
+
+---
+
 | **#** | **Step / Action** | **Responsible Team Member** | **System(s)** | **Operator Experience** | **Neighbor Experience** |
 |---:|--------------------|----------------------------|---------------|--------------------------|--------------------------|
-| 1 | Verify pre–move-in requirements complete | **Leasing Agent** | Yardi, Moved | Leasing confirms deposits, rent, and insurance; updates status in Moved. | Receives checklist confirmation email. |
-| 2 | Send Welcome Email + Portal Access | **Leasing Agent** | Moved | Leasing triggers Welcome Email template with checklist and building info. | Receives clear timeline and portal access. |
-| 3 | Schedule Move-In Date + Elevator | **Leasing Agent** | Google Calendar, Moved | Leasing books elevator slot; posts to Slack #front-desk. | Receives confirmation with logistics and parking details. |
-| 4 | Assign Move-In Advocate | **Assistant General Manager (AGM)** | Moved, Sigma | AGM assigns Advocate; Advocate reviews Design Your Flow data in Sigma. | Receives intro message from their Advocate. |
-| 5 | Unit Turn/Make Ready Process (synchronous with steps 1-4) | **Chief Engineer / Maintenance Manager**, **AGM**, **Leasing Agent**, **Cleaning Company** | Waves, Typeform, Neighbor CRM, Slack | **Maintenance:** Pre-inspection → work orders in Waves → maintenance work → post-inspection. **Cleaning:** AGM coordinates with cleaning company via Slack → deep clean → cleaning typeform submission. **Inspection:** AGM and Leasing Agent complete final unit inspection typeforms. Status updates automatically to Neighbor CRM. | Unit ready before move-in
-| 6 | Prepare Keys + Access + Welcome Gift (24h) | **Move-In Experience Agent** | Carson, Moved | Advocate stages Welcome Gift and card, tests access credentials. | Finds personalized gift waiting in unit. |
-| 7 | Place Packages in Unit | **Leasing Agent** or **Move-In Experience Agent** | Neighbor CRM | Check for any packages received for Neighbor, place in unit before move-in. | Packages waiting in unit upon arrival. |
-| 8 | Day-of Arrival Greeting + Orientation | **Front Desk Team** | Carson, Zendesk | Front Desk greets Neighbor, confirms Moved Ready, provides access. | Feels warmly welcomed and supported. |
-| 9 | Unit Walkthrough + Key Handoff | **Leasing Agent** + **Move-In Experience Agent** | Moved, Yardi | Leasing + Advocate walkthrough; resolve issues; confirm satisfaction. | Feels confident, at home, and supported. |
-| 10 | Complete Move-In Confirmation | **Leasing Agent** (with **AGM** verification) | Moved, Yardi | Leasing marks checklist complete; AGM verifies no open items. | Receives notification of completion. |
-| 11 | 48-Hour Check-In | **Move-In Experience Agent** | RingCentral, Neighbor CRM | Advocate calls Neighbor via RingCentral phone call, logs feedback and notes in Neighbor CRM, routes issues to appropriate team. | Appreciates proactive care. |
-| 12 | Week-One Coffee + Introductions | **Move-In Experience Agent** + **Community Engagement Lead** | Sigma, Carson | Advocate schedules coffee, connects to Ambassadors and Flow Groups. | Begins building relationships. |
-| 13 | 30-Day Integration Review | **Assistant General Manager (AGM)** + **Move-In Experience Agent** | Sigma | AGM + Advocate confirm Neighbor attended event or joined group; log completion. | Feels fully integrated into community. |
+| 1 | **Weekly Move-In Meeting (Monday)** | **Assistant General Manager (AGM)** | Neighbor CRM, Moved, Sigma | AGM runs meeting, reviews all known move-ins, assigns Move-In Advocates to all move-ins scheduled for coming week, identifies blockers. | N/A - Internal coordination |
+| 2 | Verify pre–move-in requirements complete | **Leasing Agent** | Yardi, Moved | Leasing confirms deposits, rent, and insurance; updates status in Moved. | Receives checklist confirmation email. |
+| 3 | Send Welcome Email + Portal Access | **Leasing Agent** | Moved | Leasing triggers Welcome Email template with checklist and building info. | Receives clear timeline and portal access. |
+| 4 | Schedule Move-In Date + Elevator | **Neighbor** (via Moved), **Front Desk Team** (verification) | Google Calendar, Moved, Neighbor CRM | Neighbor schedules 3-hour elevator slot in Google Calendar via Moved and confirms task complete in Moved. **Front Desk Team checks Moved and calendar to ensure all move-ins have reserved elevator; adds reserved times to Neighbor CRM & Move-in Tracker.** | Schedules elevator slot via Moved; receives confirmation. |
+| 5 | Assign Move-In Advocate (for move-ins appearing during week) | **Assistant General Manager (AGM)** | Moved, Sigma | AGM assigns Advocate for move-ins that appear after Monday meeting; Advocate reviews Design Your Flow data in Sigma. | Receives intro message from their Advocate. |
+| 6 | Unit Turn/Make Ready Process (synchronous with steps 2-5) | **Chief Engineer / Maintenance Manager**, **AGM**, **Leasing Agent**, **Cleaning Company** | Waves, Typeform, Neighbor CRM, Slack | **Maintenance:** Pre-inspection → work orders in Waves → maintenance work → post-inspection. **Cleaning:** AGM coordinates with cleaning company via Slack → deep clean → cleaning typeform submission. **Inspection:** AGM and Leasing Agent complete final unit inspection typeforms. Status updates automatically to Neighbor CRM. | Unit ready before move-in
+| 7 | Prepare Keys + Access + Welcome Gift (24h) | **Move-In Experience Agent** | Carson, Moved | Advocate stages Welcome Gift and card, tests access credentials. | Finds personalized gift waiting in unit. |
+| 8 | Place Packages in Unit | **Leasing Agent** or **Move-In Experience Agent** | Neighbor CRM | Check for any packages received for Neighbor, place in unit before move-in. | Packages waiting in unit upon arrival. |
+| 9 | Day-of Arrival Greeting + Orientation | **Front Desk Team** | Carson, Zendesk | Front Desk greets Neighbor, confirms Moved Ready, provides access. | Feels warmly welcomed and supported. |
+| 10 | Unit Walkthrough + Key Handoff | **Leasing Agent** + **Move-In Experience Agent** (or **Front Desk Team** if trained and assigned as Advocate) | Moved, Yardi | Leasing + Advocate walkthrough; resolve issues; confirm satisfaction. **If Leasing unavailable and Front Desk Agent is trained Move-In Advocate:** Front Desk Agent supports and completes move-in requirements with Neighbor. | Feels confident, at home, and supported. |
+| 11 | Complete Move-In Confirmation | **Leasing Agent** (with **AGM** verification) or **Front Desk Team** (if trained and assigned as Advocate, with AGM verification) | Moved, Yardi | Leasing or Front Desk Agent marks checklist complete; AGM verifies no open items. | Receives notification of completion. |
+| 12 | 48-Hour Check-In | **Move-In Experience Agent** | RingCentral, Neighbor CRM | Advocate calls Neighbor via RingCentral phone call, logs feedback and notes in Neighbor CRM, routes issues to appropriate team. | Appreciates proactive care. |
+| 13 | Week-One Coffee + Introductions | **Move-In Experience Agent** + **Community Engagement Lead** | Sigma, Carson | Advocate schedules coffee, connects to Ambassadors and Flow Groups. | Begins building relationships. |
+| 14 | 30-Day Integration Review | **Assistant General Manager (AGM)** + **Move-In Experience Agent** | Sigma | AGM + Advocate confirm Neighbor attended event or joined group; log completion. | Feels fully integrated into community. |
 
 ---
 
 ## Unit Turn/Make Ready Process
 
-The Unit Turn/Make Ready process runs **synchronously** with pre-move-in steps (Steps 1-4) and ensures the unit is ready before the Neighbor arrives. This process has three critical phases: **Maintenance**, **Cleaning**, and **Inspection**.
+The Unit Turn/Make Ready process runs **synchronously** with pre-move-in steps (Steps 2-5) and ensures the unit is ready before the Neighbor arrives. This process has three critical phases: **Maintenance**, **Cleaning**, and **Inspection**.
 
 ### **Maintenance**
 1. **Pre-Maintenance Inspection:** Chief Engineer / Maintenance Manager inspects unit and creates work orders in Waves
@@ -162,7 +181,7 @@ The Unit Turn/Make Ready process runs **synchronously** with pre-move-in steps (
 2. Unit Ready confirmation (all typeform inspections complete - see Unit Readiness SOP)  
 3. Welcome Gift and Note placed in unit  
 4. Packages placed in unit (if received)  
-5. Elevator booking confirmation  
+5. Elevator booking confirmation (Neighbor schedules via Moved; Front Desk verifies and logs in Neighbor CRM)  
 6. Carson access provisioned  
 7. Design Your Flow summary (Sigma link)
 
@@ -178,7 +197,7 @@ The Unit Turn/Make Ready process runs **synchronously** with pre-move-in steps (
 > - All documents uploaded to Yardi lease profile
 > - Welcome Gift and Note placed in unit
 > - Packages placed (if any received)
-> - Elevator booked
+> - Elevator booked (Neighbor schedules via Moved; verified by Front Desk)
 > - Carson access provisioned
 
 ---
