@@ -183,88 +183,88 @@ Front Desk Agent → Front Desk Lead → Operations Manager → AGM → GM → R
 
 ## Appendix: Typeform Checklist Templates
 
-### AM Shift Checklist (Typeform Format)
+> ASSUMPTION: Typeform's "Import questions" supports plain text where each question is followed by hyphen-prefixed options. Blank lines separate questions. Import will create Multiple Choice questions; set each to "Multiple selection" in Typeform to behave as a checklist.
 
-**Shared Responsibilities:**
-- [ ] Move-in follow-up calls
-- [ ] Schedule "Do not enter" work orders
-- [ ] Upkeep cleanliness and organization of RX area
-- [ ] Posting notices to resident doors
-- [ ] Logging in Lost and Found into Google sheet when turned in
-- [ ] Record all incidents in Opportunity Report Log
-- [ ] Update all relevant Work Google Sheets (renewals, parking violations, etc)
+### AM Shift — Typeform Import Block
 
-**Package Room:**
-- [ ] All packages are in their proper place - no random boxes outside of designated areas
-- [ ] Upkeep cleanliness and organization of package area
-- [ ] Organize packages for facilities team
+AM — Shared Responsibilities (select all completed)
+- Move-in follow-up calls
+- Schedule "Do not enter" work orders
+- Upkeep cleanliness and organization of RX area
+- Post notices to resident doors
+- Log items in Lost and Found Google Sheet when turned in
+- Record all incidents in Opportunity Report Log
+- Update Work Google Sheets (renewals, parking violations, etc)
 
-**AM Shift Duties:**
-- [ ] Check all Slack Channels for relevant info, inform MOD if needed
-- [ ] Check and answer pending emails
-- [ ] Restock all FX desk stations (water, keys, index cards, etc)
-- [ ] Check Cloudbeds for arrivals, no shows, possible cancellations and/or in-house extensions
-  - [ ] Whistle to be monitored regularly
-- [ ] Communicate regularly to cleaning team to ensure:
-  - [ ] Arrivals are assigned for cleaning
-  - [ ] Departures are communicated
-  - [ ] Contact guests with pending departures and no updates
-  - [ ] Room move must be coordinated with cleaning team
-- [ ] Elevator Reservations:
-  - [ ] Communicate directions to movers so they are aware of the operations
-  - [ ] All move-ins/outs from Yardi are contacted to schedule elevator reservations
-  - [ ] All scheduled elevator reservations in Google Calendar are called to confirm
-  - [ ] If there are double bookings, arrange with Managers to use the Elevator
-  - [ ] Help with directing move-in/out operations
-- [ ] Overnight packages are recorded and put away
-- [ ] All vendor keys are in the lockbox
-- [ ] Lender carts are in our possession
-- [ ] Enter any relevant work orders for hotel and residential units as issues are reported
-- [ ] Clear out move out key fobs and put mailbox keys back
-- [ ] In-Unit deliveries
+AM — Package Room (select all completed)
+- All packages are in their proper place (no boxes outside designated areas)
+- Package area cleaned and organized
+- Packages organized for facilities team
 
-**Handoff:**
-- [ ] Print out all reg cards for remaining check-ins for the day
-- [ ] Pass down any important info to the PM shift, attend to any internal action items and work on any
+AM — Shift Duties (select all completed)
+- Check all Slack channels for relevant info; inform MOD if needed
+- Check and answer pending emails
+- Restock all FX desk stations (water, keys, index cards, etc)
+- Review Cloudbeds for arrivals/no-shows/cancellations/in-house extensions
+- Monitor Whistle regularly
+- Cleaning coordination: arrivals assigned for cleaning
+- Cleaning coordination: departures communicated
+- Contact guests with pending departures and no updates
+- Coordinate any room moves with cleaning team
+- Elevator reservations: give mover directions / building operations
+- Elevator reservations: contact all move-ins/outs from Yardi to schedule
+- Elevator reservations: call to confirm G‑Calendar reservations
+- Elevator reservations: resolve double bookings with Managers
+- Assist directing move-in/out operations
+- Record and put away overnight packages
+- Verify all vendor keys are in the lockbox
+- Confirm lender carts are in Flow’s possession
+- Enter work orders for hotel/residential issues as reported
+- Clear out move-out key fobs and return mailbox keys
+- Complete any in-unit deliveries
 
-### PM Shift Checklist (Typeform Format)
+AM — Handoff (select all completed)
+- Print registration cards for remaining check-ins today
+- Pass important info to PM shift; address internal action items
 
-**Shared Responsibilities:**
-- [ ] Move-in follow-up call
-- [ ] Schedule "Do not enter" work order
-- [ ] Upkeep cleanliness and organization of RX area
-- [ ] Posting notices to resident doors
-- [ ] Logging in Lost and Found into Google sheet when turned in
-- [ ] Record all incidents in Opportunity Report Log
-- [ ] Update all relevant Work Google Sheets (renewals, parking violations, etc)
+### PM Shift — Typeform Import Block
 
-**Package Room:**
-- [ ] All packages are in their proper place - no random boxes outside of designated areas
-- [ ] Upkeep cleanliness and organization of package area
-- [ ] Organized packages for facilities team
+PM — Shared Responsibilities (select all completed)
+- Move-in follow-up call
+- Schedule "Do not enter" work order
+- Upkeep cleanliness and organization of RX area
+- Post notices to resident doors
+- Log items in Lost and Found Google Sheet when turned in
+- Record all incidents in Opportunity Report Log
+- Update Work Google Sheets (renewals, parking violations, etc)
 
-**PM Shift Duties:**
-- [ ] Check all Slack Channels for relevant info, inform MOD if needed
-- [ ] Check and answer pending emails
-- [ ] Restock all FX desk stations (water, keys, index cards, etc)
-- [ ] Check Cloudbeds for pending arrivals, ensuring rooms are assigned and clean
-- [ ] Check Cloudbeds for same day reservations and pending departures
-  - [ ] Whistle to be monitored regularly
-  - [ ] PCI (pre-check in arrivals)
-- [ ] Refill paper and ink in the Co-Working space
-- [ ] Enter any relevant work orders for hotel and residential units as issues are reported
-- [ ] Print and place new signage around the building
-- [ ] All vendor keys are in the lockbox
-- [ ] Clear out move out key fobs and put mailbox keys back
-- [ ] Confirm amenity reservations
-- [ ] Walk vacant units and enter work orders for needed repairs
-- [ ] Print any reg cards for the next day check-ins
-- [ ] Attend to any internal action items and work on any outstanding issues, Zendesk tickets or whistle responses
+PM — Package Room (select all completed)
+- All packages are in their proper place (no boxes outside designated areas)
+- Package area cleaned and organized
+- Packages organized for facilities team
 
-**Handoff:**
-- [ ] Organize and clean office
-- [ ] Restock RX area and working stations
-- [ ] Pass on any pending tickets/work orders to ON team and MOD using Slack Channels
+PM — Shift Duties (select all completed)
+- Check all Slack channels for relevant info; inform MOD if needed
+- Check and answer pending emails
+- Restock all FX desk stations (water, keys, index cards, etc)
+- Review Cloudbeds for pending arrivals; ensure rooms assigned and clean
+- Review Cloudbeds for same‑day reservations and pending departures
+- Monitor Whistle regularly
+- Perform PCI (pre‑check‑in arrivals)
+- Refill paper and ink in the Co‑Working space
+- Enter work orders for hotel and residential issues as reported
+- Print and place new signage around the building
+- Verify all vendor keys are in the lockbox
+- Clear out move‑out key fobs and return mailbox keys
+- Confirm amenity reservations
+- Walk vacant units and enter work orders for needed repairs
+- Print registration cards for next‑day check‑ins
+- Complete internal action items; address outstanding Zendesk/Whistle items
+
+PM — Handoff (select all completed)
+- Organize and clean office
+- Restock RX area and working stations
+- Pass pending tickets/work orders to ON team and MOD via Slack
 
 ---
 
