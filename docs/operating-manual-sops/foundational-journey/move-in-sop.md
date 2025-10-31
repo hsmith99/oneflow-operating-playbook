@@ -101,14 +101,21 @@ Front Desk → Operations Manager/Front Desk Lead → AGM → GM → Regional Op
 **Integration Notes:**  
 - Yardi → Moved (nightly sync).  
 - Typeform → Sigma (Design Your Flow responses).  
-- Carson ↔ Flow App (access + amenity setup).
+- Carson ↔ Flow App (access + amenity setup).  
+- Yardi → Carson/Flow App: Flow App invite via Carson is **automatic** and sent once AGM hits the "move-in button" in Yardi after keys are received and all requirements are complete. No manual action needed.
 
 ---
 
 ## Triggers
 - **Primary Trigger:** Signed lease in Yardi Voyager.  
 - **System Chain:** Yardi syncs overnight → Moved checklist auto-generates → Welcome Email triggers → Neighbors added to Neighbor CRM & Move-in Tracker.
-- **Readiness Gate:** Keys cannot be released until Moved shows all requirements complete and AGM approves Key Release.
+- **Readiness Gate:** Keys **cannot** be released until ALL of the following are complete in Moved and verified:
+  - Move-in balance paid via **certified funds** (security deposit + first month's rent)
+  - Electricity set up by Neighbor
+  - Proper renters insurance verified
+  - All documents uploaded to Yardi lease profile
+  - Service elevator reservation confirmed in Google Calendar
+  - AGM approves Key Release in Moved
 
 ---
 
@@ -131,16 +138,16 @@ Front Desk → Operations Manager/Front Desk Lead → AGM → GM → Regional Op
 | **#** | **Step / Action** | **Responsible Team Member** | **System(s)** | **Operator Experience** | **Neighbor Experience** |
 |---:|--------------------|----------------------------|---------------|--------------------------|--------------------------|
 | 1 | **Weekly Move-In Meeting (Monday)** | **Assistant General Manager (AGM)** | Neighbor CRM, Moved, Sigma | AGM runs meeting, reviews all known move-ins, assigns Move-In Advocates to all move-ins scheduled for coming week, identifies blockers. | N/A - Internal coordination |
-| 2 | Verify pre–move-in requirements complete | **Leasing Agent** | Yardi, Moved | Leasing confirms deposits, rent, and insurance; updates status in Moved. | Receives checklist confirmation email. |
+| 2 | Verify pre–move-in requirements complete | **Leasing Agent** | Yardi, Moved | Leasing confirms **move-in balance paid via certified funds** (security deposit + first month's rent), **electricity set up**, and **proper renters insurance** verified. Updates status in Moved. All documents uploaded to Yardi lease profile. | Receives checklist confirmation email. |
 | 3 | Send Welcome Email + Portal Access | **Leasing Agent** | Moved | Leasing triggers Welcome Email template with checklist and building info. | Receives clear timeline and portal access. |
-| 4 | Schedule Move-In Date + Elevator | **Neighbor** (via Moved), **Front Desk Team** (verification) | Google Calendar, Moved, Neighbor CRM | Neighbor schedules 3-hour elevator slot in Google Calendar via Moved and confirms task complete in Moved. **Front Desk Team checks Moved and calendar to ensure all move-ins have reserved elevator; adds reserved times to Neighbor CRM & Move-in Tracker.** | Schedules elevator slot via Moved; receives confirmation. |
+| 4 | Schedule Move-In Date + Service Elevator | **Neighbor** (via Moved), **Front Desk Team** (verification) | Google Calendar, Moved, Neighbor CRM | Neighbor schedules **service elevator reservation** (3-hour slot) in Google Calendar via Moved and confirms task complete in Moved. **Front Desk Team checks Moved and calendar to ensure all move-ins have reserved service elevator; adds reserved times to Neighbor CRM & Move-in Tracker. This is CRITICAL - every move-in must have a service elevator reservation before keys are handed over.** | Schedules service elevator reservation via Moved; receives confirmation. |
 | 5 | Assign Move-In Advocate (for move-ins appearing during week) | **Assistant General Manager (AGM)** | Moved, Sigma | AGM assigns Advocate for move-ins that appear after Monday meeting; Advocate reviews Design Your Flow data in Sigma. | Receives intro message from their Advocate. |
 | 6 | Unit Turn/Make Ready Process (synchronous with steps 2-5) | **Chief Engineer / Maintenance Manager**, **AGM**, **Leasing Agent**, **Cleaning Company** | Waves, Typeform, Neighbor CRM, Slack | **Maintenance:** Pre-inspection → work orders in Waves → maintenance work → post-inspection. **Cleaning:** AGM coordinates with cleaning company via Slack → deep clean → cleaning typeform submission. **Inspection:** AGM and Leasing Agent complete final unit inspection typeforms. Status updates automatically to Neighbor CRM. | Unit ready before move-in
 | 7 | Prepare Keys + Access + Welcome Gift (24h) | **Move-In Experience Agent** | Carson, Moved | Advocate stages Welcome Gift and card, tests access credentials. | Finds personalized gift waiting in unit. |
 | 8 | Place Packages in Unit | **Leasing Agent** or **Move-In Experience Agent** | Neighbor CRM | Check for any packages received for Neighbor, place in unit before move-in. | Packages waiting in unit upon arrival. |
-| 9 | Day-of Arrival Greeting + Orientation | **Front Desk Team** | Carson, Zendesk | Front Desk greets Neighbor, confirms Moved Ready, provides access. | Feels warmly welcomed and supported. |
-| 10 | Unit Walkthrough + Key Handoff | **Leasing Agent** + **Move-In Experience Agent** (or **Front Desk Team** if trained and assigned as Advocate) | Moved, Yardi | Leasing + Advocate walkthrough; resolve issues; confirm satisfaction. **If Leasing unavailable and Front Desk Agent is trained Move-In Advocate:** Front Desk Agent supports and completes move-in requirements with Neighbor. | Feels confident, at home, and supported. |
-| 11 | Complete Move-In Confirmation | **Leasing Agent** (with **AGM** verification) or **Front Desk Team** (if trained and assigned as Advocate, with AGM verification) | Moved, Yardi | Leasing or Front Desk Agent marks checklist complete; AGM verifies no open items. | Receives notification of completion. |
+| 9 | Day-of Arrival Greeting + Orientation | **Front Desk Team** | Carson, Zendesk | Front Desk greets Neighbor. **CRITICAL:** Before proceeding, Front Desk verifies ALL move-in requirements complete in Moved (certified funds payment, electricity, insurance, documents, AGM approval, service elevator reservation). If any requirement incomplete, **DO NOT hand over keys** - escalate to AGM immediately. | Feels warmly welcomed and supported. |
+| 10 | Unit Walkthrough + Key Handoff | **Leasing Agent** + **Move-In Experience Agent** (or **Front Desk Team** if trained and assigned as Advocate) | Moved, Yardi | Leasing + Advocate walkthrough; resolve issues; confirm satisfaction. **CRITICAL:** Keys are ONLY handed over after ALL requirements verified (certified funds, electricity, insurance, documents, AGM approval, service elevator reservation). **If Leasing unavailable and Front Desk Agent is trained Move-In Advocate:** Front Desk Agent supports and completes move-in requirements with Neighbor. | Feels confident, at home, and supported. |
+| 11 | Complete Move-In Confirmation | **Leasing Agent** (with **AGM** verification) or **Front Desk Team** (if trained and assigned as Advocate, with AGM verification) | Moved, Yardi | Leasing or Front Desk Agent marks checklist complete only after keys are received. AGM verifies no open items, then hits "move-in button" in Yardi which triggers automatic Flow App/Carson invite to Neighbor. | Receives notification of completion and Flow App invite. |
 | 12 | 48-Hour Check-In | **Move-In Experience Agent** | RingCentral, Neighbor CRM | Advocate calls Neighbor via RingCentral phone call, logs feedback and notes in Neighbor CRM, routes issues to appropriate team. | Appreciates proactive care. |
 | 13 | Week-One Coffee + Introductions | **Move-In Experience Agent** + **Community Engagement Lead** | Sigma, Carson | Advocate schedules coffee, connects to Ambassadors and Flow Groups. | Begins building relationships. |
 | 14 | 30-Day Integration Review | **Assistant General Manager (AGM)** + **Move-In Experience Agent** | Sigma | AGM + Advocate confirm Neighbor attended event or joined group; log completion. | Feels fully integrated into community. |
@@ -177,13 +184,17 @@ The Unit Turn/Make Ready process runs **synchronously** with pre-move-in steps (
 **Document Storage:** All documents and artifacts uploaded to **lease profile in Yardi Voyager**.
 
 **Required Items Prior to Key Release:**
-1. Lease, deposit, rent, insurance proof (uploaded to Yardi)  
-2. Unit Ready confirmation (all typeform inspections complete - see Unit Readiness SOP)  
-3. Welcome Gift and Note placed in unit  
-4. Packages placed in unit (if received)  
-5. Elevator booking confirmation (Neighbor schedules via Moved; Front Desk verifies and logs in Neighbor CRM)  
-6. Carson access provisioned  
-7. Design Your Flow summary (Sigma link)
+1. **Move-in balance paid via certified funds** — Security deposit and first month's rent paid via certified funds (certified check or money order). Payment verified and uploaded to Yardi lease profile  
+2. **Electricity set up** — Neighbor has set up electricity account in their name. Confirmation uploaded to Yardi lease profile  
+3. **Proper renters insurance** — Renters insurance proof uploaded to Yardi lease profile and verified for compliance  
+4. **All documents uploaded to Yardi** — Lease, deposit, rent payment, insurance proof, and all required documents uploaded to lease profile in Yardi Voyager  
+5. **Unit Ready confirmation** — All typeform inspections complete (Maintenance, Cleaning, Final Inspection) - see Unit Readiness SOP  
+6. **Service elevator reservation** — Neighbor has reserved service elevator in Google Calendar via Moved. Front Desk verifies reservation and logs reserved times in Neighbor CRM & Move-in Tracker  
+7. **Welcome Gift and Note placed in unit** — Personalized gift and card placed in unit 24 hours before move-in  
+8. **Packages placed in unit** — Any packages received for Neighbor placed in unit before move-in (if applicable)  
+9. **AGM approval for key release** — AGM has verified all requirements complete in Moved and approved key release
+
+**Carson/Flow App Access:** Invite is **automatic** and sent once AGM hits the "move-in button" in Yardi after keys are received and all requirements are complete. No manual action needed.
 
 > 🔹 **Unit Readiness (Maintenance/Cleaning):** A unit is ready from a maintenance and cleaning perspective when:
 > - All Waves work orders completed
@@ -193,12 +204,17 @@ The Unit Turn/Make Ready process runs **synchronously** with pre-move-in steps (
 >
 > 🔹 **Move-In Readiness:** A move-in is ready for move-in day when:
 > - Unit is ready (see above)
+> - **Move-in balance paid via certified funds** (security deposit + first month's rent)
+> - **Electricity set up** by Neighbor
+> - **Proper renters insurance** verified
 > - Neighbor has completed all required tasks in Moved (approved by Leasing/Move-In Experience Leads)
 > - All documents uploaded to Yardi lease profile
 > - Welcome Gift and Note placed in unit
 > - Packages placed (if any received)
-> - Elevator booked (Neighbor schedules via Moved; verified by Front Desk)
-> - Carson access provisioned
+> - **Service elevator reserved** (Neighbor schedules via Moved; verified by Front Desk in Google Calendar)
+> - AGM has approved key release in Moved
+>
+> **Note:** Carson/Flow App invite is **automatic** and sent once AGM hits the "move-in button" in Yardi after keys are received and all requirements are complete.
 
 ---
 
@@ -249,6 +265,189 @@ The Unit Turn/Make Ready process runs **synchronously** with pre-move-in steps (
 - All "Post-Move-In Day" items completed within 30 days of move-in
 - Neighbor must receive comprehensive preparation communication
 - Team must be fully briefed on special accommodations
+
+---
+
+## Guide to Being a Move-In Advocate (Front Desk Team)
+
+**Purpose:** This guide provides Front Desk Agents with a comprehensive checklist for executing the Move-In Advocate role when assigned by AGM. Use this guide to ensure you deliver a seamless, personalized move-in experience that makes every Neighbor feel welcomed, supported, and connected to their new community.
+
+**When You're Assigned:** The AGM will assign you as Move-In Advocate during the weekly Move-In meeting (Monday) or when a move-in appears during the week. You'll be assigned in Moved/Sigma, and ideally, you'll be the Front Desk Agent working on the move-in day.
+
+**Your Role:** As Move-In Advocate, you are the Neighbor's primary point of contact for their first 30 days at Flow. You ensure they feel personally cared for, connected to the community, and supported throughout their integration journey.
+
+---
+
+### Pre Day 1 Checklist
+
+**Complete these tasks before the Neighbor's move-in day:**
+
+#### Personalization & Preparation
+- [ ] **Review "Design Your Flow" Survey Data** — Access Sigma dashboard and review the Neighbor's survey responses to understand their interests, preferences, and special requests
+- [ ] **Coordinate Welcome Gift** — Confirm with Move-In Experience Agent (if staffed) or AGM that personalized gift and card are placed in unit 24 hours before move-in. If you're placing the gift, select appropriate gift based on their interests from survey
+- [ ] **Write Personalized Welcome Card** — Craft a warm, personal welcome message referencing their interests from the survey (e.g., "Welcome! We noticed you love yoga — we have a yoga Flow Group that meets Tuesdays!"). Place card with gift in unit
+- [ ] **Review Special Requests** — Document any specific accommodations, accessibility needs, or preferences mentioned in survey or lease notes
+- [ ] **Verify Unit Readiness** — Confirm unit status shows "Ready" in Moved/Yardi. If not ready, escalate to AGM immediately
+
+#### Access & Logistics
+- [ ] **Verify Service Elevator Reservation** — **CRITICAL:** Verify Neighbor has reserved the service elevator in Google Calendar via Moved. If not booked, contact Neighbor immediately to schedule. Add reserved times to Neighbor CRM & Move-in Tracker. **Every move-in must have a service elevator reservation before keys are handed over.**
+- [ ] **Check for Packages** — Review package log and check if any packages have arrived for the Neighbor. If packages exist, coordinate with team to place them in unit before move-in
+- [ ] **Verify All Move-In Requirements Complete** — **CRITICAL:** Before any key handoff, verify ALL requirements are complete in Moved:
+  - ✅ Move-in balance paid via **certified funds** (security deposit + first month's rent)
+  - ✅ Electricity set up by Neighbor
+  - ✅ Proper renters insurance verified
+  - ✅ All documents uploaded to Yardi lease profile
+  - ✅ AGM has approved key release in Moved
+- [ ] **Note on Carson/Flow App Access** — Carson/Flow App invite is automatic and will be sent once AGM hits the "move-in button" in Yardi after keys are received and all requirements are complete. No manual action needed.
+
+#### Communication & Team Briefing
+- [ ] **Notify Neighbor of Your Role** — Send brief introduction message (via RingCentral or preferred contact method) introducing yourself as their Move-In Advocate and confirming move-in details
+- [ ] **Brief Front Desk Team** — Update #frontdesk Slack channel with move-in details, special considerations, and confirm you're handling as Advocate
+- [ ] **Schedule 48-Hour Check-In Reminder** — Set calendar reminder for 48 hours after move-in day to conduct check-in call
+- [ ] **Plan Week 1 Coffee Chat** — Begin thinking about who to connect Neighbor with (Ambassador, GM/AGM, or other community members) based on their interests
+
+#### System Preparation
+- [ ] **Access Neighbor CRM & Move-in Tracker** — Ensure you have access to Neighbor's entry in Google Sheet and can update status
+- [ ] **Review Unit Details** — Familiarize yourself with unit number, floor, building location, and any unit-specific notes
+- [ ] **Prepare Walkthrough Materials** — Have Moved checklist available, know how to access unit via Carson, and understand building amenities to point out during walkthrough
+
+---
+
+### On Day 1 Checklist
+
+**Complete these tasks during the Neighbor's move-in day:**
+
+#### Initial Greeting & Arrival
+- [ ] **Welcome Neighbor Warmly** — Greet Neighbor by name when they arrive at front desk. Express genuine excitement about their move-in
+- [ ] **Verify All Move-In Requirements Complete** — **CRITICAL:** Before proceeding, verify ALL move-in requirements are complete in Moved:
+  - ✅ Move-in balance paid via **certified funds** (security deposit + first month's rent)
+  - ✅ Electricity set up by Neighbor
+  - ✅ Proper renters insurance verified
+  - ✅ All documents uploaded to Yardi lease profile
+  - ✅ AGM has approved key release in Moved
+  - ✅ Service elevator reservation confirmed in Google Calendar
+- [ ] **DO NOT Hand Over Keys if Requirements Not Met** — If any requirement is incomplete, explain to Neighbor what's needed and escalate to AGM immediately. Keys cannot be released until ALL requirements are complete.
+- [ ] **Offer Refreshments** — Offer water, coffee, or snacks to make them feel welcome and comfortable
+
+#### Unit Walkthrough & Key Handoff
+- [ ] **Conduct Unit Walkthrough** — Walk Neighbor to their unit. Point out building amenities on the way (mailroom, package room, elevators, amenities)
+- [ ] **Complete Unit Inspection** — Walk through unit together, checking:
+  - All lights and switches working
+  - Appliances functioning (refrigerator, stove, HVAC)
+  - Windows and doors opening/closing properly
+  - Water pressure and temperature
+  - Any damage or issues noted
+- [ ] **Document Issues Immediately** — Log any issues found in Zendesk with "Move-In" tag and assign to appropriate team (Maintenance, Operations, etc.)
+- [ ] **Point Out Welcome Gift** — Direct Neighbor's attention to personalized gift and card in unit. Share why you selected it based on their interests
+- [ ] **Confirm Packages in Unit** — Verify any packages are present and point them out
+- [ ] **Verify Service Elevator Access** — Confirm movers/Neighbor know how to access and use the service elevator for their reservation window
+- [ ] **Note on Flow App Access** — Inform Neighbor that their Flow App invite (via Carson) will be sent automatically once AGM processes the move-in in Yardi after keys are received and all requirements are complete. They'll receive an email invitation.
+
+#### Information & Orientation
+- [ ] **Provide Building Orientation** — Share key information:
+  - Mailroom location and mailbox number
+  - Package room location and process
+  - Parking information and passes (if applicable)
+  - Elevator use and reservation process
+  - Amenity locations and reservation process
+  - Emergency contacts and procedures
+- [ ] **Walk Through Flow App/Carson Features** — Show Neighbor how to:
+  - Reserve amenities
+  - Request maintenance
+  - Access deliveries
+  - Connect with neighbors
+- [ ] **Share Community Information** — Mention upcoming events, Flow Groups, and New Neighbor Welcome Event. Invite them to check out community calendar
+- [ ] **Provide Contact Information** — Share your direct contact info (if appropriate) and explain when to reach you vs. front desk general line
+
+#### Move-In Completion
+- [ ] **Verify Keys Handed Over After All Requirements Met** — Confirm that keys were only handed over after ALL requirements verified (certified funds payment, electricity, insurance, documents, AGM approval)
+- [ ] **Complete Move-In Confirmation** — Mark checklist complete in Moved. Verify with AGM if required before marking complete
+- [ ] **Notify AGM to Process Move-In in Yardi** — Confirm with AGM that move-in should be processed in Yardi (hitting "move-in button") which triggers Flow App/Carson invite to Neighbor
+- [ ] **Update Neighbor CRM** — Log move-in completion in Neighbor CRM & Move-in Tracker. Note any special considerations or issues
+- [ ] **Post to Slack Channels** — Update #fx and #move-ins Slack channels with move-in completion status and any notes for team
+- [ ] **Hand Off to Moving Team** — If movers are present, provide directions and coordinate service elevator access during their reservation window. Assist with move-in logistics as needed
+- [ ] **Confirm Follow-Up Scheduled** — Remind Neighbor you'll check in with them in 48 hours. Confirm best contact method
+
+---
+
+### Post Day 1 Checklist
+
+**Complete these tasks after move-in day (within 30 days):**
+
+#### Immediate Follow-Up (48 Hours)
+- [ ] **48-Hour Check-In Call** — Call Neighbor via RingCentral (or preferred method) 48 hours after move-in. Use warm, conversational tone:
+  - How are they settling in?
+  - Are they experiencing any issues or concerns?
+  - Do they have questions about the building or community?
+  - Are they comfortable with access and systems?
+- [ ] **Log Feedback in Neighbor CRM** — Document all feedback, questions, and concerns in Neighbor CRM & Move-in Tracker
+- [ ] **Route Issues to Appropriate Team** — If Neighbor reports issues, create Zendesk tickets or escalate to Maintenance, Operations, etc. Follow up to ensure resolution
+- [ ] **Add to WhatsApp Community** — Add Neighbor to WhatsApp Community (if applicable) and send welcome message introducing them
+
+#### Week 1 Integration (Days 1-7)
+- [ ] **Schedule Week 1 Coffee Chat** — During 48-hour check-in, invite Neighbor to coffee chat. Options:
+  - Conduct personally (if comfortable)
+  - Schedule with GM or AGM
+  - Connect with appropriate Ambassador
+- [ ] **Identify Flow Group Matches** — Review Neighbor's interests from "Design Your Flow" survey and match to relevant Flow Groups. Send invitations during coffee chat
+- [ ] **Invite to New Neighbor Welcome Event** — Confirm Neighbor is invited to upcoming New Neighbor Welcome Event. Share date, time, and what to expect
+- [ ] **Follow Up on Reported Issues** — Check status of any Zendesk tickets created during move-in. Ensure all issues are resolved and follow up with Neighbor to confirm satisfaction
+
+#### Community Connection (Days 8-21)
+- [ ] **Connect with Ambassadors** — Introduce Neighbor to appropriate Ambassadors based on interests. Facilitate introduction via email, WhatsApp, or in-person
+- [ ] **Promote Community Events** — Share upcoming community events that align with Neighbor's interests. Encourage attendance
+- [ ] **Encourage Flow Group Participation** — Follow up on Flow Group invitations. Check if Neighbor has joined and attended any meetings
+- [ ] **Facilitate Neighbor Connections** — If Neighbor expresses interest, help connect them with other residents who share similar interests (with permission)
+
+#### 30-Day Integration Review (Day 30)
+- [ ] **Conduct 30-Day Integration Review** — Check in with Neighbor (via call or in-person) to assess integration progress:
+  - Have they attended the New Neighbor Welcome Event?
+  - Have they joined any Flow Groups?
+  - Have they connected with Ambassadors or other neighbors?
+  - How do they feel about their community connection?
+- [ ] **Document Integration Milestones** — Log completion status in Neighbor CRM & Move-in Tracker. Update Sigma dashboard with integration progress
+- [ ] **Confirm Event Attendance or Group Membership** — Verify Neighbor has attended event or joined group. If not, offer additional support or connections
+- [ ] **Transition to Ongoing Support** — Confirm Neighbor feels integrated and understands ongoing support channels (Front Desk, Community Engagement Lead, etc.)
+- [ ] **Update AGM on Integration Status** — Share integration completion status with AGM for their 30-Day Integration Review with Move-In Advocate
+
+#### Ongoing Support (As Needed)
+- [ ] **Monitor Integration Progress** — Continue checking in periodically if Neighbor hasn't achieved integration milestones. Offer additional support or alternative connections
+- [ ] **Respond to Questions** — Be available to answer questions about building, community, or resources as they arise
+- [ ] **Celebrate Integration Wins** — Acknowledge and celebrate when Neighbor joins groups, attends events, or makes connections. Reinforce their belonging
+
+---
+
+### Escalation & Support
+
+**When to Escalate:**
+- **Missing Move-In Requirements:** If Neighbor arrives but requirements not complete (certified funds, electricity, insurance) → **DO NOT hand over keys.** Escalate to AGM immediately for resolution
+- **No Service Elevator Reservation:** If Neighbor has not reserved service elevator → Contact Neighbor immediately to schedule. Escalate to AGM if reservation cannot be made before move-in time
+- **Unit Readiness Issues:** If unit is not marked "Ready" 24 hours before move-in → Escalate to AGM immediately
+- **Access Problems:** If Carson access doesn't work → Escalate to Operations Manager or Front Desk Lead
+- **Move-In Delays:** If Neighbor needs to delay move-in → Notify AGM and Leasing Agent
+- **Critical Maintenance Issues:** If unit has critical issues (no heat, water, etc.) → Create urgent Zendesk ticket and escalate to Maintenance Manager and AGM
+- **Neighbor Concerns:** If Neighbor expresses significant dissatisfaction → Escalate to AGM and GM immediately
+- **Integration Challenges:** If Neighbor struggling with integration after 30 days → Escalate to Community Engagement Lead and AGM
+
+**Support Resources:**
+- **AGM:** For move-in readiness, unit issues, or process questions
+- **Front Desk Lead:** For front desk procedures, access issues, or daily operations
+- **Operations Manager:** For hotel/operational questions or escalations
+- **Community Engagement Lead:** For Flow Groups, events, or community connections
+- **Zendesk:** For all issue tracking and ticketing
+
+---
+
+### Success Metrics
+
+**Your success as Move-In Advocate is measured by:**
+- **Move-In Experience:** Neighbor feels warmly welcomed and supported on Day 1
+- **48-Hour Satisfaction:** Neighbor reports positive experience in 48-hour check-in
+- **30-Day Integration:** Neighbor has attended New Neighbor Event or joined Flow Group by Day 30
+- **Issue Resolution:** All move-in issues resolved within 48 hours
+- **Community Connection:** Neighbor feels connected to community and understands how to engage
+
+**Remember:** You are the face of Flow during one of the most important moments in a Neighbor's journey. Your warmth, attention to detail, and genuine care make the difference between a good move-in and a memorable one that creates lasting community connection.
 
 ---
 
