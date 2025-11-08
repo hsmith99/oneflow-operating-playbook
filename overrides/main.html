@@ -1,0 +1,302 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Flow Brand Colors - Minimalist and Clean */
+        :root {
+            --moonlight: #F3EDDF;        /* Original Moonlight */
+            --moonlight-light: #FDFCF9;  /* Very light, almost white Moonlight */
+            --moonlight-subtle: #F9F7F3; /* Subtle Moonlight for sidebar */
+            --moonlight-minimal: #FEFEFD; /* Minimal Moonlight for main content */
+            --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-subtle) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Minimalist background - full width */
+        body {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-container {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Main content area - Minimalist style */
+        .md-main,
+        .md-main[data-md-state="open"] {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
+            background-color: var(--moonlight-minimal) !important;
+            max-width: none !important;
+        }
+
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Ensure the main grid layout uses full width */
+        .md-grid {
+            max-width: none !important;
+        }
+
+        /* Flow text colors */
+        body, .md-content, .md-typeset {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset h1, .md-typeset h2, .md-typeset h3, 
+        .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset p, .md-typeset li, .md-typeset blockquote {
+            color: var(--midnight) !important;
+        }
+
+        /* Typography - Poppins for navigation, Inter for content */
+        .md-header,
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title,
+        .md-sidebar--primary,
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar--primary .md-nav__link,
+        .md-footer {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        /* Inter for main content */
+        .md-main__inner,
+        .md-content,
+        .md-typeset,
+        .md-typeset h1,
+        .md-typeset h2,
+        .md-typeset h3,
+        .md-typeset h4,
+        .md-typeset h5,
+        .md-typeset h6,
+        .md-typeset p,
+        .md-typeset li,
+        .md-typeset table,
+        .md-typeset blockquote {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Header (top nav) - Minimalist style */
+        .md-header {
+            background-color: var(--moonlight-subtle) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            width: 100% !important;
+        }
+
+        .md-header__inner {
+            background-color: var(--moonlight-subtle) !important;
+        }
+
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title {
+            color: var(--midnight) !important;
+        }
+
+        /* Logo styling */
+        .md-header__button.md-logo {
+            padding: 0.2rem 0.4rem;
+        }
+
+        .md-header__button.md-logo img,
+        .md-header__button.md-logo svg {
+            height: 2rem;
+            width: auto;
+        }
+
+        /* Left sidebar - Minimalist style matching top menu color */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-subtle) !important; /* Same as top menu */
+            border-right: 1px solid rgba(61, 61, 61, 0.1);
+        }
+        
+        /* Remove strange top spacing and tighten title */
+        .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            padding-top: 0.8rem !important;
+            padding-bottom: 0.6rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Tighten spacing for all navigation links */
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
+            color: var(--midnight) !important;
+            padding: 4px 16px !important;
+            margin: 0 !important;
+        }
+        
+        /* Remove extra spacing from navigation items */
+        .md-sidebar--primary .md-nav__item {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: rgba(61, 61, 61, 0.08) !important;
+            color: var(--midnight) !important;
+            font-weight: 600;
+        }
+
+        /* Nested navigation items - Flow style */
+        .md-sidebar--primary .md-nav__item .md-nav__link {
+            padding-left: 32px;
+            color: var(--midnight) !important;
+        }
+
+        .md-sidebar--primary .md-nav__item .md-nav__item .md-nav__link {
+            padding-left: 48px;
+        }
+
+        /* Footer - Minimalist style */
+        .md-footer {
+            background-color: var(--moonlight-subtle) !important;
+            border-top: 1px solid rgba(61, 61, 61, 0.1);
+            color: var(--midnight) !important;
+        }
+
+        .md-footer-nav__link {
+            color: var(--midnight) !important;
+        }
+
+        /* Code blocks - Minimalist style */
+        .md-typeset code {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+
+        /* Tables - Minimalist clean styling */
+        .md-typeset table {
+            border: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table th {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table td {
+            border-bottom: 1px solid rgba(61, 61, 61, 0.05);
+        }
+
+        /* Admonitions - Minimalist style */
+        .md-typeset .admonition {
+            background-color: var(--moonlight-minimal) !important;
+            border-left: 4px solid rgba(61, 61, 61, 0.2) !important;
+        }
+
+        .md-typeset .admonition-title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+        }
+        
+        /* Hide the sidebar title completely - multiple selectors for persistence */
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title,
+        [dir] .md-sidebar--primary .md-nav__title {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Make section headers collapsible */
+        .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+            cursor: pointer !important;
+        }
+
+        /* SOP Agent Button Styling */
+        .sop-agent-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 1rem;
+            margin-right: 0.5rem;
+            background-color: var(--midnight) !important;
+            color: var(--moonlight-minimal) !important;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .sop-agent-button:hover {
+            background-color: rgba(61, 61, 61, 0.9) !important;
+            color: var(--moonlight-minimal) !important;
+        }
+    </style>
+{% endblock %}
+
+{% block header %}
+    {{ super() }}
+    <script>
+        // Add SOP Agent button to header after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerInner = document.querySelector('.md-header__inner');
+            if (headerInner) {
+                const sopButton = document.createElement('a');
+                sopButton.className = 'sop-agent-button';
+                sopButton.textContent = 'SOP Agent';
+                sopButton.href = '#';
+                sopButton.onclick = function(e) {
+                    e.preventDefault();
+                    // Fake button - no action
+                    return false;
+                };
+                
+                // Insert button in the header navigation area (right side)
+                const headerNav = headerInner.querySelector('.md-header__nav');
+                if (headerNav) {
+                    headerNav.insertBefore(sopButton, headerNav.firstChild);
+                } else {
+                    // Fallback: append to header inner
+                    headerInner.appendChild(sopButton);
+                }
+            }
+        });
+    </script>
+{% endblock %}

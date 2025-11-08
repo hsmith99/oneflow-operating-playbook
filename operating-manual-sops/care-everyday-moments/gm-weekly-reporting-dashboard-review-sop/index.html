@@ -1,0 +1,2418 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The comprehensive operating system for Flow's hospitality excellence. Mission, values, SOPs, and best practices for world-class neighbor experiences.">
+      
+      
+        <meta name="author" content="Flow">
+      
+      
+        <link rel="canonical" href="https://hsmith99.github.io/oneflow-operating-playbook/operating-manual-sops/care-everyday-moments/gm-weekly-reporting-dashboard-review-sop/">
+      
+      
+        <link rel="prev" href="../front-desk-shifts-sop/">
+      
+      
+        <link rel="next" href="../neighbor-communication-sop/">
+      
+      
+      <link rel="icon" href="../../../images/flow-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>GM Weekly Reporting Dashboard Review SOP - One Flow Operating Playbook</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Flow Brand Colors - Minimalist and Clean */
+        :root {
+            --moonlight: #F3EDDF;        /* Original Moonlight */
+            --moonlight-light: #FDFCF9;  /* Very light, almost white Moonlight */
+            --moonlight-subtle: #F9F7F3; /* Subtle Moonlight for sidebar */
+            --moonlight-minimal: #FEFEFD; /* Minimal Moonlight for main content */
+            --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-subtle) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Minimalist background - full width */
+        body {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-container {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Main content area - Minimalist style */
+        .md-main,
+        .md-main[data-md-state="open"] {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
+            background-color: var(--moonlight-minimal) !important;
+            max-width: none !important;
+        }
+
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Ensure the main grid layout uses full width */
+        .md-grid {
+            max-width: none !important;
+        }
+
+        /* Flow text colors */
+        body, .md-content, .md-typeset {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset h1, .md-typeset h2, .md-typeset h3, 
+        .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset p, .md-typeset li, .md-typeset blockquote {
+            color: var(--midnight) !important;
+        }
+
+        /* Typography - Poppins for navigation, Inter for content */
+        .md-header,
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title,
+        .md-sidebar--primary,
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar--primary .md-nav__link,
+        .md-footer {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        /* Inter for main content */
+        .md-main__inner,
+        .md-content,
+        .md-typeset,
+        .md-typeset h1,
+        .md-typeset h2,
+        .md-typeset h3,
+        .md-typeset h4,
+        .md-typeset h5,
+        .md-typeset h6,
+        .md-typeset p,
+        .md-typeset li,
+        .md-typeset table,
+        .md-typeset blockquote {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Header (top nav) - Minimalist style */
+        .md-header {
+            background-color: var(--moonlight-subtle) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            width: 100% !important;
+        }
+
+        .md-header__inner {
+            background-color: var(--moonlight-subtle) !important;
+        }
+
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title {
+            color: var(--midnight) !important;
+        }
+
+        /* Logo styling */
+        .md-header__button.md-logo {
+            padding: 0.2rem 0.4rem;
+        }
+
+        .md-header__button.md-logo img,
+        .md-header__button.md-logo svg {
+            height: 2rem;
+            width: auto;
+        }
+
+        /* Left sidebar - Minimalist style matching top menu color */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-subtle) !important; /* Same as top menu */
+            border-right: 1px solid rgba(61, 61, 61, 0.1);
+        }
+        
+        /* Remove strange top spacing and tighten title */
+        .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            padding-top: 0.8rem !important;
+            padding-bottom: 0.6rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Tighten spacing for all navigation links */
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
+            color: var(--midnight) !important;
+            padding: 4px 16px !important;
+            margin: 0 !important;
+        }
+        
+        /* Remove extra spacing from navigation items */
+        .md-sidebar--primary .md-nav__item {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: rgba(61, 61, 61, 0.08) !important;
+            color: var(--midnight) !important;
+            font-weight: 600;
+        }
+
+        /* Nested navigation items - Flow style */
+        .md-sidebar--primary .md-nav__item .md-nav__link {
+            padding-left: 32px;
+            color: var(--midnight) !important;
+        }
+
+        .md-sidebar--primary .md-nav__item .md-nav__item .md-nav__link {
+            padding-left: 48px;
+        }
+
+        /* Footer - Minimalist style */
+        .md-footer {
+            background-color: var(--moonlight-subtle) !important;
+            border-top: 1px solid rgba(61, 61, 61, 0.1);
+            color: var(--midnight) !important;
+        }
+
+        .md-footer-nav__link {
+            color: var(--midnight) !important;
+        }
+
+        /* Code blocks - Minimalist style */
+        .md-typeset code {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+
+        /* Tables - Minimalist clean styling */
+        .md-typeset table {
+            border: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table th {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table td {
+            border-bottom: 1px solid rgba(61, 61, 61, 0.05);
+        }
+
+        /* Admonitions - Minimalist style */
+        .md-typeset .admonition {
+            background-color: var(--moonlight-minimal) !important;
+            border-left: 4px solid rgba(61, 61, 61, 0.2) !important;
+        }
+
+        .md-typeset .admonition-title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+        }
+        
+        /* Hide the sidebar title completely - multiple selectors for persistence */
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title,
+        [dir] .md-sidebar--primary .md-nav__title {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Make section headers collapsible */
+        .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+            cursor: pointer !important;
+        }
+
+        /* SOP Agent Button Styling */
+        .sop-agent-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 1rem;
+            margin-right: 0.5rem;
+            background-color: var(--midnight) !important;
+            color: var(--moonlight-minimal) !important;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .sop-agent-button:hover {
+            background-color: rgba(61, 61, 61, 0.9) !important;
+            color: var(--moonlight-minimal) !important;
+        }
+    </style>
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gm-weekly-reporting-dashboard-review-sop-v10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="One Flow Operating Playbook" class="md-header__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            One Flow Operating Playbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GM Weekly Reporting Dashboard Review SOP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <script>
+        // Add SOP Agent button to header after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerInner = document.querySelector('.md-header__inner');
+            if (headerInner) {
+                const sopButton = document.createElement('a');
+                sopButton.className = 'sop-agent-button';
+                sopButton.textContent = 'SOP Agent';
+                sopButton.href = '#';
+                sopButton.onclick = function(e) {
+                    e.preventDefault();
+                    // Fake button - no action
+                    return false;
+                };
+                
+                // Insert button in the header navigation area (right side)
+                const headerNav = headerInner.querySelector('.md-header__nav');
+                if (headerNav) {
+                    headerNav.insertBefore(sopButton, headerNav.firstChild);
+                } else {
+                    // Fallback: append to header inner
+                    headerInner.appendChild(sopButton);
+                }
+            }
+        });
+    </script>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="One Flow Operating Playbook" class="md-nav__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    One Flow Operating Playbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/mission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mission
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/brand-values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brand Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/leadership-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Leadership Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/the-flow-experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Flow Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Team & Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Team & Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/onsite-staffing-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Staffing Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/onsite-technology-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Technology Stack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/yardi-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Yardi Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/zendesk-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zendesk Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Practices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating-practices/foundational-neighbor-journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundational Neighbor Journey
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating-practices/care-everyday-moments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating-practices/belong-cultivated-community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Manual - SOPs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Manual - SOPs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundational Journey
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Foundational Journey
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundational-journey/move-in-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move-in SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundational-journey/unit-move-in-readiness-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unit Move-in Readiness SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Care – Everyday Moments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-desk-shifts-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Front Desk Shifts SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    GM Weekly Reporting Dashboard Review SOP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    GM Weekly Reporting Dashboard Review SOP
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems &amp; Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weekly-dashboard-review-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weekly Dashboard Review Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-review-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard Review Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard Review Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-property-health-scorecard" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Property Health Scorecard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-financial-performance-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Financial Performance Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-leasing-metrics-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Leasing Metrics Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-operational-performance-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Operational Performance Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-community-engagement-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Community Engagement Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weekly-review-notes-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weekly Review Notes Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handoff-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handoff Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-standards-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Standards &amp; Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources &amp; Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../neighbor-communication-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbor Communication SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fair-housing-act-compliance-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fair Housing Act Compliance SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flow-minibar-experience-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow Minibar Experience SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Belong – Cultivated Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../belong-cultivated-community/ambassador-program-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ambassador Program SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems &amp; Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weekly-dashboard-review-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weekly Dashboard Review Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-review-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard Review Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard Review Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-property-health-scorecard" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Property Health Scorecard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-financial-performance-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Financial Performance Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-leasing-metrics-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Leasing Metrics Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-operational-performance-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Operational Performance Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-community-engagement-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Community Engagement Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weekly-review-notes-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weekly Review Notes Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handoff-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handoff Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-standards-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Standards &amp; Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources &amp; Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="gm-weekly-reporting-dashboard-review-sop-v10">GM Weekly Reporting Dashboard Review SOP (v1.0)<a class="headerlink" href="#gm-weekly-reporting-dashboard-review-sop-v10" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>🔗 <strong><a href="#process">Quick Link: Jump to Process</a></strong></p>
+</blockquote>
+<h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Type</strong></th>
+<th><strong>Goal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operational</strong></td>
+<td>Establish systematic weekly review of Sigma dashboards to monitor property health, financial performance, operational metrics, and community engagement. Enable data-driven decision-making, early issue identification, and proactive course correction across all aspects of property operations.</td>
+</tr>
+<tr>
+<td><strong>Experiential</strong></td>
+<td>Ensure property leadership maintains clear visibility into Neighbor satisfaction, community engagement trends, and service quality metrics that directly impact the Flow Experience. Translate dashboard insights into actionable improvements that enhance care, belonging, and operational excellence.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h2>
+<p>Applies to <strong>General Managers (GMs)</strong> at all Flow properties conducting weekly dashboard reviews in <strong>Sigma</strong>.</p>
+<p><strong>Frequency:</strong> Weekly review session scheduled every <strong>Monday morning</strong> (or first business day of the week).</p>
+<p><strong>Time Allocation:</strong> 45-60 minutes for comprehensive dashboard review and action planning.</p>
+<p><strong>Excludes:</strong> Daily operational checks (covered in daily workflows), ad-hoc reporting requests, and real-time monitoring dashboards accessed throughout the week.</p>
+<hr />
+<h2 id="roles-responsibilities">Roles &amp; Responsibilities<a class="headerlink" href="#roles-responsibilities" title="Permanent link">&para;</a></h2>
+<p><strong>Process Owner:</strong> <strong>General Manager</strong> — accountable for weekly review execution, action planning, and follow-up.<br />
+<strong>Deputy:</strong> <strong>Assistant General Manager</strong> (executes review if GM unavailable on Monday)</p>
+<table>
+<thead>
+<tr>
+<th><strong>Role</strong></th>
+<th><strong>Responsibilities</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>General Manager</strong></td>
+<td>Conducts comprehensive weekly Sigma dashboard review on Monday morning (or first business day), identifies trends and outliers, documents insights, creates action plans, communicates findings to leadership team, and tracks action item completion.</td>
+</tr>
+<tr>
+<td><strong>Assistant General Manager</strong></td>
+<td>Acts as deputy for review execution if GM unavailable on Monday. Provides operational context and data verification during review sessions, executes action items assigned during review, and supports GM with on-the-ground validation of dashboard metrics.</td>
+</tr>
+<tr>
+<td><strong>Operations Manager</strong></td>
+<td>Provides hotel/residential operations context, validates front desk and guest experience metrics, and implements operational improvements identified during review.</td>
+</tr>
+<tr>
+<td><strong>Regional Director of Operations</strong></td>
+<td>Reviews GM dashboard review notes and action plans, provides strategic guidance, and ensures property-level insights inform regional strategy.</td>
+</tr>
+<tr>
+<td><strong>Data &amp; Analytics Team</strong></td>
+<td>Maintains dashboard accuracy, updates metrics definitions, responds to GM questions about data interpretation, and creates new dashboards based on property needs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Escalation Ladder:</strong><br />
+GM → Regional Director of Operations → Head of Data &amp; Analytics (for data questions)<br />
+<strong>Action Item Escalation:</strong> Assigned Owner → GM → Regional Director (if deadline missed)<br />
+<strong>Metric Threshold Escalation:</strong> GM identifies threshold breach → Immediate notification to Regional Director → Strategic response plan</p>
+<hr />
+<h2 id="systems-tools">Systems &amp; Tools<a class="headerlink" href="#systems-tools" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>System</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sigma</strong></td>
+<td>Primary analytics platform providing real-time dashboards on property health, financial performance, leasing metrics, operations, and community engagement. Frontend UI for Snowflake data warehouse.</td>
+</tr>
+<tr>
+<td><strong>Snowflake</strong></td>
+<td>Data warehouse containing cleaned, transformed, and aggregated data from Yardi Voyager, Moved, Zendesk, Carson, and other Flow systems.</td>
+</tr>
+<tr>
+<td><strong>Yardi Voyager</strong></td>
+<td>Source system for residential financials, lease data, unit status, and AR/collections metrics displayed in Sigma.</td>
+</tr>
+<tr>
+<td><strong>Moved</strong></td>
+<td>Source system for move-in readiness, completion rates, and Neighbor onboarding metrics.</td>
+</tr>
+<tr>
+<td><strong>Zendesk</strong></td>
+<td>Source system for support ticket volume, response times, resolution rates, and satisfaction scores.</td>
+</tr>
+<tr>
+<td><strong>Carson/Flow App</strong></td>
+<td>Source system for amenity usage, delivery metrics, and engagement activity.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Integration Notes:</strong><br />
+- Sigma dashboards pull data from Snowflake (updated nightly via data pipelines)<br />
+- Yardi → Snowflake → Sigma decisions are updated within 24 hours<br />
+- Real-time metrics (occupancy, Zendesk tickets) refresh more frequently<br />
+- Historical trends and aggregations may take up to 48 hours to reflect in dashboards  </p>
+<p><strong>Fail-Safes:</strong><br />
+- <strong>Sigma Unavailable:</strong> GM accesses Yardi Voyager reports directly and documents review in weekly notes template. Escalate to Data &amp; Analytics team for system status.<br />
+- <strong>Snowflake Data Delay:</strong> GM verifies data freshness timestamp. If &gt; 48 hours old, proceed with available data and note limitations in review notes.<br />
+- <strong>Dashboard Missing/Inaccessible:</strong> Document missing dashboard in review notes, contact Data &amp; Analytics team for immediate restoration, and use backup reports from source systems.</p>
+<hr />
+<h2 id="triggers">Triggers<a class="headerlink" href="#triggers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Primary Trigger:</strong> Start of business week (Monday morning or first business day)  </li>
+<li><strong>System Chain:</strong> Weekly calendar reminder → Access Sigma workspace → Navigate to Property Dashboard Collection → Begin systematic review  </li>
+<li><strong>Readiness Gate:</strong> All required dashboards must be accessible and data must be current (within 48 hours). If gate fails, proceed with available data and document limitations.  </li>
+<li><strong>Deputy Trigger:</strong> If GM is unavailable on Monday, AGM automatically executes review by end of first business day  </li>
+<li><strong>Fail-Safe:</strong> If Sigma is unavailable, GM accesses Yardi Voyager reports directly and documents review in weekly notes template</li>
+</ul>
+<hr />
+<h2 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h2>
+<h3 id="weekly-dashboard-review-process"><strong>Weekly Dashboard Review Process</strong><a class="headerlink" href="#weekly-dashboard-review-process" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>#</strong></th>
+<th><strong>Step / Action</strong></th>
+<th><strong>Responsible Team Member</strong></th>
+<th><strong>System(s)</strong></th>
+<th><strong>Operator Experience</strong></th>
+<th><strong>Neighbor Impact</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><strong>Access Sigma Workspace</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Sigma</td>
+<td>Log into Sigma, navigate to Property Dashboard Collection, verify all dashboards are accessible and data is current (within 48 hours).</td>
+<td>Dashboard insights drive property-level improvements that enhance overall experience</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><strong>Review Property Health Scorecard</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Sigma (Property Health Scorecard)</td>
+<td>Review Property Health Scorecard for overall property performance across financial, operational, and experiential metrics. Note any red flags or declining trends.</td>
+<td>Early identification of issues prevents service degradation</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><strong>Review Financial Performance</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Sigma (Financial Dashboard, Yardi integration)</td>
+<td>Review revenue, occupancy, rent growth, concession burn-off, delinquency rates, and AR aging. Compare current period to budget and identify variances.</td>
+<td>Financial health enables investment in amenities, services, and community programs</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td><strong>Review Leasing Metrics</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Sigma (Leasing Dashboard, BoxScore data)</td>
+<td>Analyze conversion rates, lead volume, tour-to-lease metrics, move-in pipeline, and renewal rates. Identify blockers or opportunities.</td>
+<td>Strong leasing metrics indicate healthy community demand and retention</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><strong>Review Operational Performance</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Sigma (Operations Dashboard, Zendesk integration)</td>
+<td>Review work order completion rates, maintenance response times, front desk shift completion, move-in readiness scores, and unit turn times.</td>
+<td>Operational excellence ensures Neighbors experience reliable, responsive service</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td><strong>Review Community Engagement</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Sigma (Community Dashboard, Carson/Flow App data)</td>
+<td>Analyze amenity usage, Flow Group participation, event attendance, move-in integration milestones, and community satisfaction trends.</td>
+<td>High engagement metrics indicate strong belonging and community connection</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td><strong>Document Insights &amp; Anomalies</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Sigma, Google Docs/Sheets</td>
+<td>Record key findings, trends, outliers, and questions in weekly review notes template. Flag items requiring investigation or action.</td>
+<td>Systematic documentation ensures no insights are lost and facilitates follow-up</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td><strong>Create Action Plan</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Google Docs/Sheets, Slack</td>
+<td>Prioritize action items based on impact and urgency, assign owners, set deadlines, and document in weekly action plan template.</td>
+<td>Action plans translate insights into concrete improvements</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><strong>Communicate Findings</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Slack, Weekly Team Meeting</td>
+<td>Share dashboard summary with leadership team via Slack, discuss key findings in weekly leadership meeting, and assign action items to appropriate team members.</td>
+<td>Transparent communication ensures team alignment and accountability</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td><strong>Schedule Follow-Up Reviews</strong></td>
+<td><strong>General Manager</strong></td>
+<td>Google Calendar, Sigma</td>
+<td>Schedule follow-up reviews for action items, set calendar reminders for critical metric monitoring, and book time for deeper dives into specific dashboards as needed.</td>
+<td>Regular follow-up ensures action items are completed and improvements are implemented</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔹 <strong>Tech Note:</strong> Sigma dashboards refresh automatically based on data pipeline schedules. GM should verify data freshness timestamp on each dashboard before review.<br />
+🔹 <strong>Cross-Reference:</strong> <a href="../../foundational-journey/move-in-sop/">Move-In SOP</a> for move-in metrics interpretation<br />
+🔹 <strong>Placeholder:</strong> [Insert link to Property Dashboard Collection in Sigma]<br />
+🔹 <strong>Placeholder:</strong> [Insert link to Weekly Review Notes Template]</p>
+</blockquote>
+<hr />
+<h2 id="dashboard-review-framework">Dashboard Review Framework<a class="headerlink" href="#dashboard-review-framework" title="Permanent link">&para;</a></h2>
+<h3 id="1-property-health-scorecard"><strong>1. Property Health Scorecard</strong><a class="headerlink" href="#1-property-health-scorecard" title="Permanent link">&para;</a></h3>
+<p><strong>Review Focus:</strong> Overall property health composite score, trend direction, and component breakdown.</p>
+<p><strong>Key Metrics:</strong>
+- Property Health Score (composite)
+- Financial Health Index
+- Operational Health Index
+- Community Engagement Index
+- Trend indicators (improving/declining/stable)</p>
+<p><strong>Action Triggers:</strong>
+- <strong>Health score decline &gt; 5 points week-over-week:</strong> Document in review notes, create immediate action plan, notify Regional Director within 24 hours<br />
+- <strong>Any component index below threshold:</strong> Assign owner to investigate root cause, create action item with 7-day deadline, escalate to Regional Director if systemic issue<br />
+- <strong>Three consecutive weeks of declining trend:</strong> Schedule deep-dive review with Data &amp; Analytics team, develop intervention plan, escalate to Regional Director for strategic response</p>
+<h3 id="2-financial-performance-dashboard"><strong>2. Financial Performance Dashboard</strong><a class="headerlink" href="#2-financial-performance-dashboard" title="Permanent link">&para;</a></h3>
+<p><strong>Review Focus:</strong> Revenue, occupancy, rent growth, and financial stability.</p>
+<p><strong>Key Metrics:</strong>
+- Occupancy Rate (current and trailing 12-month)
+- Revenue vs. Budget variance
+- Rent Growth (market rent, effective rent, rent per square foot)
+- Concession burn-off rate
+- Delinquency rate and AR aging
+- Bad debt expense trends</p>
+<p><strong>Action Triggers:</strong>
+- <strong>Occupancy decline &gt; 2% week-over-week:</strong> Create action item for Leasing Manager, review marketing campaigns, notify Regional Director if decline persists two weeks<br />
+- <strong>Revenue variance &gt; 5% from budget:</strong> Assign AGM to investigate components (rent, concessions, ancillary), create action plan with financial recovery timeline, escalate to Regional Director if variance &gt; 10%<br />
+- <strong>Delinquency rate &gt; 3% or trending upward:</strong> Assign AGM to review AR aging detail, create collection action plan, escalate to Regional Director if rate &gt; 5%<br />
+- <strong>AR aging &gt; 30 days for &gt; 5% of residents:</strong> Assign AGM to review individual accounts, execute collection protocols, escalate accounts &gt; 60 days to Regional Director</p>
+<h3 id="3-leasing-metrics-dashboard"><strong>3. Leasing Metrics Dashboard</strong><a class="headerlink" href="#3-leasing-metrics-dashboard" title="Permanent link">&para;</a></h3>
+<p><strong>Review Focus:</strong> Leasing funnel performance, conversion rates, and pipeline health.</p>
+<p><strong>Key Metrics:</strong>
+- Lead volume (website inquiries, tours scheduled)
+- Tour-to-application conversion rate
+- Application-to-lease conversion rate
+- Move-in pipeline (next 30 days)
+- Renewal rate and lease expiration schedule
+- Average time-to-lease</p>
+<p><strong>Action Triggers:</strong>
+- <strong>Conversion rate decline &gt; 5% month-over-month:</strong> Assign Leasing Manager to analyze funnel stage, review tour quality and pricing, create improvement plan with 30-day deadline<br />
+- <strong>Move-in pipeline &lt; expected volume:</strong> Assign Leasing Manager to review lead generation, tour scheduling, and application processing, create pipeline recovery plan<br />
+- <strong>Renewal rate &lt; target threshold:</strong> Assign AGM and Leasing Manager to review renewal outreach, retention incentives, and resident satisfaction data, create retention strategy<br />
+- <strong>Average time-to-lease increase &gt; 3 days:</strong> Assign Leasing Manager to review application processing, screening delays, and leasing team capacity, create efficiency improvement plan</p>
+<h3 id="4-operational-performance-dashboard"><strong>4. Operational Performance Dashboard</strong><a class="headerlink" href="#4-operational-performance-dashboard" title="Permanent link">&para;</a></h3>
+<p><strong>Review Focus:</strong> Service delivery, maintenance efficiency, and operational reliability.</p>
+<p><strong>Key Metrics:</strong>
+- Work order completion rate (Waves)
+- Average maintenance response time
+- Front desk shift checklist completion rate (Typeform)
+- Move-in readiness scores (Unit Readiness SOP compliance)
+- Unit turn time (vacancy to ready)
+- Zendesk ticket volume and resolution time</p>
+<p><strong>Action Triggers:</strong>
+- <strong>Work order completion rate &lt; 95%:</strong> Assign Chief Engineer to review work order backlog, capacity constraints, and prioritization, create completion improvement plan with weekly check-ins<br />
+- <strong>Average response time &gt; 48 hours:</strong> Assign Chief Engineer to review dispatch efficiency and technician availability, create response time improvement plan, escalate if &gt; 72 hours<br />
+- <strong>Front desk checklist completion &lt; 100%:</strong> Assign Front Desk Lead to review completion rates by shift, identify gaps, create accountability plan, escalate to Operations Manager if persists<br />
+- <strong>Move-in readiness &lt; 100% on-time:</strong> Assign AGM to review Unit Readiness SOP compliance, identify bottlenecks in maintenance/cleaning/inspection phases, create improvement plan<br />
+- <strong>Unit turn time &gt; 7 days:</strong> Assign AGM to review unit turn process, identify delays in maintenance or cleaning coordination, create efficiency improvement plan<br />
+- <strong>Zendesk ticket volume spike &gt; 20% week-over-week:</strong> Assign Operations Manager to analyze ticket categories, identify root causes, create resolution plan, escalate if spike &gt; 50% or recurring</p>
+<h3 id="5-community-engagement-dashboard"><strong>5. Community Engagement Dashboard</strong><a class="headerlink" href="#5-community-engagement-dashboard" title="Permanent link">&para;</a></h3>
+<p><strong>Review Focus:</strong> Neighbor participation, belonging metrics, and community health.</p>
+<p><strong>Key Metrics:</strong>
+- Amenity usage rates (Carson/Flow App)
+- Flow Group participation
+- Event attendance rates
+- Move-in integration milestones (30-day completion)
+- Community satisfaction scores (from surveys)
+- "Design Your Flow" completion and personalization usage</p>
+<p><strong>Action Triggers:</strong>
+- <strong>Amenity usage decline &gt; 10% month-over-month:</strong> Assign Community Engagement Lead to review amenity accessibility, programming, and resident awareness, create engagement improvement plan<br />
+- <strong>Flow Group participation &lt; 20% of eligible residents:</strong> Assign Community Engagement Lead to review group offerings, promotion, and onboarding, create participation growth strategy<br />
+- <strong>Event attendance &lt; 15% of community:</strong> Assign Community Engagement Lead to review event types, scheduling, and promotion channels, create attendance improvement plan<br />
+- <strong>Move-in integration completion &lt; 80% at trajectory:</strong> Assign Move-In Experience Agent (or Move-In Advocate) to review 30-day integration milestones, identify gaps in coffee chats or event invitations, create completion improvement plan<br />
+- <strong>Satisfaction scores &lt; 4.0 (5-point scale):</strong> Assign GM to review satisfaction survey feedback, identify themes, create service improvement action plan, escalate to Regional Director if scores &lt; 3.5</p>
+<hr />
+<h2 id="documentation-requirements">Documentation Requirements<a class="headerlink" href="#documentation-requirements" title="Permanent link">&para;</a></h2>
+<h3 id="weekly-review-notes-template"><strong>Weekly Review Notes Template</strong><a class="headerlink" href="#weekly-review-notes-template" title="Permanent link">&para;</a></h3>
+<p><strong>Date:</strong> [MM/DD/YYYY]<br />
+<strong>Reviewed By:</strong> [GM Name]<br />
+<strong>Review Time:</strong> [Start] - [End] minutes</p>
+<p><strong>Dashboard Summary:</strong>
+- Property Health Score: [Score] ([Trend: ↑/↓/→])
+- Financial Health: [Status] ([Key Metric])
+- Leasing Health: [Status] ([Key Metric])
+- Operational Health: [Status] ([Key Metric])
+- Community Engagement: [Status] ([Key Metric])</p>
+<p><strong>Key Findings:</strong>
+1. [Finding with context and trend]
+2. [Finding with context and trend]
+3. [Finding with context and trend]</p>
+<p><strong>Anomalies &amp; Questions:</strong>
+- [Anomaly or data inconsistency requiring investigation]
+- [Question for Data &amp; Analytics team]</p>
+<p><strong>Action Items:</strong>
+| <strong>Priority</strong> | <strong>Action Item</strong> | <strong>Owner</strong> | <strong>Deadline</strong> | <strong>Status</strong> |
+|--------------|-----------------|-----------|--------------|------------|
+| High | [Action] | [Owner] | [Date] | [Open/In Progress/Complete] |
+| Medium | [Action] | [Owner] | [Date] | [Open/In Progress/Complete] |
+| Low | [Action] | [Owner] | [Date] | [Open/In Progress/Complete] |</p>
+<p><strong>Follow-Up Items:</strong>
+- [Follow-up from previous week]
+- [Item requiring Regional Director review]</p>
+<hr />
+<h2 id="handoff-requirements">Handoff Requirements<a class="headerlink" href="#handoff-requirements" title="Permanent link">&para;</a></h2>
+<p><strong>Weekly Review Artifacts:</strong>
+- Completed Weekly Review Notes template ✓
+- Action Plan with assigned owners and deadlines ✓
+- Slack summary shared with leadership team ✓
+- Follow-up calendar reminders scheduled ✓
+- Critical items escalated to Regional Director ✓</p>
+<p><strong>Communication Handoff:</strong>
+1. <strong>GM → Leadership Team:</strong> Dashboard summary and action items via Slack #leadership channel
+2. <strong>GM → Regional Director:</strong> Weekly summary email with key findings and any regional concerns
+3. <strong>GM → Data &amp; Analytics Team:</strong> Questions or data issues flagged for investigation</p>
+<hr />
+<h2 id="quality-standards-metrics">Quality Standards &amp; Metrics<a class="headerlink" href="#quality-standards-metrics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Metric</strong></th>
+<th><strong>Target</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Completeness</strong></td>
+<td>Weekly review completion rate</td>
+<td>100% (every Monday)</td>
+</tr>
+<tr>
+<td><strong>Timeliness</strong></td>
+<td>Review completed within first 2 business days of week</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Thoroughness</strong></td>
+<td>All five dashboard categories reviewed</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Actionability</strong></td>
+<td>Action items created for identified issues</td>
+<td>≥ 80% of issues</td>
+</tr>
+<tr>
+<td><strong>Follow-Through</strong></td>
+<td>Action items completed by deadline</td>
+<td>≥ 90%</td>
+</tr>
+<tr>
+<td><strong>Communication</strong></td>
+<td>Leadership team receives summary within 24 hours</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Data Quality</strong></td>
+<td>Dashboard data freshness &lt; 48 hours</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resources-templates">Resources &amp; Templates<a class="headerlink" href="#resources-templates" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[Insert link to Sigma Property Dashboard Collection]</li>
+<li>[Insert link to Weekly Review Notes Template (Google Doc)]</li>
+<li>[Insert link to Weekly Action Plan Template (Google Sheet)]</li>
+<li>[Insert link to Dashboard Metric Definitions Document]</li>
+<li>[Insert link to Data &amp; Analytics Team contact list]</li>
+<li>[Insert link to Regional Director reporting template]</li>
+</ul>
+<hr />
+<h2 id="screenshots-visuals">Screenshots &amp; Visuals<a class="headerlink" href="#screenshots-visuals" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[Insert screenshot of Sigma Property Dashboard Collection homepage]</li>
+<li>[Insert screenshot of Property Health Scorecard]</li>
+<li>[Insert screenshot of Financial Performance Dashboard]</li>
+<li>[Insert screenshot of Leasing Metrics Dashboard]</li>
+<li>[Insert screenshot of Operational Performance Dashboard]</li>
+<li>[Insert screenshot of Community Engagement Dashboard]</li>
+<li>[Insert screenshot of Weekly Review Notes Template]</li>
+</ul>
+<hr />
+<h2 id="version-control">Version Control<a class="headerlink" href="#version-control" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Author</strong></th>
+<th><strong>Reviewer(s)</strong></th>
+<th><strong>Version</strong></th>
+<th><strong>Date</strong></th>
+<th><strong>Changes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Author Agent</td>
+<td>Reviewer Agent</td>
+<td>1.0</td>
+<td>2025-01-27</td>
+<td>Initial version</td>
+</tr>
+<tr>
+<td>Reviewer Agent</td>
+<td>-</td>
+<td>1.1</td>
+<td>2025-01-27</td>
+<td>Added AGM deputy ownership, expanded fail-safes, enhanced action triggers with escalation paths, integrated Dashboard Review Framework into process steps, improved process table granularity</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>ASSUMPTION:</strong> Sigma dashboards include Property Health Scorecard, Financial Performance, Leasing Metrics, Operational Performance, and Community Engagement dashboards. Specific metric definitions and thresholds may vary by property or regional standards. GM should consult with Data &amp; Analytics team for dashboard customization requests.  </p>
+<p>Delivering this SOP ensures that every General Manager systematically reviews property performance through data-driven insights, enabling proactive leadership decisions that maintain Flow's standards of operational excellence and community care.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../front-desk-shifts-sop/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Front Desk Shifts SOP">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Front Desk Shifts SOP
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../neighbor-communication-sop/" class="md-footer__link md-footer__link--next" aria-label="Next: Neighbor Communication SOP">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Neighbor Communication SOP
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.sections", "navigation.indexes", "navigation.tracking", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

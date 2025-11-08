@@ -1,0 +1,3236 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The comprehensive operating system for Flow's hospitality excellence. Mission, values, SOPs, and best practices for world-class neighbor experiences.">
+      
+      
+        <meta name="author" content="Flow">
+      
+      
+        <link rel="canonical" href="https://hsmith99.github.io/oneflow-operating-playbook/operating-manual-sops/foundational-journey/move-in-sop/">
+      
+      
+        <link rel="prev" href="../../../operating-practices/belong-cultivated-community/">
+      
+      
+        <link rel="next" href="../unit-move-in-readiness-sop/">
+      
+      
+      <link rel="icon" href="../../../images/flow-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Move-in SOP - One Flow Operating Playbook</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Flow Brand Colors - Minimalist and Clean */
+        :root {
+            --moonlight: #F3EDDF;        /* Original Moonlight */
+            --moonlight-light: #FDFCF9;  /* Very light, almost white Moonlight */
+            --moonlight-subtle: #F9F7F3; /* Subtle Moonlight for sidebar */
+            --moonlight-minimal: #FEFEFD; /* Minimal Moonlight for main content */
+            --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-subtle) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Minimalist background - full width */
+        body {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-container {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Main content area - Minimalist style */
+        .md-main,
+        .md-main[data-md-state="open"] {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
+            background-color: var(--moonlight-minimal) !important;
+            max-width: none !important;
+        }
+
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Ensure the main grid layout uses full width */
+        .md-grid {
+            max-width: none !important;
+        }
+
+        /* Flow text colors */
+        body, .md-content, .md-typeset {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset h1, .md-typeset h2, .md-typeset h3, 
+        .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset p, .md-typeset li, .md-typeset blockquote {
+            color: var(--midnight) !important;
+        }
+
+        /* Typography - Poppins for navigation, Inter for content */
+        .md-header,
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title,
+        .md-sidebar--primary,
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar--primary .md-nav__link,
+        .md-footer {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        /* Inter for main content */
+        .md-main__inner,
+        .md-content,
+        .md-typeset,
+        .md-typeset h1,
+        .md-typeset h2,
+        .md-typeset h3,
+        .md-typeset h4,
+        .md-typeset h5,
+        .md-typeset h6,
+        .md-typeset p,
+        .md-typeset li,
+        .md-typeset table,
+        .md-typeset blockquote {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Header (top nav) - Minimalist style */
+        .md-header {
+            background-color: var(--moonlight-subtle) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            width: 100% !important;
+        }
+
+        .md-header__inner {
+            background-color: var(--moonlight-subtle) !important;
+        }
+
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title {
+            color: var(--midnight) !important;
+        }
+
+        /* Logo styling */
+        .md-header__button.md-logo {
+            padding: 0.2rem 0.4rem;
+        }
+
+        .md-header__button.md-logo img,
+        .md-header__button.md-logo svg {
+            height: 2rem;
+            width: auto;
+        }
+
+        /* Left sidebar - Minimalist style matching top menu color */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-subtle) !important; /* Same as top menu */
+            border-right: 1px solid rgba(61, 61, 61, 0.1);
+        }
+        
+        /* Remove strange top spacing and tighten title */
+        .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            padding-top: 0.8rem !important;
+            padding-bottom: 0.6rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Tighten spacing for all navigation links */
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
+            color: var(--midnight) !important;
+            padding: 4px 16px !important;
+            margin: 0 !important;
+        }
+        
+        /* Remove extra spacing from navigation items */
+        .md-sidebar--primary .md-nav__item {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: rgba(61, 61, 61, 0.08) !important;
+            color: var(--midnight) !important;
+            font-weight: 600;
+        }
+
+        /* Nested navigation items - Flow style */
+        .md-sidebar--primary .md-nav__item .md-nav__link {
+            padding-left: 32px;
+            color: var(--midnight) !important;
+        }
+
+        .md-sidebar--primary .md-nav__item .md-nav__item .md-nav__link {
+            padding-left: 48px;
+        }
+
+        /* Footer - Minimalist style */
+        .md-footer {
+            background-color: var(--moonlight-subtle) !important;
+            border-top: 1px solid rgba(61, 61, 61, 0.1);
+            color: var(--midnight) !important;
+        }
+
+        .md-footer-nav__link {
+            color: var(--midnight) !important;
+        }
+
+        /* Code blocks - Minimalist style */
+        .md-typeset code {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+
+        /* Tables - Minimalist clean styling */
+        .md-typeset table {
+            border: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table th {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table td {
+            border-bottom: 1px solid rgba(61, 61, 61, 0.05);
+        }
+
+        /* Admonitions - Minimalist style */
+        .md-typeset .admonition {
+            background-color: var(--moonlight-minimal) !important;
+            border-left: 4px solid rgba(61, 61, 61, 0.2) !important;
+        }
+
+        .md-typeset .admonition-title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+        }
+        
+        /* Hide the sidebar title completely - multiple selectors for persistence */
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title,
+        [dir] .md-sidebar--primary .md-nav__title {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Make section headers collapsible */
+        .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+            cursor: pointer !important;
+        }
+
+        /* SOP Agent Button Styling */
+        .sop-agent-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 1rem;
+            margin-right: 0.5rem;
+            background-color: var(--midnight) !important;
+            color: var(--moonlight-minimal) !important;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .sop-agent-button:hover {
+            background-color: rgba(61, 61, 61, 0.9) !important;
+            color: var(--moonlight-minimal) !important;
+        }
+    </style>
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#move-in-sop-v11" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="One Flow Operating Playbook" class="md-header__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            One Flow Operating Playbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Move-in SOP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <script>
+        // Add SOP Agent button to header after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerInner = document.querySelector('.md-header__inner');
+            if (headerInner) {
+                const sopButton = document.createElement('a');
+                sopButton.className = 'sop-agent-button';
+                sopButton.textContent = 'SOP Agent';
+                sopButton.href = '#';
+                sopButton.onclick = function(e) {
+                    e.preventDefault();
+                    // Fake button - no action
+                    return false;
+                };
+                
+                // Insert button in the header navigation area (right side)
+                const headerNav = headerInner.querySelector('.md-header__nav');
+                if (headerNav) {
+                    headerNav.insertBefore(sopButton, headerNav.firstChild);
+                } else {
+                    // Fallback: append to header inner
+                    headerInner.appendChild(sopButton);
+                }
+            }
+        });
+    </script>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="One Flow Operating Playbook" class="md-nav__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    One Flow Operating Playbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/mission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mission
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/brand-values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brand Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/leadership-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Leadership Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/the-flow-experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Flow Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Team & Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Team & Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/onsite-staffing-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Staffing Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/onsite-technology-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Technology Stack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/yardi-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Yardi Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/zendesk-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zendesk Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Practices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating-practices/foundational-neighbor-journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundational Neighbor Journey
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating-practices/care-everyday-moments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating-practices/belong-cultivated-community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Manual - SOPs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Manual - SOPs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundational Journey
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Foundational Journey
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Move-in SOP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move-in SOP
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move-in-experience-agent-alternative-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Experience Agent Alternative Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Move-In Experience Agent Alternative Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-move-in-responsibilities-leasing-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Move-In Responsibilities (Leasing Agent)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-in-advocate-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Advocate Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-move-in-responsibilities-move-in-advocate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Move-In Responsibilities (Move-In Advocate)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Adjustments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems &amp; Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weekly-daily-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weekly &amp; Daily Meetings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-turnmake-ready-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Turn/Make Ready Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Turn/Make Ready Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Inspection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-artifacts-leasing-operations-handoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Artifacts (Leasing → Operations Handoff)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-standards-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Standards &amp; Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move-in-experience-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Experience Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Move-In Experience Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prior-to-move-in-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prior to Move-In Day:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to Move-In Day:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personalization-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalization Review
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-logistics-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access &amp; Logistics Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-follow-up-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication &amp; Follow-up Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-move-in-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Move-In Day:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Move-In Day:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#community-integration-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Integration Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completion-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completion Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guide-to-being-a-move-in-advocate-front-desk-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guide to Being a Move-In Advocate (Front Desk Team)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guide to Being a Move-In Advocate (Front Desk Team)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-day-1-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre Day 1 Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre Day 1 Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personalization-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalization &amp; Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-logistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access &amp; Logistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-team-briefing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication &amp; Team Briefing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Preparation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-day-1-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Day 1 Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="On Day 1 Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-greeting-arrival" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Greeting &amp; Arrival
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-walkthrough-key-handoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Walkthrough &amp; Key Handoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information &amp; Orientation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-in-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Completion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-day-1-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Day 1 Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post Day 1 Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-follow-up-48-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Follow-Up (48 Hours)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-1-integration-days-1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1 Integration (Days 1-7)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-connection-days-8-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Connection (Days 8-21)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30-day-integration-review-day-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      30-Day Integration Review (Day 30)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing-support-as-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ongoing Support (As Needed)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalation &amp; Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources &amp; Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit-move-in-readiness-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unit Move-in Readiness SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Care – Everyday Moments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/front-desk-shifts-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Front Desk Shifts SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/gm-weekly-reporting-dashboard-review-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GM Weekly Reporting Dashboard Review SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/neighbor-communication-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbor Communication SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/fair-housing-act-compliance-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fair Housing Act Compliance SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/flow-minibar-experience-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow Minibar Experience SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Belong – Cultivated Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../belong-cultivated-community/ambassador-program-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ambassador Program SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move-in-experience-agent-alternative-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Experience Agent Alternative Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Move-In Experience Agent Alternative Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-move-in-responsibilities-leasing-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Move-In Responsibilities (Leasing Agent)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-in-advocate-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Advocate Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-move-in-responsibilities-move-in-advocate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Move-In Responsibilities (Move-In Advocate)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Adjustments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems &amp; Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weekly-daily-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weekly &amp; Daily Meetings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-turnmake-ready-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Turn/Make Ready Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Turn/Make Ready Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Inspection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-artifacts-leasing-operations-handoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Artifacts (Leasing → Operations Handoff)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-standards-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Standards &amp; Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move-in-experience-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Experience Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Move-In Experience Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prior-to-move-in-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prior to Move-In Day:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to Move-In Day:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personalization-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalization Review
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-logistics-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access &amp; Logistics Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-follow-up-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication &amp; Follow-up Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-move-in-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Move-In Day:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Move-In Day:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#community-integration-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Integration Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completion-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completion Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guide-to-being-a-move-in-advocate-front-desk-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guide to Being a Move-In Advocate (Front Desk Team)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guide to Being a Move-In Advocate (Front Desk Team)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-day-1-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre Day 1 Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre Day 1 Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personalization-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalization &amp; Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-logistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access &amp; Logistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-team-briefing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication &amp; Team Briefing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Preparation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-day-1-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Day 1 Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="On Day 1 Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-greeting-arrival" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Greeting &amp; Arrival
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-walkthrough-key-handoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Walkthrough &amp; Key Handoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information &amp; Orientation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-in-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Completion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-day-1-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post Day 1 Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post Day 1 Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-follow-up-48-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Follow-Up (48 Hours)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-1-integration-days-1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1 Integration (Days 1-7)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-connection-days-8-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Connection (Days 8-21)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30-day-integration-review-day-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      30-Day Integration Review (Day 30)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing-support-as-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ongoing Support (As Needed)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalation &amp; Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources &amp; Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="move-in-sop-v11">Move-In SOP (v1.1)<a class="headerlink" href="#move-in-sop-v11" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>🔗 <strong><a href="#process">Quick Link: Jump to Process</a></strong></p>
+</blockquote>
+<h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Type</strong></th>
+<th><strong>Goal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operational</strong></td>
+<td>Deliver a seamless, standardized Move-In process across all Flow communities with clear ownership, defined readiness gates, and cross-functional coordination between Leasing, Operations, Maintenance, and Housekeeping.</td>
+</tr>
+<tr>
+<td><strong>Experiential</strong></td>
+<td>Make every Neighbor feel personally welcomed, supported, and integrated into their community within 30 days of moving in. The first day should feel calm, personal, and celebratory.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h2>
+<p>Applies to <strong>all residential leases (≥ 1 month)</strong> recorded in <strong>Yardi Voyager</strong>.
+Excludes short-stay, hotel, and condo operations covered under the <em>Stay</em> Journey SOPs.</p>
+<hr />
+<h2 id="roles-responsibilities">Roles &amp; Responsibilities<a class="headerlink" href="#roles-responsibilities" title="Permanent link">&para;</a></h2>
+<p><strong>Process Owner:</strong> <strong>Assistant General Manager (AGM)</strong> – accountable for the end-to-end Move-In outcome.<br />
+<strong>Deputy:</strong> <strong>Operations Manager</strong> (where staffed) or <strong>Front Desk Lead</strong>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Role</strong></th>
+<th><strong>Responsibilities</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Leasing Agent</strong></td>
+<td>Owns all pre–move-in steps: verifying requirements, scheduling, and sending the Welcome Email. Co-leads the unit walkthrough and marks completion in Moved before handoff.</td>
+</tr>
+<tr>
+<td><strong>Move-In Experience Agent</strong></td>
+<td>Acts as Move-In Advocate: prepares unit touches (gift, card, keys), conducts check-ins at 48 hours and Week One, and ensures the Neighbor’s integration milestones are achieved within 30 days using Sigma dashboards.</td>
+</tr>
+<tr>
+<td><strong>Assistant General Manager (AGM)</strong></td>
+<td>Runs weekly Move-In readiness meetings (Monday), assigns Move-In Advocates for all known move-ins, leads daily move-in huddles with key stakeholders to stay on top of upcoming move-ins and address blockers, resolves blockers across functions, verifies readiness in Moved/Yardi, and approves "Go" status prior to key release to Neighbors, ensuring that all requirements are met before the Neighbor moves in.</td>
+</tr>
+<tr>
+<td><strong>Operations Manager / Front Desk Lead</strong></td>
+<td>Manages day-of logistics, elevator operations, and issue triage through Zendesk and Slack. Acts as on-duty executive for after-hours or weekend move-ins.</td>
+</tr>
+<tr>
+<td><strong>Front Desk Team</strong></td>
+<td>Greets and orients Neighbors, helps to make keys, supports with 48 Check-ins, confirms access, assists with parking and elevator use, logs issues in Zendesk, and updates #fx and #move-ins Slack channels. Verifies elevator bookings by checking Moved and Google Calendar; adds reserved elevator times to Neighbor CRM &amp; Move-in Tracker. <strong>When trained and assigned as Move-In Advocate:</strong> Supports and completes move-in requirements with Neighbors upon arrival if Leasing team is unavailable.</td>
+</tr>
+<tr>
+<td><strong>Chief Engineer / Maintenance Manager</strong></td>
+<td>Conducts pre-maintenance inspection, creates work orders in Waves, completes maintenance work, conducts post-maintenance inspection, updates Neighbor CRM.</td>
+</tr>
+<tr>
+<td><strong>Maintenance Team</strong></td>
+<td>Completes work orders assigned by Maintenance Manager in Waves, ensures all systems operational.</td>
+</tr>
+<tr>
+<td><strong>Cleaning Company (Third-Party)</strong></td>
+<td>Deep cleans unit per AGM instructions, completes cleaning typeform upon completion.</td>
+</tr>
+<tr>
+<td><strong>Community Engagement Lead</strong></td>
+<td>Coordinates introductions (Ambassador Coffee), Flow Group invites, and ensures inclusion in the New Neighbor Event within 30 days.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Escalation Ladder:</strong><br />
+Front Desk → Operations Manager/Front Desk Lead → AGM → GM → Regional Operations.</p>
+<p><strong>Weekend/After-Hours:</strong> On-duty Front Desk Agent handles move-in operations with Operations Manager/Front Desk Lead backup. All move-in issues logged in Zendesk with "Move-In" tag.</p>
+<hr />
+<h2 id="move-in-experience-agent-alternative-structure">Move-In Experience Agent Alternative Structure<a class="headerlink" href="#move-in-experience-agent-alternative-structure" title="Permanent link">&para;</a></h2>
+<p><strong>When Move-In Experience Agent is not on the team, the following structure applies:</strong></p>
+<h3 id="pre-move-in-responsibilities-leasing-agent"><strong>Pre-Move-In Responsibilities (Leasing Agent)</strong><a class="headerlink" href="#pre-move-in-responsibilities-leasing-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Leasing Agent</strong> handles all steps through Day 1 (Steps 2-4, 6-9, 11)</li>
+<li><strong>Leasing Agent</strong> conducts unit walkthrough and key handoff (or Front Desk Team if trained and assigned as Advocate)</li>
+<li><strong>Leasing Agent</strong> completes move-in confirmation (or Front Desk Team if trained and assigned as Advocate, with AGM verification)</li>
+</ul>
+<h3 id="move-in-advocate-assignment"><strong>Move-In Advocate Assignment</strong><a class="headerlink" href="#move-in-advocate-assignment" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Move-In Advocate</strong> assigned from <strong>Front Desk Team</strong></li>
+<li><strong>Move-In Advocate</strong> should be the <strong>Front Desk Agent working on move-in day</strong></li>
+<li><strong>Ideal timing:</strong> Front Desk Agent scheduled during neighbor's move-in window</li>
+<li><strong>AGM</strong> assigns Front Desk Agent as Move-In Advocate in Moved/Sigma</li>
+</ul>
+<h3 id="post-move-in-responsibilities-move-in-advocate"><strong>Post-Move-In Responsibilities (Move-In Advocate)</strong><a class="headerlink" href="#post-move-in-responsibilities-move-in-advocate" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Move-In Advocate</strong> handles all post-Day 1 activities (Steps 12-14)</li>
+<li><strong>Move-In Advocate</strong> conducts 48-hour check-in</li>
+<li><strong>Move-In Advocate</strong> schedules Week 1 coffee chat during 48-hour check-in</li>
+<li><strong>Coffee chat options:</strong></li>
+<li>Move-In Advocate conducts personally</li>
+<li>Schedule with <strong>GM</strong> or <strong>AGM</strong></li>
+<li>Connect Neighbor with <strong>Ambassador</strong></li>
+<li><strong>Move-In Advocate</strong> follows up on community integration:</li>
+<li>Encourage attendance at New Neighbor Event</li>
+<li>Connect with other residents (if desired)</li>
+<li>Promote community events and activities</li>
+<li>Monitor integration progress through 30 days</li>
+</ul>
+<h3 id="process-adjustments"><strong>Process Adjustments</strong><a class="headerlink" href="#process-adjustments" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Step</strong></th>
+<th><strong>Original Responsible</strong></th>
+<th><strong>Alternative Responsible</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>Move-In Experience Agent</td>
+<td><strong>Leasing Agent</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Leasing Agent + Move-In Experience Agent</td>
+<td><strong>Leasing Agent</strong> (solo) or <strong>Front Desk Team</strong> (if trained and assigned as Advocate)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Leasing Agent (with AGM verification)</td>
+<td><strong>Leasing Agent</strong> (with AGM verification) or <strong>Front Desk Team</strong> (if trained and assigned as Advocate, with AGM verification)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Move-In Experience Agent</td>
+<td><strong>Move-In Advocate</strong> (Front Desk Agent)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Move-In Experience Agent + Community Engagement Lead</td>
+<td><strong>Move-In Advocate</strong> + <strong>GM/AGM/Ambassador</strong></td>
+</tr>
+<tr>
+<td>14</td>
+<td>AGM + Move-In Experience Agent</td>
+<td><strong>AGM</strong> + <strong>Move-In Advocate</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="systems-tools">Systems &amp; Tools<a class="headerlink" href="#systems-tools" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>System</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Yardi Voyager</strong></td>
+<td>Lease and unit management; source of truth for payments, deposits, readiness status, and document storage. All lease documents and artifacts uploaded to lease profile.</td>
+</tr>
+<tr>
+<td><strong>Google Sheet - Neighbor CRM &amp; Move-in Tracker</strong></td>
+<td>Tracks all Neighbors, all Move-ins, and the status of each step in the Move-in process for each Neighbor.</td>
+</tr>
+<tr>
+<td><strong>Moved</strong></td>
+<td>Neighbor-facing Move-In checklist where tasks are completed by Neighbors and approved by Leasing Agents or Move-In Experience Leads as required. Integrates nightly with Yardi. Prevents key release until all requirements are marked complete.</td>
+</tr>
+<tr>
+<td><strong>Carson / Flow App</strong></td>
+<td>Access control, amenity reservations, deliveries, and Neighbor-facing onboarding.</td>
+</tr>
+<tr>
+<td><strong>Zendesk</strong></td>
+<td>Support ticketing and escalation tracking.</td>
+</tr>
+<tr>
+<td><strong>Google Calendar</strong></td>
+<td>Shared resource calendar for elevator scheduling.</td>
+</tr>
+<tr>
+<td><strong>RingCentral</strong></td>
+<td>Onsite calling mechanism for Prospect and Neighbor communications.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Integration Notes:</strong><br />
+- Yardi → Moved (nightly sync).<br />
+- Typeform → Sigma (Design Your Flow responses).<br />
+- Carson ↔ Flow App (access + amenity setup).<br />
+- Yardi → Carson/Flow App: Flow App invite via Carson is <strong>automatic</strong> and sent once AGM hits the "move-in button" in Yardi after keys are received and all requirements are complete. No manual action needed.</p>
+<hr />
+<h2 id="triggers">Triggers<a class="headerlink" href="#triggers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Primary Trigger:</strong> Signed lease in Yardi Voyager.  </li>
+<li><strong>System Chain:</strong> Yardi syncs overnight → Moved checklist auto-generates → Welcome Email triggers → Neighbors added to Neighbor CRM &amp; Move-in Tracker.</li>
+<li><strong>Readiness Gate:</strong> Keys <strong>cannot</strong> be released until ALL of the following are complete in Moved and verified:</li>
+<li>Move-in balance paid via <strong>certified funds</strong> (security deposit + first month's rent)</li>
+<li>Electricity set up by Neighbor</li>
+<li>Proper renters insurance verified</li>
+<li>All documents uploaded to Yardi lease profile</li>
+<li>Service elevator reservation confirmed in Google Calendar</li>
+<li>AGM approves Key Release in Moved</li>
+</ul>
+<hr />
+<h2 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h2>
+<h3 id="weekly-daily-meetings">Weekly &amp; Daily Meetings<a class="headerlink" href="#weekly-daily-meetings" title="Permanent link">&para;</a></h3>
+<p><strong>Weekly Move-In Meeting (Monday):</strong>
+- <strong>Led by:</strong> Assistant General Manager (AGM)
+- <strong>Attendees:</strong> Leasing, Front Desk Lead, Operations Manager (if staffed), Chief Engineer / Maintenance Manager
+- <strong>Purpose:</strong> Review all known upcoming move-ins, assign Move-In Advocates for all move-ins scheduled for the coming week, identify blockers, and ensure coordination across functions.</p>
+<p><strong>Daily Move-In Huddle:</strong>
+- <strong>Led by:</strong> Assistant General Manager (AGM)
+- <strong>Attendees:</strong> Key stakeholders from all functions (Leasing, Front Desk, Operations, Maintenance)
+- <strong>Purpose:</strong> Review upcoming move-ins, address blockers, hold each other accountable for readiness tasks, and update Neighbor CRM &amp; Move-in Tracker with current status.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>#</strong></th>
+<th><strong>Step / Action</strong></th>
+<th><strong>Responsible Team Member</strong></th>
+<th><strong>System(s)</strong></th>
+<th><strong>Operator Experience</strong></th>
+<th><strong>Neighbor Experience</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><strong>Weekly Move-In Meeting (Monday)</strong></td>
+<td><strong>Assistant General Manager (AGM)</strong></td>
+<td>Neighbor CRM, Moved, Sigma</td>
+<td>AGM runs meeting, reviews all known move-ins, assigns Move-In Advocates to all move-ins scheduled for coming week, identifies blockers.</td>
+<td>N/A - Internal coordination</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Verify pre–move-in requirements complete</td>
+<td><strong>Leasing Agent</strong></td>
+<td>Yardi, Moved</td>
+<td>Leasing confirms <strong>move-in balance paid via certified funds</strong> (security deposit + first month's rent), <strong>electricity set up</strong>, and <strong>proper renters insurance</strong> verified. Updates status in Moved. All documents uploaded to Yardi lease profile.</td>
+<td>Receives checklist confirmation email.</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Send Welcome Email + Portal Access</td>
+<td><strong>Leasing Agent</strong></td>
+<td>Moved</td>
+<td>Leasing triggers Welcome Email template with checklist and building info.</td>
+<td>Receives clear timeline and portal access.</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Schedule Move-In Date + Service Elevator</td>
+<td><strong>Neighbor</strong> (via Moved), <strong>Front Desk Team</strong> (verification)</td>
+<td>Google Calendar, Moved, Neighbor CRM</td>
+<td>Neighbor schedules <strong>service elevator reservation</strong> (3-hour slot) in Google Calendar via Moved and confirms task complete in Moved. <strong>Front Desk Team checks Moved and calendar to ensure all move-ins have reserved service elevator; adds reserved times to Neighbor CRM &amp; Move-in Tracker. This is CRITICAL - every move-in must have a service elevator reservation before keys are handed over.</strong></td>
+<td>Schedules service elevator reservation via Moved; receives confirmation.</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Assign Move-In Advocate (for move-ins appearing during week)</td>
+<td><strong>Assistant General Manager (AGM)</strong></td>
+<td>Moved, Sigma</td>
+<td>AGM assigns Advocate for move-ins that appear after Monday meeting; Advocate reviews Design Your Flow data in Sigma.</td>
+<td>Receives intro message from their Advocate.</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Unit Turn/Make Ready Process (synchronous with steps 2-5)</td>
+<td><strong>Chief Engineer / Maintenance Manager</strong>, <strong>AGM</strong>, <strong>Leasing Agent</strong>, <strong>Cleaning Company</strong></td>
+<td>Waves, Typeform, Neighbor CRM, Slack</td>
+<td><strong>Maintenance:</strong> Pre-inspection → work orders in Waves → maintenance work → post-inspection. <strong>Cleaning:</strong> AGM coordinates with cleaning company via Slack → deep clean → cleaning typeform submission. <strong>Inspection:</strong> AGM and Leasing Agent complete final unit inspection typeforms. Status updates automatically to Neighbor CRM.</td>
+<td>Unit ready before move-in</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Prepare Keys + Access + Welcome Gift (24h)</td>
+<td><strong>Move-In Experience Agent</strong></td>
+<td>Carson, Moved</td>
+<td>Advocate stages Welcome Gift and card, tests access credentials.</td>
+<td>Finds personalized gift waiting in unit.</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Place Packages in Unit</td>
+<td><strong>Leasing Agent</strong> or <strong>Move-In Experience Agent</strong></td>
+<td>Neighbor CRM</td>
+<td>Check for any packages received for Neighbor, place in unit before move-in.</td>
+<td>Packages waiting in unit upon arrival.</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>Day-of Arrival Greeting + Orientation</td>
+<td><strong>Front Desk Team</strong></td>
+<td>Carson, Zendesk</td>
+<td>Front Desk greets Neighbor. <strong>CRITICAL:</strong> Before proceeding, Front Desk verifies ALL move-in requirements complete in Moved (certified funds payment, electricity, insurance, documents, AGM approval, service elevator reservation). If any requirement incomplete, <strong>DO NOT hand over keys</strong> - escalate to AGM immediately.</td>
+<td>Feels warmly welcomed and supported.</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Unit Walkthrough + Key Handoff</td>
+<td><strong>Leasing Agent</strong> + <strong>Move-In Experience Agent</strong> (or <strong>Front Desk Team</strong> if trained and assigned as Advocate)</td>
+<td>Moved, Yardi</td>
+<td>Leasing + Advocate walkthrough; resolve issues; confirm satisfaction. <strong>CRITICAL:</strong> Keys are ONLY handed over after ALL requirements verified (certified funds, electricity, insurance, documents, AGM approval, service elevator reservation). <strong>If Leasing unavailable and Front Desk Agent is trained Move-In Advocate:</strong> Front Desk Agent supports and completes move-in requirements with Neighbor.</td>
+<td>Feels confident, at home, and supported.</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Complete Move-In Confirmation</td>
+<td><strong>Leasing Agent</strong> (with <strong>AGM</strong> verification) or <strong>Front Desk Team</strong> (if trained and assigned as Advocate, with AGM verification)</td>
+<td>Moved, Yardi</td>
+<td>Leasing or Front Desk Agent marks checklist complete only after keys are received. AGM verifies no open items, then hits "move-in button" in Yardi which triggers automatic Flow App/Carson invite to Neighbor.</td>
+<td>Receives notification of completion and Flow App invite.</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>48-Hour Check-In</td>
+<td><strong>Move-In Experience Agent</strong></td>
+<td>RingCentral, Neighbor CRM</td>
+<td>Advocate calls Neighbor via RingCentral phone call, logs feedback and notes in Neighbor CRM, routes issues to appropriate team.</td>
+<td>Appreciates proactive care.</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>Week-One Coffee + Introductions</td>
+<td><strong>Move-In Experience Agent</strong> + <strong>Community Engagement Lead</strong></td>
+<td>Sigma, Carson</td>
+<td>Advocate schedules coffee, connects to Ambassadors and Flow Groups.</td>
+<td>Begins building relationships.</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>30-Day Integration Review</td>
+<td><strong>Assistant General Manager (AGM)</strong> + <strong>Move-In Experience Agent</strong></td>
+<td>Sigma</td>
+<td>AGM + Advocate confirm Neighbor attended event or joined group; log completion.</td>
+<td>Feels fully integrated into community.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="unit-turnmake-ready-process">Unit Turn/Make Ready Process<a class="headerlink" href="#unit-turnmake-ready-process" title="Permanent link">&para;</a></h2>
+<p>The Unit Turn/Make Ready process runs <strong>synchronously</strong> with pre-move-in steps (Steps 2-5) and ensures the unit is ready before the Neighbor arrives. This process has three critical phases: <strong>Maintenance</strong>, <strong>Cleaning</strong>, and <strong>Inspection</strong>.</p>
+<h3 id="maintenance"><strong>Maintenance</strong><a class="headerlink" href="#maintenance" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Pre-Maintenance Inspection:</strong> Chief Engineer / Maintenance Manager inspects unit and creates work orders in Waves</li>
+<li><strong>Work Order Completion:</strong> Maintenance Team completes all work orders</li>
+<li><strong>Post-Maintenance Inspection:</strong> Chief Engineer / Maintenance Manager inspects completed work via Maintenance Inspection typeform</li>
+</ol>
+<h3 id="cleaning"><strong>Cleaning</strong><a class="headerlink" href="#cleaning" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Daily Coordination:</strong> AGM messages cleaning company via Slack with units to clean tomorrow</li>
+<li><strong>Deep Clean:</strong> Cleaning company performs comprehensive deep cleaning</li>
+<li><strong>Confirmation:</strong> Cleaning company completes Cleaning Completion typeform</li>
+</ol>
+<h3 id="final-inspection"><strong>Final Inspection</strong><a class="headerlink" href="#final-inspection" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>AGM Inspection:</strong> AGM conducts post-cleaning inspection via Final Unit Inspection typeform</li>
+<li><strong>Leasing Agent Inspection:</strong> Leasing Agent conducts final pre-move-in inspection via Final Unit Inspection typeform</li>
+<li><strong>Unit Ready Status:</strong> AGM reviews all completed typeforms and updates unit status to "Ready" in Yardi</li>
+</ol>
+<blockquote>
+<p>🔹 <strong>Cross-Reference:</strong> For complete details on this process, including typeform structures and quality standards, see <a href="../unit-move-in-readiness-sop/">Unit Move-In Readiness SOP</a>.<br />
+🔹 <strong>System Integration:</strong> All typeform submissions automatically update Neighbor CRM &amp; Move-in Tracker and post to Slack channels via Google Scripts.</p>
+</blockquote>
+<hr />
+<h2 id="required-artifacts-leasing-operations-handoff">Required Artifacts (Leasing → Operations Handoff)<a class="headerlink" href="#required-artifacts-leasing-operations-handoff" title="Permanent link">&para;</a></h2>
+<p><strong>Tracking &amp; Approval:</strong> Tasks completed by Neighbors and tracked in <strong>Moved</strong> (approved by Leasing Agents or Move-In Experience Leads as required).<br />
+<strong>Document Storage:</strong> All documents and artifacts uploaded to <strong>lease profile in Yardi Voyager</strong>.</p>
+<p><strong>Required Items Prior to Key Release:</strong>
+1. <strong>Move-in balance paid via certified funds</strong> — Security deposit and first month's rent paid via certified funds (certified check or money order). Payment verified and uploaded to Yardi lease profile<br />
+2. <strong>Electricity set up</strong> — Neighbor has set up electricity account in their name. Confirmation uploaded to Yardi lease profile<br />
+3. <strong>Proper renters insurance</strong> — Renters insurance proof uploaded to Yardi lease profile and verified for compliance<br />
+4. <strong>All documents uploaded to Yardi</strong> — Lease, deposit, rent payment, insurance proof, and all required documents uploaded to lease profile in Yardi Voyager<br />
+5. <strong>Unit Ready confirmation</strong> — All typeform inspections complete (Maintenance, Cleaning, Final Inspection) - see Unit Readiness SOP<br />
+6. <strong>Service elevator reservation</strong> — Neighbor has reserved service elevator in Google Calendar via Moved. Front Desk verifies reservation and logs reserved times in Neighbor CRM &amp; Move-in Tracker<br />
+7. <strong>Welcome Gift and Note placed in unit</strong> — Personalized gift and card placed in unit 24 hours before move-in<br />
+8. <strong>Packages placed in unit</strong> — Any packages received for Neighbor placed in unit before move-in (if applicable)<br />
+9. <strong>AGM approval for key release</strong> — AGM has verified all requirements complete in Moved and approved key release</p>
+<p><strong>Carson/Flow App Access:</strong> Invite is <strong>automatic</strong> and sent once AGM hits the "move-in button" in Yardi after keys are received and all requirements are complete. No manual action needed.</p>
+<blockquote>
+<p>🔹 <strong>Unit Readiness (Maintenance/Cleaning):</strong> A unit is ready from a maintenance and cleaning perspective when:
+- All Waves work orders completed
+- Post-maintenance inspection passed (Maintenance Manager)
+- Cleaning completed and confirmed
+- Final inspections passed (AGM &amp; Leasing Agent)</p>
+<p>🔹 <strong>Move-In Readiness:</strong> A move-in is ready for move-in day when:
+- Unit is ready (see above)
+- <strong>Move-in balance paid via certified funds</strong> (security deposit + first month's rent)
+- <strong>Electricity set up</strong> by Neighbor
+- <strong>Proper renters insurance</strong> verified
+- Neighbor has completed all required tasks in Moved (approved by Leasing/Move-In Experience Leads)
+- All documents uploaded to Yardi lease profile
+- Welcome Gift and Note placed in unit
+- Packages placed (if any received)
+- <strong>Service elevator reserved</strong> (Neighbor schedules via Moved; verified by Front Desk in Google Calendar)
+- AGM has approved key release in Moved</p>
+<p><strong>Note:</strong> Carson/Flow App invite is <strong>automatic</strong> and sent once AGM hits the "move-in button" in Yardi after keys are received and all requirements are complete.</p>
+</blockquote>
+<hr />
+<h2 id="quality-standards-metrics">Quality Standards &amp; Metrics<a class="headerlink" href="#quality-standards-metrics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Metric</strong></th>
+<th><strong>Target</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>All Move-In requirements complete prior to keys.</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Readiness</strong></td>
+<td>Unit marked Ready ≥ 48h pre-arrival.</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Timeliness</strong></td>
+<td>Average arrival-to-keys time.</td>
+<td>≤ 15 minutes</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>Move-Ins with no day-of escalation.</td>
+<td>≥ 98%</td>
+</tr>
+<tr>
+<td><strong>Experience</strong></td>
+<td>48-hour satisfaction score.</td>
+<td>≥ 90% positive</td>
+</tr>
+<tr>
+<td><strong>Integration</strong></td>
+<td>New Neighbors joined ≥1 Flow Group or event by Day 30.</td>
+<td>≥ 80%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="move-in-experience-checklist">Move-In Experience Checklist<a class="headerlink" href="#move-in-experience-checklist" title="Permanent link">&para;</a></h2>
+<p><strong>Purpose:</strong> Ensure Leasing Agents, Move-In Experience Agents, and Move-in Advocates complete all preparation tasks for seamless Neighbor integration and move-in day execution.</p>
+<h3 id="prior-to-move-in-day">Prior to Move-In Day:<a class="headerlink" href="#prior-to-move-in-day" title="Permanent link">&para;</a></h3>
+<h4 id="personalization-review">Personalization Review<a class="headerlink" href="#personalization-review" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Design Your Flow Data Reviewed</strong> - Accessed Sigma dashboard and reviewed Neighbor's survey responses</li>
+<li>[ ] <strong>Welcome Gift Selected</strong> - Chose appropriate gift based on Neighbor's interests and preferences</li>
+<li>[ ] <strong>Personalized Card Written</strong> - Crafted warm, personal welcome message referencing their interests</li>
+<li>[ ] <strong>Special Requests Noted</strong> - Documented any specific accommodations or preferences from survey</li>
+</ul>
+<h4 id="access-logistics-preparation">Access &amp; Logistics Preparation<a class="headerlink" href="#access-logistics-preparation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Digital Keys Tested</strong> - Verified Carson access credentials work properly</li>
+<li>[ ] <strong>Elevator Booking Confirmed</strong> - Confirmed scheduled time slot in Google Calendar</li>
+</ul>
+<h4 id="communication-follow-up-setup">Communication &amp; Follow-up Setup<a class="headerlink" href="#communication-follow-up-setup" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Neighbor Notified</strong> - Sent confirmation message with move-in day details</li>
+<li>[ ] <strong>Team Briefed</strong> - Updated Front Desk and Operations on any special considerations</li>
+<li>[ ] <strong>Follow-up Scheduled</strong> - Set calendar reminder for 48-hour check-in</li>
+<li>[ ] <strong>Integration Milestones Set</strong> - Planned 30-day integration goals and checkpoints</li>
+</ul>
+<h3 id="post-move-in-day">Post-Move-In Day:<a class="headerlink" href="#post-move-in-day" title="Permanent link">&para;</a></h3>
+<h4 id="community-integration-planning">Community Integration Planning<a class="headerlink" href="#community-integration-planning" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>48-Hour Check-in Completed</strong> - Checked in with Neighbors via Ringcentral and logged in Neighbor CRM.</li>
+<li>[ ] <strong>Added Neighbors to Whatsapp Community</strong> - Added Neighbors to Whatsapp Community and sent welcome message.</li>
+<li>[ ] <strong>Flow Groups Identified</strong> - Reviewed Neighbor interests and matched to relevant Flow Groups</li>
+<li>[ ] <strong>Ambassador Connections</strong> - Identified appropriate Ambassadors for introductions</li>
+<li>[ ] <strong>Invited to New Neighbor Welcome Event</strong> - Confirmed Neighbor's inclusion in upcoming New Neighbor Event</li>
+<li>[ ] <strong>Coffee Meeting Planned</strong> - Scheduled Week-One coffee with relevant community members</li>
+</ul>
+<h3 id="completion-requirements">Completion Requirements:<a class="headerlink" href="#completion-requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All "Prior to Move-In Day" items must be checked before move-in day</li>
+<li>All "Post-Move-In Day" items completed within 30 days of move-in</li>
+<li>Neighbor must receive comprehensive preparation communication</li>
+<li>Team must be fully briefed on special accommodations</li>
+</ul>
+<hr />
+<h2 id="guide-to-being-a-move-in-advocate-front-desk-team">Guide to Being a Move-In Advocate (Front Desk Team)<a class="headerlink" href="#guide-to-being-a-move-in-advocate-front-desk-team" title="Permanent link">&para;</a></h2>
+<p><strong>Purpose:</strong> This guide provides Front Desk Agents with a comprehensive checklist for executing the Move-In Advocate role when assigned by AGM. Use this guide to ensure you deliver a seamless, personalized move-in experience that makes every Neighbor feel welcomed, supported, and connected to their new community.</p>
+<p><strong>When You're Assigned:</strong> The AGM will assign you as Move-In Advocate during the weekly Move-In meeting (Monday) or when a move-in appears during the week. You'll be assigned in Moved/Sigma, and ideally, you'll be the Front Desk Agent working on the move-in day.</p>
+<p><strong>Your Role:</strong> As Move-In Advocate, you are the Neighbor's primary point of contact for their first 30 days at Flow. You ensure they feel personally cared for, connected to the community, and supported throughout their integration journey.</p>
+<hr />
+<h3 id="pre-day-1-checklist">Pre Day 1 Checklist<a class="headerlink" href="#pre-day-1-checklist" title="Permanent link">&para;</a></h3>
+<p><strong>Complete these tasks before the Neighbor's move-in day:</strong></p>
+<h4 id="personalization-preparation">Personalization &amp; Preparation<a class="headerlink" href="#personalization-preparation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Review "Design Your Flow" Survey Data</strong> — Access Sigma dashboard and review the Neighbor's survey responses to understand their interests, preferences, and special requests</li>
+<li>[ ] <strong>Coordinate Welcome Gift</strong> — Confirm with Move-In Experience Agent (if staffed) or AGM that personalized gift and card are placed in unit 24 hours before move-in. If you're placing the gift, select appropriate gift based on their interests from survey</li>
+<li>[ ] <strong>Write Personalized Welcome Card</strong> — Craft a warm, personal welcome message referencing their interests from the survey (e.g., "Welcome! We noticed you love yoga — we have a yoga Flow Group that meets Tuesdays!"). Place card with gift in unit</li>
+<li>[ ] <strong>Review Special Requests</strong> — Document any specific accommodations, accessibility needs, or preferences mentioned in survey or lease notes</li>
+<li>[ ] <strong>Verify Unit Readiness</strong> — Confirm unit status shows "Ready" in Moved/Yardi. If not ready, escalate to AGM immediately</li>
+</ul>
+<h4 id="access-logistics">Access &amp; Logistics<a class="headerlink" href="#access-logistics" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Verify Service Elevator Reservation</strong> — <strong>CRITICAL:</strong> Verify Neighbor has reserved the service elevator in Google Calendar via Moved. If not booked, contact Neighbor immediately to schedule. Add reserved times to Neighbor CRM &amp; Move-in Tracker. <strong>Every move-in must have a service elevator reservation before keys are handed over.</strong></li>
+<li>[ ] <strong>Check for Packages</strong> — Review package log and check if any packages have arrived for the Neighbor. If packages exist, coordinate with team to place them in unit before move-in</li>
+<li>[ ] <strong>Verify All Move-In Requirements Complete</strong> — <strong>CRITICAL:</strong> Before any key handoff, verify ALL requirements are complete in Moved:</li>
+<li>✅ Move-in balance paid via <strong>certified funds</strong> (security deposit + first month's rent)</li>
+<li>✅ Electricity set up by Neighbor</li>
+<li>✅ Proper renters insurance verified</li>
+<li>✅ All documents uploaded to Yardi lease profile</li>
+<li>✅ AGM has approved key release in Moved</li>
+<li>[ ] <strong>Note on Carson/Flow App Access</strong> — Carson/Flow App invite is automatic and will be sent once AGM hits the "move-in button" in Yardi after keys are received and all requirements are complete. No manual action needed.</li>
+</ul>
+<h4 id="communication-team-briefing">Communication &amp; Team Briefing<a class="headerlink" href="#communication-team-briefing" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Notify Neighbor of Your Role</strong> — Send brief introduction message (via RingCentral or preferred contact method) introducing yourself as their Move-In Advocate and confirming move-in details</li>
+<li>[ ] <strong>Brief Front Desk Team</strong> — Update #frontdesk Slack channel with move-in details, special considerations, and confirm you're handling as Advocate</li>
+<li>[ ] <strong>Schedule 48-Hour Check-In Reminder</strong> — Set calendar reminder for 48 hours after move-in day to conduct check-in call</li>
+<li>[ ] <strong>Plan Week 1 Coffee Chat</strong> — Begin thinking about who to connect Neighbor with (Ambassador, GM/AGM, or other community members) based on their interests</li>
+</ul>
+<h4 id="system-preparation">System Preparation<a class="headerlink" href="#system-preparation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Access Neighbor CRM &amp; Move-in Tracker</strong> — Ensure you have access to Neighbor's entry in Google Sheet and can update status</li>
+<li>[ ] <strong>Review Unit Details</strong> — Familiarize yourself with unit number, floor, building location, and any unit-specific notes</li>
+<li>[ ] <strong>Prepare Walkthrough Materials</strong> — Have Moved checklist available, know how to access unit via Carson, and understand building amenities to point out during walkthrough</li>
+</ul>
+<hr />
+<h3 id="on-day-1-checklist">On Day 1 Checklist<a class="headerlink" href="#on-day-1-checklist" title="Permanent link">&para;</a></h3>
+<p><strong>Complete these tasks during the Neighbor's move-in day:</strong></p>
+<h4 id="initial-greeting-arrival">Initial Greeting &amp; Arrival<a class="headerlink" href="#initial-greeting-arrival" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Welcome Neighbor Warmly</strong> — Greet Neighbor by name when they arrive at front desk. Express genuine excitement about their move-in</li>
+<li>[ ] <strong>Verify All Move-In Requirements Complete</strong> — <strong>CRITICAL:</strong> Before proceeding, verify ALL move-in requirements are complete in Moved:</li>
+<li>✅ Move-in balance paid via <strong>certified funds</strong> (security deposit + first month's rent)</li>
+<li>✅ Electricity set up by Neighbor</li>
+<li>✅ Proper renters insurance verified</li>
+<li>✅ All documents uploaded to Yardi lease profile</li>
+<li>✅ AGM has approved key release in Moved</li>
+<li>✅ Service elevator reservation confirmed in Google Calendar</li>
+<li>[ ] <strong>DO NOT Hand Over Keys if Requirements Not Met</strong> — If any requirement is incomplete, explain to Neighbor what's needed and escalate to AGM immediately. Keys cannot be released until ALL requirements are complete.</li>
+<li>[ ] <strong>Offer Refreshments</strong> — Offer water, coffee, or snacks to make them feel welcome and comfortable</li>
+</ul>
+<h4 id="unit-walkthrough-key-handoff">Unit Walkthrough &amp; Key Handoff<a class="headerlink" href="#unit-walkthrough-key-handoff" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Conduct Unit Walkthrough</strong> — Walk Neighbor to their unit. Point out building amenities on the way (mailroom, package room, elevators, amenities)</li>
+<li>[ ] <strong>Complete Unit Inspection</strong> — Walk through unit together, checking:</li>
+<li>All lights and switches working</li>
+<li>Appliances functioning (refrigerator, stove, HVAC)</li>
+<li>Windows and doors opening/closing properly</li>
+<li>Water pressure and temperature</li>
+<li>Any damage or issues noted</li>
+<li>[ ] <strong>Document Issues Immediately</strong> — Log any issues found in Zendesk with "Move-In" tag and assign to appropriate team (Maintenance, Operations, etc.)</li>
+<li>[ ] <strong>Point Out Welcome Gift</strong> — Direct Neighbor's attention to personalized gift and card in unit. Share why you selected it based on their interests</li>
+<li>[ ] <strong>Confirm Packages in Unit</strong> — Verify any packages are present and point them out</li>
+<li>[ ] <strong>Verify Service Elevator Access</strong> — Confirm movers/Neighbor know how to access and use the service elevator for their reservation window</li>
+<li>[ ] <strong>Note on Flow App Access</strong> — Inform Neighbor that their Flow App invite (via Carson) will be sent automatically once AGM processes the move-in in Yardi after keys are received and all requirements are complete. They'll receive an email invitation.</li>
+</ul>
+<h4 id="information-orientation">Information &amp; Orientation<a class="headerlink" href="#information-orientation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Provide Building Orientation</strong> — Share key information:</li>
+<li>Mailroom location and mailbox number</li>
+<li>Package room location and process</li>
+<li>Parking information and passes (if applicable)</li>
+<li>Elevator use and reservation process</li>
+<li>Amenity locations and reservation process</li>
+<li>Emergency contacts and procedures</li>
+<li>[ ] <strong>Walk Through Flow App/Carson Features</strong> — Show Neighbor how to:</li>
+<li>Reserve amenities</li>
+<li>Request maintenance</li>
+<li>Access deliveries</li>
+<li>Connect with neighbors</li>
+<li>[ ] <strong>Share Community Information</strong> — Mention upcoming events, Flow Groups, and New Neighbor Welcome Event. Invite them to check out community calendar</li>
+<li>[ ] <strong>Provide Contact Information</strong> — Share your direct contact info (if appropriate) and explain when to reach you vs. front desk general line</li>
+</ul>
+<h4 id="move-in-completion">Move-In Completion<a class="headerlink" href="#move-in-completion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Verify Keys Handed Over After All Requirements Met</strong> — Confirm that keys were only handed over after ALL requirements verified (certified funds payment, electricity, insurance, documents, AGM approval)</li>
+<li>[ ] <strong>Complete Move-In Confirmation</strong> — Mark checklist complete in Moved. Verify with AGM if required before marking complete</li>
+<li>[ ] <strong>Notify AGM to Process Move-In in Yardi</strong> — Confirm with AGM that move-in should be processed in Yardi (hitting "move-in button") which triggers Flow App/Carson invite to Neighbor</li>
+<li>[ ] <strong>Update Neighbor CRM</strong> — Log move-in completion in Neighbor CRM &amp; Move-in Tracker. Note any special considerations or issues</li>
+<li>[ ] <strong>Post to Slack Channels</strong> — Update #fx and #move-ins Slack channels with move-in completion status and any notes for team</li>
+<li>[ ] <strong>Hand Off to Moving Team</strong> — If movers are present, provide directions and coordinate service elevator access during their reservation window. Assist with move-in logistics as needed</li>
+<li>[ ] <strong>Confirm Follow-Up Scheduled</strong> — Remind Neighbor you'll check in with them in 48 hours. Confirm best contact method</li>
+</ul>
+<hr />
+<h3 id="post-day-1-checklist">Post Day 1 Checklist<a class="headerlink" href="#post-day-1-checklist" title="Permanent link">&para;</a></h3>
+<p><strong>Complete these tasks after move-in day (within 30 days):</strong></p>
+<h4 id="immediate-follow-up-48-hours">Immediate Follow-Up (48 Hours)<a class="headerlink" href="#immediate-follow-up-48-hours" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>48-Hour Check-In Call</strong> — Call Neighbor via RingCentral (or preferred method) 48 hours after move-in. Use warm, conversational tone:</li>
+<li>How are they settling in?</li>
+<li>Are they experiencing any issues or concerns?</li>
+<li>Do they have questions about the building or community?</li>
+<li>Are they comfortable with access and systems?</li>
+<li>[ ] <strong>Log Feedback in Neighbor CRM</strong> — Document all feedback, questions, and concerns in Neighbor CRM &amp; Move-in Tracker</li>
+<li>[ ] <strong>Route Issues to Appropriate Team</strong> — If Neighbor reports issues, create Zendesk tickets or escalate to Maintenance, Operations, etc. Follow up to ensure resolution</li>
+<li>[ ] <strong>Add to WhatsApp Community</strong> — Add Neighbor to WhatsApp Community (if applicable) and send welcome message introducing them</li>
+</ul>
+<h4 id="week-1-integration-days-1-7">Week 1 Integration (Days 1-7)<a class="headerlink" href="#week-1-integration-days-1-7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Schedule Week 1 Coffee Chat</strong> — During 48-hour check-in, invite Neighbor to coffee chat. Options:</li>
+<li>Conduct personally (if comfortable)</li>
+<li>Schedule with GM or AGM</li>
+<li>Connect with appropriate Ambassador</li>
+<li>[ ] <strong>Identify Flow Group Matches</strong> — Review Neighbor's interests from "Design Your Flow" survey and match to relevant Flow Groups. Send invitations during coffee chat</li>
+<li>[ ] <strong>Invite to New Neighbor Welcome Event</strong> — Confirm Neighbor is invited to upcoming New Neighbor Welcome Event. Share date, time, and what to expect</li>
+<li>[ ] <strong>Follow Up on Reported Issues</strong> — Check status of any Zendesk tickets created during move-in. Ensure all issues are resolved and follow up with Neighbor to confirm satisfaction</li>
+</ul>
+<h4 id="community-connection-days-8-21">Community Connection (Days 8-21)<a class="headerlink" href="#community-connection-days-8-21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Connect with Ambassadors</strong> — Introduce Neighbor to appropriate Ambassadors based on interests. Facilitate introduction via email, WhatsApp, or in-person</li>
+<li>[ ] <strong>Promote Community Events</strong> — Share upcoming community events that align with Neighbor's interests. Encourage attendance</li>
+<li>[ ] <strong>Encourage Flow Group Participation</strong> — Follow up on Flow Group invitations. Check if Neighbor has joined and attended any meetings</li>
+<li>[ ] <strong>Facilitate Neighbor Connections</strong> — If Neighbor expresses interest, help connect them with other residents who share similar interests (with permission)</li>
+</ul>
+<h4 id="30-day-integration-review-day-30">30-Day Integration Review (Day 30)<a class="headerlink" href="#30-day-integration-review-day-30" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Conduct 30-Day Integration Review</strong> — Check in with Neighbor (via call or in-person) to assess integration progress:</li>
+<li>Have they attended the New Neighbor Welcome Event?</li>
+<li>Have they joined any Flow Groups?</li>
+<li>Have they connected with Ambassadors or other neighbors?</li>
+<li>How do they feel about their community connection?</li>
+<li>[ ] <strong>Document Integration Milestones</strong> — Log completion status in Neighbor CRM &amp; Move-in Tracker. Update Sigma dashboard with integration progress</li>
+<li>[ ] <strong>Confirm Event Attendance or Group Membership</strong> — Verify Neighbor has attended event or joined group. If not, offer additional support or connections</li>
+<li>[ ] <strong>Transition to Ongoing Support</strong> — Confirm Neighbor feels integrated and understands ongoing support channels (Front Desk, Community Engagement Lead, etc.)</li>
+<li>[ ] <strong>Update AGM on Integration Status</strong> — Share integration completion status with AGM for their 30-Day Integration Review with Move-In Advocate</li>
+</ul>
+<h4 id="ongoing-support-as-needed">Ongoing Support (As Needed)<a class="headerlink" href="#ongoing-support-as-needed" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Monitor Integration Progress</strong> — Continue checking in periodically if Neighbor hasn't achieved integration milestones. Offer additional support or alternative connections</li>
+<li>[ ] <strong>Respond to Questions</strong> — Be available to answer questions about building, community, or resources as they arise</li>
+<li>[ ] <strong>Celebrate Integration Wins</strong> — Acknowledge and celebrate when Neighbor joins groups, attends events, or makes connections. Reinforce their belonging</li>
+</ul>
+<hr />
+<h3 id="escalation-support">Escalation &amp; Support<a class="headerlink" href="#escalation-support" title="Permanent link">&para;</a></h3>
+<p><strong>When to Escalate:</strong>
+- <strong>Missing Move-In Requirements:</strong> If Neighbor arrives but requirements not complete (certified funds, electricity, insurance) → <strong>DO NOT hand over keys.</strong> Escalate to AGM immediately for resolution
+- <strong>No Service Elevator Reservation:</strong> If Neighbor has not reserved service elevator → Contact Neighbor immediately to schedule. Escalate to AGM if reservation cannot be made before move-in time
+- <strong>Unit Readiness Issues:</strong> If unit is not marked "Ready" 24 hours before move-in → Escalate to AGM immediately
+- <strong>Access Problems:</strong> If Carson access doesn't work → Escalate to Operations Manager or Front Desk Lead
+- <strong>Move-In Delays:</strong> If Neighbor needs to delay move-in → Notify AGM and Leasing Agent
+- <strong>Critical Maintenance Issues:</strong> If unit has critical issues (no heat, water, etc.) → Create urgent Zendesk ticket and escalate to Maintenance Manager and AGM
+- <strong>Neighbor Concerns:</strong> If Neighbor expresses significant dissatisfaction → Escalate to AGM and GM immediately
+- <strong>Integration Challenges:</strong> If Neighbor struggling with integration after 30 days → Escalate to Community Engagement Lead and AGM</p>
+<p><strong>Support Resources:</strong>
+- <strong>AGM:</strong> For move-in readiness, unit issues, or process questions
+- <strong>Front Desk Lead:</strong> For front desk procedures, access issues, or daily operations
+- <strong>Operations Manager:</strong> For hotel/operational questions or escalations
+- <strong>Community Engagement Lead:</strong> For Flow Groups, events, or community connections
+- <strong>Zendesk:</strong> For all issue tracking and ticketing</p>
+<hr />
+<h3 id="success-metrics">Success Metrics<a class="headerlink" href="#success-metrics" title="Permanent link">&para;</a></h3>
+<p><strong>Your success as Move-In Advocate is measured by:</strong>
+- <strong>Move-In Experience:</strong> Neighbor feels warmly welcomed and supported on Day 1
+- <strong>48-Hour Satisfaction:</strong> Neighbor reports positive experience in 48-hour check-in
+- <strong>30-Day Integration:</strong> Neighbor has attended New Neighbor Event or joined Flow Group by Day 30
+- <strong>Issue Resolution:</strong> All move-in issues resolved within 48 hours
+- <strong>Community Connection:</strong> Neighbor feels connected to community and understands how to engage</p>
+<p><strong>Remember:</strong> You are the face of Flow during one of the most important moments in a Neighbor's journey. Your warmth, attention to detail, and genuine care make the difference between a good move-in and a memorable one that creates lasting community connection.</p>
+<hr />
+<h2 id="resources-templates">Resources &amp; Templates<a class="headerlink" href="#resources-templates" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Welcome Email Template (Moved)  </li>
+<li>Unit Readiness Checklist (Maintenance &amp; Housekeeping)  </li>
+<li>Elevator Booking Calendar  </li>
+<li>Design Your Flow Survey (Typeform)  </li>
+<li>Sigma Dashboard – Move-In Personalization  </li>
+<li>New Neighbor Welcome Event SOP  </li>
+<li>One-Pager – Front Desk Move-In Quick Guide</li>
+<li>[Placeholder: Link to Move-In Experience Agent Preparation Checklist (Typeform)]</li>
+</ul>
+<hr />
+<h2 id="screenshots-visuals">Screenshots &amp; Visuals<a class="headerlink" href="#screenshots-visuals" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Moved: Move-In Checklist view  </li>
+<li>Sigma: Integration Dashboard  </li>
+<li>Carson: Account Setup  </li>
+</ul>
+<hr />
+<blockquote>
+<p>Delivering this SOP ensures that every Neighbor’s first day at Flow feels like coming home—not moving house.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../../operating-practices/belong-cultivated-community/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Belong – Cultivated Community">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Belong – Cultivated Community
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../unit-move-in-readiness-sop/" class="md-footer__link md-footer__link--next" aria-label="Next: Unit Move-in Readiness SOP">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Unit Move-in Readiness SOP
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.sections", "navigation.indexes", "navigation.tracking", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

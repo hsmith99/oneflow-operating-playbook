@@ -1,0 +1,2140 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Flow’s onsite team structure and role responsibilities.">
+      
+      
+        <meta name="author" content="Flow">
+      
+      
+        <link rel="canonical" href="https://hsmith99.github.io/oneflow-operating-playbook/team-and-systems/onsite-staffing-model/">
+      
+      
+        <link rel="prev" href="../../introduction/the-flow-experience/">
+      
+      
+        <link rel="next" href="../onsite-technology-stack/">
+      
+      
+      <link rel="icon" href="../../images/flow-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Onsite Staffing Model - One Flow Operating Playbook</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Flow Brand Colors - Minimalist and Clean */
+        :root {
+            --moonlight: #F3EDDF;        /* Original Moonlight */
+            --moonlight-light: #FDFCF9;  /* Very light, almost white Moonlight */
+            --moonlight-subtle: #F9F7F3; /* Subtle Moonlight for sidebar */
+            --moonlight-minimal: #FEFEFD; /* Minimal Moonlight for main content */
+            --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-subtle) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Minimalist background - full width */
+        body {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-container {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Main content area - Minimalist style */
+        .md-main,
+        .md-main[data-md-state="open"] {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
+            background-color: var(--moonlight-minimal) !important;
+            max-width: none !important;
+        }
+
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Ensure the main grid layout uses full width */
+        .md-grid {
+            max-width: none !important;
+        }
+
+        /* Flow text colors */
+        body, .md-content, .md-typeset {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset h1, .md-typeset h2, .md-typeset h3, 
+        .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset p, .md-typeset li, .md-typeset blockquote {
+            color: var(--midnight) !important;
+        }
+
+        /* Typography - Poppins for navigation, Inter for content */
+        .md-header,
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title,
+        .md-sidebar--primary,
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar--primary .md-nav__link,
+        .md-footer {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        /* Inter for main content */
+        .md-main__inner,
+        .md-content,
+        .md-typeset,
+        .md-typeset h1,
+        .md-typeset h2,
+        .md-typeset h3,
+        .md-typeset h4,
+        .md-typeset h5,
+        .md-typeset h6,
+        .md-typeset p,
+        .md-typeset li,
+        .md-typeset table,
+        .md-typeset blockquote {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Header (top nav) - Minimalist style */
+        .md-header {
+            background-color: var(--moonlight-subtle) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            width: 100% !important;
+        }
+
+        .md-header__inner {
+            background-color: var(--moonlight-subtle) !important;
+        }
+
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title {
+            color: var(--midnight) !important;
+        }
+
+        /* Logo styling */
+        .md-header__button.md-logo {
+            padding: 0.2rem 0.4rem;
+        }
+
+        .md-header__button.md-logo img,
+        .md-header__button.md-logo svg {
+            height: 2rem;
+            width: auto;
+        }
+
+        /* Left sidebar - Minimalist style matching top menu color */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-subtle) !important; /* Same as top menu */
+            border-right: 1px solid rgba(61, 61, 61, 0.1);
+        }
+        
+        /* Remove strange top spacing and tighten title */
+        .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            padding-top: 0.8rem !important;
+            padding-bottom: 0.6rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Tighten spacing for all navigation links */
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
+            color: var(--midnight) !important;
+            padding: 4px 16px !important;
+            margin: 0 !important;
+        }
+        
+        /* Remove extra spacing from navigation items */
+        .md-sidebar--primary .md-nav__item {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: rgba(61, 61, 61, 0.08) !important;
+            color: var(--midnight) !important;
+            font-weight: 600;
+        }
+
+        /* Nested navigation items - Flow style */
+        .md-sidebar--primary .md-nav__item .md-nav__link {
+            padding-left: 32px;
+            color: var(--midnight) !important;
+        }
+
+        .md-sidebar--primary .md-nav__item .md-nav__item .md-nav__link {
+            padding-left: 48px;
+        }
+
+        /* Footer - Minimalist style */
+        .md-footer {
+            background-color: var(--moonlight-subtle) !important;
+            border-top: 1px solid rgba(61, 61, 61, 0.1);
+            color: var(--midnight) !important;
+        }
+
+        .md-footer-nav__link {
+            color: var(--midnight) !important;
+        }
+
+        /* Code blocks - Minimalist style */
+        .md-typeset code {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+
+        /* Tables - Minimalist clean styling */
+        .md-typeset table {
+            border: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table th {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table td {
+            border-bottom: 1px solid rgba(61, 61, 61, 0.05);
+        }
+
+        /* Admonitions - Minimalist style */
+        .md-typeset .admonition {
+            background-color: var(--moonlight-minimal) !important;
+            border-left: 4px solid rgba(61, 61, 61, 0.2) !important;
+        }
+
+        .md-typeset .admonition-title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+        }
+        
+        /* Hide the sidebar title completely - multiple selectors for persistence */
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title,
+        [dir] .md-sidebar--primary .md-nav__title {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Make section headers collapsible */
+        .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+            cursor: pointer !important;
+        }
+
+        /* SOP Agent Button Styling */
+        .sop-agent-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 1rem;
+            margin-right: 0.5rem;
+            background-color: var(--midnight) !important;
+            color: var(--moonlight-minimal) !important;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .sop-agent-button:hover {
+            background-color: rgba(61, 61, 61, 0.9) !important;
+            color: var(--moonlight-minimal) !important;
+        }
+    </style>
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#onsite-staffing-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="One Flow Operating Playbook" class="md-header__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            One Flow Operating Playbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Onsite Staffing Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <script>
+        // Add SOP Agent button to header after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerInner = document.querySelector('.md-header__inner');
+            if (headerInner) {
+                const sopButton = document.createElement('a');
+                sopButton.className = 'sop-agent-button';
+                sopButton.textContent = 'SOP Agent';
+                sopButton.href = '#';
+                sopButton.onclick = function(e) {
+                    e.preventDefault();
+                    // Fake button - no action
+                    return false;
+                };
+                
+                // Insert button in the header navigation area (right side)
+                const headerNav = headerInner.querySelector('.md-header__nav');
+                if (headerNav) {
+                    headerNav.insertBefore(sopButton, headerNav.firstChild);
+                } else {
+                    // Fallback: append to header inner
+                    headerInner.appendChild(sopButton);
+                }
+            }
+        });
+    </script>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="One Flow Operating Playbook" class="md-nav__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    One Flow Operating Playbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/mission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mission
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/brand-values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brand Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/leadership-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Leadership Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/the-flow-experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Flow Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Team & Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Team & Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Onsite Staffing Model
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Staffing Model
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leadership-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Leadership &amp; Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Leadership &amp; Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-manager-gm" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Manager (GM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistant-general-manager-agm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assistant General Manager (AGM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations Manager
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leasing-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧑‍💼 Leasing &amp; Experience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧑‍💼 Leasing &amp; Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasing-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-in-experience-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Experience Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-engagement-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Engagement Lead
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#front-desk-guest-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛎 Front Desk &amp; Guest Experience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛎 Front Desk &amp; Guest Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Desk Lead
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Desk Agent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance-housekeeping-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Maintenance, Housekeeping &amp; Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠 Maintenance, Housekeeping &amp; Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chief-engineer-maintenance-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chief Engineer / Maintenance Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Team
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#housekeeping-contracted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Housekeeping (Contracted)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-contracted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security (Contracted)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaboration-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Collaboration &amp; Communication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staffing-structure-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Staffing Structure Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Cross-References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onsite-technology-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Technology Stack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yardi-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Yardi Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zendesk-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zendesk Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Practices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-practices/foundational-neighbor-journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundational Neighbor Journey
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-practices/care-everyday-moments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-practices/belong-cultivated-community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Manual - SOPs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Manual - SOPs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundational Journey
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Foundational Journey
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/foundational-journey/move-in-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move-in SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/foundational-journey/unit-move-in-readiness-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unit Move-in Readiness SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Care – Everyday Moments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/front-desk-shifts-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Front Desk Shifts SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/gm-weekly-reporting-dashboard-review-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GM Weekly Reporting Dashboard Review SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/neighbor-communication-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbor Communication SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/fair-housing-act-compliance-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fair Housing Act Compliance SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/flow-minibar-experience-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow Minibar Experience SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Belong – Cultivated Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/belong-cultivated-community/ambassador-program-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ambassador Program SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leadership-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Leadership &amp; Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Leadership &amp; Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-manager-gm" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Manager (GM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistant-general-manager-agm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assistant General Manager (AGM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations Manager
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leasing-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧑‍💼 Leasing &amp; Experience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧑‍💼 Leasing &amp; Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasing-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-in-experience-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Experience Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-engagement-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Engagement Lead
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#front-desk-guest-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛎 Front Desk &amp; Guest Experience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛎 Front Desk &amp; Guest Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Desk Lead
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Desk Agent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance-housekeeping-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Maintenance, Housekeeping &amp; Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠 Maintenance, Housekeeping &amp; Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chief-engineer-maintenance-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chief Engineer / Maintenance Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Team
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#housekeeping-contracted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Housekeeping (Contracted)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-contracted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security (Contracted)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaboration-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Collaboration &amp; Communication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staffing-structure-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Staffing Structure Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Cross-References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="onsite-staffing-model">Onsite Staffing Model<a class="headerlink" href="#onsite-staffing-model" title="Permanent link">&para;</a></h1>
+<p>Every Flow community is only as strong as the humans who bring it to life.<br />
+Our Onsite Team exists to ensure that every Neighbor and Guest experiences safety, care, and connection from the moment they arrive.<br />
+Together, this team transforms a building into a community — translating Flow’s philosophy into daily practice.</p>
+<hr />
+<h2 id="leadership-management">🧭 Leadership &amp; Management<a class="headerlink" href="#leadership-management" title="Permanent link">&para;</a></h2>
+<h3 id="general-manager-gm">General Manager (GM)<a class="headerlink" href="#general-manager-gm" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> Regional Director of Operations<br />
+<strong>Purpose:</strong> Leads the entire property operation — residential, hotel, and condo (where applicable). Owns the P&amp;L, oversees all teams, and ensures that Flow’s standards of hospitality, care, and belonging are consistently delivered.</p>
+<h3 id="assistant-general-manager-agm">Assistant General Manager (AGM)<a class="headerlink" href="#assistant-general-manager-agm" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> General Manager<br />
+<strong>Purpose:</strong> Oversees the residential business and ensures operational excellence in Accounts Receivable, collections, maintenance, housekeeping, and security. Acts as the operational backbone of the property.</p>
+<h3 id="operations-manager">Operations Manager<a class="headerlink" href="#operations-manager" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> General Manager or Assistant General Manager<br />
+<strong>Purpose:</strong> Leads day-to-day management of the front desk and hotel operations. Ensures hospitality and service consistency across all Neighbor and Guest interactions. Acts as Manager on Duty when required.</p>
+<hr />
+<h2 id="leasing-experience">🧑‍💼 Leasing &amp; Experience<a class="headerlink" href="#leasing-experience" title="Permanent link">&para;</a></h2>
+<h3 id="leasing-manager">Leasing Manager<a class="headerlink" href="#leasing-manager" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> General Manager<br />
+<strong>Purpose:</strong> Leads all leasing operations in stabilized or large buildings. Ensures Flow’s hospitality and care extend from the first tour through move-in.</p>
+<h3 id="leasing-agent">Leasing Agent<a class="headerlink" href="#leasing-agent" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> Director of Lease-Up, Leasing Manager, or General Manager<br />
+<strong>Purpose:</strong> Manages the full leasing journey — from first inquiry through lease signing and key handoff. Owns the early-stage relationship with every new Neighbor.</p>
+<h3 id="move-in-experience-agent">Move-In Experience Agent<a class="headerlink" href="#move-in-experience-agent" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> Operations Manager or Assistant General Manager<br />
+<strong>Purpose:</strong> Delivers the Join stage of the Foundational Journey. Ensures every new Neighbor’s first 30 days are seamless, personal, and community-oriented.<br />
+Coordinates with Leasing, Front Desk, and Community Engagement to integrate Neighbors quickly and meaningfully.</p>
+<h3 id="community-engagement-lead">Community Engagement Lead<a class="headerlink" href="#community-engagement-lead" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> General Manager<br />
+<strong>Purpose:</strong> Owns and activates the Flow Belonging Platform.<br />
+Leads Ambassadors, programs community experiences, and nurtures a culture of belonging through Flow Groups, Clubs, and Events.</p>
+<hr />
+<h2 id="front-desk-guest-experience">🛎 Front Desk &amp; Guest Experience<a class="headerlink" href="#front-desk-guest-experience" title="Permanent link">&para;</a></h2>
+<h3 id="front-desk-lead">Front Desk Lead<a class="headerlink" href="#front-desk-lead" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> Assistant General Manager or General Manager<br />
+<strong>Purpose:</strong> Oversees the front desk team, ensuring consistency and accountability.<br />
+Trains new members, maintains service standards, and supports daily operations as the link between management and the frontline.</p>
+<h3 id="front-desk-agent">Front Desk Agent<a class="headerlink" href="#front-desk-agent" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> Front Desk Lead, Operations Manager, or Assistant General Manager<br />
+<strong>Purpose:</strong> Represents the face of Flow.<br />
+Ensures every Neighbor and Guest feels welcome, supported, and cared for.<br />
+Manages check-ins, deliveries, access, and Level 1 Neighbor support.</p>
+<hr />
+<h2 id="maintenance-housekeeping-security">🛠 Maintenance, Housekeeping &amp; Security<a class="headerlink" href="#maintenance-housekeeping-security" title="Permanent link">&para;</a></h2>
+<h3 id="chief-engineer-maintenance-manager">Chief Engineer / Maintenance Manager<a class="headerlink" href="#chief-engineer-maintenance-manager" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> Assistant General Manager<br />
+<strong>Purpose:</strong> Leads the maintenance team and ensures all unit readiness standards are met.<br />
+Conducts pre-maintenance inspections, creates work orders in Waves, completes maintenance work, conducts post-maintenance inspections, and updates unit readiness status. Owns technical quality and functionality of all units.</p>
+<h3 id="maintenance-team">Maintenance Team<a class="headerlink" href="#maintenance-team" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> Chief Engineer / Maintenance Manager or Assistant General Manager<br />
+<strong>Purpose:</strong> Maintains units, amenities, and shared spaces to Flow's standards.<br />
+Responds promptly to requests, completes work orders assigned by Maintenance Manager in Waves, and upholds preventive maintenance schedules.</p>
+<h3 id="housekeeping-contracted">Housekeeping (Contracted)<a class="headerlink" href="#housekeeping-contracted" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> Operations Manager or Assistant General Manager<br />
+<strong>Purpose:</strong> Ensures cleanliness and readiness across hotel units, amenities, and shared areas.<br />
+Coordinates with Front Desk and Maintenance to maintain seamless turnover between stays.</p>
+<h3 id="security-contracted">Security (Contracted)<a class="headerlink" href="#security-contracted" title="Permanent link">&para;</a></h3>
+<p><strong>Reports to:</strong> Assistant General Manager and General Manager<br />
+<strong>Purpose:</strong> Provides overnight coverage (9 PM–7 AM) and patrols the property to ensure safety and peace of mind.<br />
+Acts as the eyes and ears of the community overnight, coordinating with the day team for any incidents.</p>
+<hr />
+<h2 id="collaboration-communication">🧩 Collaboration &amp; Communication<a class="headerlink" href="#collaboration-communication" title="Permanent link">&para;</a></h2>
+<p>Flow properties use a shared Slack workspace organized by function:
+- <strong>#cleaning</strong> — housekeeping and maintenance coordination<br />
+- <strong>#security</strong> — incident updates and patrol summaries<br />
+- <strong>#leasing</strong> — daily leads, tours, and application updates<br />
+- <strong>#frontdesk</strong> — guest check-ins, package logs, and escalations<br />
+- <strong>#neighbor-activity</strong> — community updates and events</p>
+<hr />
+<h2 id="staffing-structure-overview">📊 Staffing Structure Overview<a class="headerlink" href="#staffing-structure-overview" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Department</th>
+<th>Role</th>
+<th>Reports To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leadership</td>
+<td>General Manager</td>
+<td>Regional Director of Operations</td>
+</tr>
+<tr>
+<td>Leadership</td>
+<td>Assistant General Manager</td>
+<td>General Manager</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>Operations Manager</td>
+<td>GM / AGM</td>
+</tr>
+<tr>
+<td>Leasing</td>
+<td>Leasing Manager</td>
+<td>General Manager</td>
+</tr>
+<tr>
+<td>Leasing</td>
+<td>Leasing Agent</td>
+<td>Lease-Up Director / Leasing Manager / GM</td>
+</tr>
+<tr>
+<td>Experience</td>
+<td>Move-In Experience Agent</td>
+<td>AGM / Operations Manager</td>
+</tr>
+<tr>
+<td>Experience</td>
+<td>Community Engagement Lead</td>
+<td>General Manager</td>
+</tr>
+<tr>
+<td>Front Desk</td>
+<td>Front Desk Lead</td>
+<td>AGM / GM</td>
+</tr>
+<tr>
+<td>Front Desk</td>
+<td>Front Desk Agent</td>
+<td>Front Desk Lead / Ops Manager / AGM</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>Chief Engineer / Maintenance Manager</td>
+<td>Assistant General Manager</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>Maintenance Team</td>
+<td>Chief Engineer / Maintenance Manager / AGM</td>
+</tr>
+<tr>
+<td>Housekeeping</td>
+<td>Contracted Housekeeping</td>
+<td>Ops Manager / AGM</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Contracted Security</td>
+<td>AGM / GM</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cross-references">🔗 Cross-References<a class="headerlink" href="#cross-references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../onsite-technology-stack/">Onsite Technology Stack</a></li>
+<li><a href="../operating-practices/foundational-journey/move-in-sop.md">Move-In SOP</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../introduction/the-flow-experience/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Flow Experience">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                The Flow Experience
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../onsite-technology-stack/" class="md-footer__link md-footer__link--next" aria-label="Next: Onsite Technology Stack">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Onsite Technology Stack
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.sections", "navigation.indexes", "navigation.tracking", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

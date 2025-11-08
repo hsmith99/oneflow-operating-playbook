@@ -1,0 +1,2482 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The comprehensive operating system for Flow's hospitality excellence. Mission, values, SOPs, and best practices for world-class neighbor experiences.">
+      
+      
+        <meta name="author" content="Flow">
+      
+      
+        <link rel="canonical" href="https://hsmith99.github.io/oneflow-operating-playbook/operating-manual-sops/foundational-journey/unit-move-in-readiness-sop/">
+      
+      
+        <link rel="prev" href="../move-in-sop/">
+      
+      
+        <link rel="next" href="../../care-everyday-moments/front-desk-shifts-sop/">
+      
+      
+      <link rel="icon" href="../../../images/flow-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Unit Move-in Readiness SOP - One Flow Operating Playbook</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Flow Brand Colors - Minimalist and Clean */
+        :root {
+            --moonlight: #F3EDDF;        /* Original Moonlight */
+            --moonlight-light: #FDFCF9;  /* Very light, almost white Moonlight */
+            --moonlight-subtle: #F9F7F3; /* Subtle Moonlight for sidebar */
+            --moonlight-minimal: #FEFEFD; /* Minimal Moonlight for main content */
+            --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-subtle) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Minimalist background - full width */
+        body {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-container {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Main content area - Minimalist style */
+        .md-main,
+        .md-main[data-md-state="open"] {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
+            background-color: var(--moonlight-minimal) !important;
+            max-width: none !important;
+        }
+
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Ensure the main grid layout uses full width */
+        .md-grid {
+            max-width: none !important;
+        }
+
+        /* Flow text colors */
+        body, .md-content, .md-typeset {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset h1, .md-typeset h2, .md-typeset h3, 
+        .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset p, .md-typeset li, .md-typeset blockquote {
+            color: var(--midnight) !important;
+        }
+
+        /* Typography - Poppins for navigation, Inter for content */
+        .md-header,
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title,
+        .md-sidebar--primary,
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar--primary .md-nav__link,
+        .md-footer {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        /* Inter for main content */
+        .md-main__inner,
+        .md-content,
+        .md-typeset,
+        .md-typeset h1,
+        .md-typeset h2,
+        .md-typeset h3,
+        .md-typeset h4,
+        .md-typeset h5,
+        .md-typeset h6,
+        .md-typeset p,
+        .md-typeset li,
+        .md-typeset table,
+        .md-typeset blockquote {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Header (top nav) - Minimalist style */
+        .md-header {
+            background-color: var(--moonlight-subtle) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            width: 100% !important;
+        }
+
+        .md-header__inner {
+            background-color: var(--moonlight-subtle) !important;
+        }
+
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title {
+            color: var(--midnight) !important;
+        }
+
+        /* Logo styling */
+        .md-header__button.md-logo {
+            padding: 0.2rem 0.4rem;
+        }
+
+        .md-header__button.md-logo img,
+        .md-header__button.md-logo svg {
+            height: 2rem;
+            width: auto;
+        }
+
+        /* Left sidebar - Minimalist style matching top menu color */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-subtle) !important; /* Same as top menu */
+            border-right: 1px solid rgba(61, 61, 61, 0.1);
+        }
+        
+        /* Remove strange top spacing and tighten title */
+        .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            padding-top: 0.8rem !important;
+            padding-bottom: 0.6rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Tighten spacing for all navigation links */
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
+            color: var(--midnight) !important;
+            padding: 4px 16px !important;
+            margin: 0 !important;
+        }
+        
+        /* Remove extra spacing from navigation items */
+        .md-sidebar--primary .md-nav__item {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: rgba(61, 61, 61, 0.08) !important;
+            color: var(--midnight) !important;
+            font-weight: 600;
+        }
+
+        /* Nested navigation items - Flow style */
+        .md-sidebar--primary .md-nav__item .md-nav__link {
+            padding-left: 32px;
+            color: var(--midnight) !important;
+        }
+
+        .md-sidebar--primary .md-nav__item .md-nav__item .md-nav__link {
+            padding-left: 48px;
+        }
+
+        /* Footer - Minimalist style */
+        .md-footer {
+            background-color: var(--moonlight-subtle) !important;
+            border-top: 1px solid rgba(61, 61, 61, 0.1);
+            color: var(--midnight) !important;
+        }
+
+        .md-footer-nav__link {
+            color: var(--midnight) !important;
+        }
+
+        /* Code blocks - Minimalist style */
+        .md-typeset code {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+
+        /* Tables - Minimalist clean styling */
+        .md-typeset table {
+            border: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table th {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table td {
+            border-bottom: 1px solid rgba(61, 61, 61, 0.05);
+        }
+
+        /* Admonitions - Minimalist style */
+        .md-typeset .admonition {
+            background-color: var(--moonlight-minimal) !important;
+            border-left: 4px solid rgba(61, 61, 61, 0.2) !important;
+        }
+
+        .md-typeset .admonition-title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+        }
+        
+        /* Hide the sidebar title completely - multiple selectors for persistence */
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title,
+        [dir] .md-sidebar--primary .md-nav__title {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Make section headers collapsible */
+        .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+            cursor: pointer !important;
+        }
+
+        /* SOP Agent Button Styling */
+        .sop-agent-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 1rem;
+            margin-right: 0.5rem;
+            background-color: var(--midnight) !important;
+            color: var(--moonlight-minimal) !important;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .sop-agent-button:hover {
+            background-color: rgba(61, 61, 61, 0.9) !important;
+            color: var(--moonlight-minimal) !important;
+        }
+    </style>
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-move-in-readiness-sop" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="One Flow Operating Playbook" class="md-header__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            One Flow Operating Playbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unit Move-in Readiness SOP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <script>
+        // Add SOP Agent button to header after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerInner = document.querySelector('.md-header__inner');
+            if (headerInner) {
+                const sopButton = document.createElement('a');
+                sopButton.className = 'sop-agent-button';
+                sopButton.textContent = 'SOP Agent';
+                sopButton.href = '#';
+                sopButton.onclick = function(e) {
+                    e.preventDefault();
+                    // Fake button - no action
+                    return false;
+                };
+                
+                // Insert button in the header navigation area (right side)
+                const headerNav = headerInner.querySelector('.md-header__nav');
+                if (headerNav) {
+                    headerNav.insertBefore(sopButton, headerNav.firstChild);
+                } else {
+                    // Fallback: append to header inner
+                    headerInner.appendChild(sopButton);
+                }
+            }
+        });
+    </script>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="One Flow Operating Playbook" class="md-nav__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    One Flow Operating Playbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/mission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mission
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/brand-values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brand Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/leadership-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Leadership Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/the-flow-experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Flow Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Team & Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Team & Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/onsite-staffing-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Staffing Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/onsite-technology-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Technology Stack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/yardi-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Yardi Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team-and-systems/zendesk-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zendesk Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Practices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating-practices/foundational-neighbor-journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundational Neighbor Journey
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating-practices/care-everyday-moments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operating-practices/belong-cultivated-community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Manual - SOPs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Manual - SOPs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundational Journey
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Foundational Journey
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../move-in-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move-in SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Unit Move-in Readiness SOP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unit Move-in Readiness SOP
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems &amp; Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cleaning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-final-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Final Inspection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typeform-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typeform Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typeform Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-maintenance-inspection-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Maintenance Inspection Typeform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cleaning-completion-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cleaning Completion Typeform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-final-unit-inspection-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Final Unit Inspection Typeform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handoff-to-move-in-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handoff to Move-In SOP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-standards-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Standards &amp; Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources &amp; Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Care – Everyday Moments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/front-desk-shifts-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Front Desk Shifts SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/gm-weekly-reporting-dashboard-review-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GM Weekly Reporting Dashboard Review SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/neighbor-communication-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbor Communication SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/fair-housing-act-compliance-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fair Housing Act Compliance SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../care-everyday-moments/flow-minibar-experience-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow Minibar Experience SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Belong – Cultivated Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../belong-cultivated-community/ambassador-program-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ambassador Program SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles &amp; Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems &amp; Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cleaning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-final-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Final Inspection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typeform-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typeform Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typeform Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-maintenance-inspection-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Maintenance Inspection Typeform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cleaning-completion-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cleaning Completion Typeform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-final-unit-inspection-typeform" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Final Unit Inspection Typeform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handoff-to-move-in-sop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handoff to Move-In SOP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-standards-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Standards &amp; Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources &amp; Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unit-move-in-readiness-sop">Unit Move-In Readiness SOP<a class="headerlink" href="#unit-move-in-readiness-sop" title="Permanent link">&para;</a></h1>
+<h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Type</strong></th>
+<th><strong>Goal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operational</strong></td>
+<td>Ensure every Neighbor is delighted by their first impression of their unit. Achieve 100% satisfaction rate with zero complaints from new move-ins.</td>
+</tr>
+<tr>
+<td><strong>Experiential</strong></td>
+<td>Make sure Neighbors feel their unit is clean and fully functional when they move in, creating an immediate sense of home and belonging.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h2>
+<p>Applies to <strong>all residential units</strong> preparing for move-in across all Flow-managed properties. This SOP covers the unit turn/make ready process ensuring every unit meets Flow's hospitality standards for cleanliness, functionality, and presentation.</p>
+<hr />
+<h2 id="roles-responsibilities">Roles &amp; Responsibilities<a class="headerlink" href="#roles-responsibilities" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Owner:</strong> <strong>Assistant General Manager (AGM)</strong> — accountable for end-to-end unit readiness outcome</li>
+<li><strong>Deputy:</strong> <strong>Chief Engineer / Maintenance Manager</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Role</strong></th>
+<th><strong>Responsibilities</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chief Engineer / Maintenance Manager</strong></td>
+<td>Conduct pre-maintenance inspection, create work orders in Waves, complete maintenance work, conduct post-maintenance inspection, update Neighbor CRM via typeform.</td>
+</tr>
+<tr>
+<td><strong>Maintenance Team</strong></td>
+<td>Complete work orders assigned by Maintenance Manager in Waves, address technical issues, ensure all systems operational.</td>
+</tr>
+<tr>
+<td><strong>Cleaning Company (Third-Party)</strong></td>
+<td>Deep clean unit per AGM instructions, complete cleaning typeform upon completion.</td>
+</tr>
+<tr>
+<td><strong>Assistant General Manager (AGM)</strong></td>
+<td>Coordinate with cleaning company via Slack, conduct post-cleaning inspection via Final Unit Inspection typeform, approve "Unit Ready" status in Neighbor CRM.</td>
+</tr>
+<tr>
+<td><strong>Leasing Agent</strong></td>
+<td>Conduct final pre-move-in unit inspection via Final Unit Inspection typeform, verify readiness before move-in.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Escalation Ladder:</strong><br />
+Maintenance/Cleaning → Chief Engineer / Maintenance Manager → AGM → GM → Regional Operations</p>
+<p><strong>Weekend/After-Hours:</strong> On-duty Maintenance Manager handles readiness operations with AGM backup. All readiness issues logged in Zendesk with "Unit Readiness" tag.</p>
+<hr />
+<h2 id="systems-tools">Systems &amp; Tools<a class="headerlink" href="#systems-tools" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Neighbor CRM &amp; Move-in Tracker</strong> — Source of truth for unit turn/make ready status (Google Sheets)</li>
+<li><strong>Typeform</strong> — Three inspection forms: Maintenance, Cleaning, Final Unit Inspection</li>
+<li><strong>Slack</strong> — Real-time notifications from typeform submissions to dedicated channels</li>
+<li><strong>Yardi Voyager</strong> — Unit status and move-in scheduling (status updated when unit ready)</li>
+<li><strong>Waves</strong> — Maintenance work order tracking and completion</li>
+<li><strong>Google Scripts</strong> — Automated status updates to Neighbor CRM &amp; Move-in Tracker</li>
+</ul>
+<blockquote>
+<p>🔹 <strong>Tech Note:</strong> Typeform responses automatically flow to Slack and update Neighbor CRM &amp; Move-in Tracker via Google Scripts. Unit status in Yardi is updated when unit is marked ready.<br />
+🔹 <strong>Data Flow:</strong> Typeform → Slack → Google Scripts → Neighbor CRM &amp; Move-in Tracker → Yardi</p>
+</blockquote>
+<hr />
+<h2 id="triggers">Triggers<a class="headerlink" href="#triggers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Primary Trigger:</strong> Unit needs to be prepared for move-in (either post-construction in lease-up or unit turn after previous resident)</li>
+<li><strong>System Chain:</strong> Neighbor CRM &amp; Move-in Tracker identifies unit → Work orders created in Waves → Typeform inspections completed → Status updates via Google Scripts</li>
+<li><strong>Fail-Safe:</strong> If typeform submissions fail, manual status updates can be made directly in Neighbor CRM &amp; Move-in Tracker</li>
+<li><strong>Readiness Gate:</strong> Unit cannot be marked ready until:</li>
+<li>All Waves work orders completed</li>
+<li>Post-maintenance inspection passed (Maintenance Manager)</li>
+<li>Cleaning completed and confirmed</li>
+<li>Final inspections passed (AGM &amp; Leasing Agent)</li>
+</ul>
+<hr />
+<h2 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h2>
+<p>There are three critical phases to making a unit ready: <strong>Maintenance</strong>, <strong>Cleaning</strong>, and <strong>Inspection</strong>. Inspections take place before and after each phase to ensure quality standards are met throughout the process.</p>
+<h3 id="1-maintenance"><strong>1. Maintenance</strong><a class="headerlink" href="#1-maintenance" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>#</strong></th>
+<th><strong>Step / Action</strong></th>
+<th><strong>Responsible</strong></th>
+<th><strong>System(s)</strong></th>
+<th><strong>Operator Experience</strong></th>
+<th><strong>Deliverable</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><strong>Pre-Maintenance Inspection</strong></td>
+<td>Chief Engineer / Maintenance Manager</td>
+<td>Waves, Typeform</td>
+<td>Identify what needs to be fixed/set up, create work orders in Waves</td>
+<td>Waves work orders created</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td><strong>Complete Maintenance Work</strong></td>
+<td>Maintenance Team</td>
+<td>Waves</td>
+<td>Address all work orders, ensure everything operational</td>
+<td>All work orders marked complete</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td><strong>Post-Maintenance Inspection</strong></td>
+<td>Chief Engineer / Maintenance Manager</td>
+<td>Typeform, Neighbor CRM</td>
+<td>Inspect completed work via Maintenance Inspection typeform, create additional work orders if needed</td>
+<td>Typeform submitted → Status updated in Neighbor CRM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-cleaning"><strong>2. Cleaning</strong><a class="headerlink" href="#2-cleaning" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>#</strong></th>
+<th><strong>Step / Action</strong></th>
+<th><strong>Responsible</strong></th>
+<th><strong>System(s)</strong></th>
+<th><strong>Operator Experience</strong></th>
+<th><strong>Deliverable</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4</td>
+<td><strong>Daily Coordination with Cleaning Company</strong></td>
+<td>AGM</td>
+<td>Slack</td>
+<td>AGM messages cleaning company with units to clean tomorrow via Slack</td>
+<td>Cleaning assignments communicated</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td><strong>Complete Deep Clean</strong></td>
+<td>Cleaning Company</td>
+<td>N/A</td>
+<td>Perform comprehensive deep cleaning of unit</td>
+<td>Unit cleaned to luxury standards</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td><strong>Confirm Cleaning Completion</strong></td>
+<td>Cleaning Company</td>
+<td>Typeform</td>
+<td>Complete cleaning typeform with unit number, cleaner name, time details, and checklist</td>
+<td>Typeform submitted → Status updated in Neighbor CRM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-final-inspection"><strong>3. Final Inspection</strong><a class="headerlink" href="#3-final-inspection" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>#</strong></th>
+<th><strong>Step / Action</strong></th>
+<th><strong>Responsible</strong></th>
+<th><strong>System(s)</strong></th>
+<th><strong>Operator Experience</strong></th>
+<th><strong>Deliverable</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">7</td>
+<td><strong>Post-Cleaning Inspection</strong></td>
+<td>AGM</td>
+<td>Typeform, Neighbor CRM</td>
+<td>Inspect cleaned unit via Final Unit Inspection typeform</td>
+<td>Typeform submitted → Status updated in Neighbor CRM</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td><strong>Final Pre-Move-In Inspection</strong></td>
+<td>Leasing Agent</td>
+<td>Typeform, Neighbor CRM</td>
+<td>Final unit inspection via Final Unit Inspection typeform before move-in day</td>
+<td>Typeform submitted → Status updated in Neighbor CRM</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><strong>Approve "Unit Ready"</strong></td>
+<td>AGM</td>
+<td>Neighbor CRM, Yardi</td>
+<td>Review all completed typeforms in Neighbor CRM, update unit status to "Ready" in Yardi</td>
+<td>Unit status: "Ready" in Yardi</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔹 <strong>Cross-Reference:</strong> This process runs synchronously with pre-move-in steps in the <a href="../move-in-sop/">Move-In SOP</a><br />
+🔹 <strong>Readiness Definition:</strong> A unit is ready when all three phases are complete (maintenance work done, cleaning done, inspections passed)<br />
+🔹 <strong>Documentation:</strong> Every inspection must be completed via typeform, with responses automatically updating Neighbor CRM &amp; Move-in Tracker status</p>
+</blockquote>
+<hr />
+<h2 id="typeform-structures">Typeform Structures<a class="headerlink" href="#typeform-structures" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>🔹 <strong>Import Instructions:</strong> Copy the formatted checklist text blocks below and paste them into Typeform's "Import questions" feature (Create new form → Start from scratch → Import questions tab). Typeform will automatically detect question types and format them appropriately.</p>
+</blockquote>
+<h3 id="1-maintenance-inspection-typeform"><strong>1. Maintenance Inspection Typeform</strong><a class="headerlink" href="#1-maintenance-inspection-typeform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Pre-maintenance and post-maintenance inspections by Chief Engineer / Maintenance Manager</p>
+<p><strong>Inspection Checklist Items (for reference):</strong>
+- Water Meter Installed
+- CWE hardware Installed
+- Thermostat Installed
+- Wire Closet Demo/Patched
+- Closet Installed
+- Shades Installed
+- Bedroom Blackouts + Metal Chain Confirmed
+- Refrigerator - Clean, cold, ice maker working, no odors
+- Stove - Clean, all burners working, oven heats properly
+- Dishwasher - Clean, cycles complete properly, no leaks
+- Washer &amp; Dryer - Clean, no lint, functioning properly
+- Microwave - Clean, heats properly, door seals correctly
+- HVAC - Air conditioning/heating working, filters clean
+- Taps &amp; Shower - All faucets work, no leaks, hot water available
+- Lighting - All fixtures working, bulbs in every lamp</p>
+<p><strong>Typeform Import Format:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Water Meter Installed?
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Yes
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>No
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>CWE hardware Installed?
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Yes
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>No
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Thermostat Installed?
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Yes
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>No
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Wire Closet Demo/Patched?
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Yes
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>No
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>Closet Installed?
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>Yes
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>No
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>Shades Installed?
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>Yes
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>No
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>Bedroom Blackouts + Metal Chain Confirmed?
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>Yes
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>No
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>Refrigerator - Clean, cold, ice maker working, no odors?
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>Yes
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>No
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>Stove - Clean, all burners working, oven heats properly?
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>Yes
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>No
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>Dishwasher - Clean, cycles complete properly, no leaks?
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>Yes
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>No
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>Washer &amp; Dryer - Clean, no lint, functioning properly?
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>Yes
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>No
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>Microwave - Clean, heats properly, door seals correctly?
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>Yes
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>No
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>HVAC - Air conditioning/heating working, filters clean?
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>Yes
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>No
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>Taps &amp; Shower - All faucets work, no leaks, hot water available?
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>Yes
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>No
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>Lighting - All fixtures working, bulbs in every lamp?
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>Yes
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>No
+</code></pre></div></p>
+<h3 id="2-cleaning-completion-typeform"><strong>2. Cleaning Completion Typeform</strong><a class="headerlink" href="#2-cleaning-completion-typeform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Cleaning company confirms completion of deep clean</p>
+<p><strong>Required Fields (for reference):</strong>
+- Unit number
+- Name of cleaner
+- Date of cleaning
+- Time started
+- Time completed
+- Checklist: "Yes/No I cleaned this space" running through all normal deep cleaning items for luxury apartments:
+  - Living room
+  - Kitchen (counters, cabinets, appliances, sink)
+  - Bedroom(s)
+  - Bathroom(s) (fixtures, mirrors, surfaces, shower/tub)
+  - Closets
+  - Windows and window sills
+  - Floors (swept, mopped, vacuumed)
+  - Baseboards
+  - Light fixtures and switches
+  - Doors and door frames
+- Are there any issues to report?</p>
+<p><strong>Typeform Import Format:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Unit number?
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Name of cleaner?
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Date of cleaning?
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Time started?
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Time completed?
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Did you clean the Living room?
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Yes
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>No
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>Did you clean the Kitchen (counters, cabinets, appliances, sink)?
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>Yes
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>No
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>Did you clean the Bedroom(s)?
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>Yes
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>No
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>Did you clean the Bathroom(s) (fixtures, mirrors, surfaces, shower/tub)?
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>Yes
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>No
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>Did you clean the Closets?
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>Yes
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>No
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>Did you clean the Windows and window sills?
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>Yes
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>No
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>Did you clean the Floors (swept, mopped, vacuumed)?
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>Yes
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>No
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>Did you clean the Baseboards?
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>Yes
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>No
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>Did you clean the Light fixtures and switches?
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>Yes
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>No
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>Did you clean the Doors and door frames?
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>Yes
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>No
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>Are there any issues to report?
+</code></pre></div></p>
+<h3 id="3-final-unit-inspection-typeform"><strong>3. Final Unit Inspection Typeform</strong><a class="headerlink" href="#3-final-unit-inspection-typeform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Final inspections by AGM and Leasing Agent</p>
+<p><strong>Inspection Checklist Items (for reference):</strong></p>
+<p><strong>Inspector Information:</strong>
+- Please confirm that you are inspecting [unit_number]
+- First name
+- Last name</p>
+<p><strong>Appliances &amp; Systems:</strong>
+- Refrigerator - Clean, cold, ice maker working, no odors
+- Stove - Clean, all burners working, oven heats properly
+- Dishwasher - Clean, cycles complete properly, no leaks
+- Washer &amp; Dryer - Clean, no lint, functioning properly
+- Microwave - Clean, heats properly, door seals correctly
+- HVAC - Air conditioning/heating working, filters clean
+- Taps &amp; Shower - All faucets work, no leaks, hot water available
+- Lighting - All fixtures working, bulbs in every lamp
+- Are there any other issues with the Appliances &amp; Systems?</p>
+<p><strong>Cleanliness &amp; Presentation:</strong>
+- Floors - Clean, no stains, appropriate for flooring type
+- Walls - Clean, no scuffs or marks, touch-ups complete
+- Windows - Clean inside and out, screens intact, blinds working
+- Bathroom - Spotless, all fixtures working, no mold or mildew
+- Kitchen - Clean counters, cabinets, sink, no food residue
+- Closets - Clean, shelves wiped down, doors working properly
+- Are there any other issues with the Cleanliness &amp; Presentation of the Unit?</p>
+<p><strong>Safety &amp; Functionality:</strong>
+- Smoke Detectors - Working, batteries fresh, no chirping
+- Locks - All doors and windows lock properly
+- Key Access - Neighbor keys are able to open and lock the door
+- Electrical Outlets - All working, no exposed wiring
+- Are there any other issues with the Safety &amp; Functionality of the Unit?</p>
+<p><strong>Additional Information:</strong>
+- Is there anything else to report?
+- unit_number
+- move_in_date
+- Submitted At
+- Token</p>
+<p><strong>Typeform Import Format:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Please confirm that you are inspecting which unit number?
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>First name?
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Last name?
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Refrigerator - Clean, cold, ice maker working, no odors?
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Yes
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>No
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Stove - Clean, all burners working, oven heats properly?
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>Yes
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>No
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>Dishwasher - Clean, cycles complete properly, no leaks?
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>Yes
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>No
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>Washer &amp; Dryer - Clean, no lint, functioning properly?
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>Yes
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>No
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>Microwave - Clean, heats properly, door seals correctly?
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>Yes
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>No
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>HVAC - Air conditioning/heating working, filters clean?
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>Yes
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>No
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>Taps &amp; Shower - All faucets work, no leaks, hot water available?
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>Yes
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>No
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>Lighting - All fixtures working, bulbs in every lamp?
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>Yes
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>No
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>Are there any other issues with the Appliances &amp; Systems?
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>Floors - Clean, no stains, appropriate for flooring type?
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>Yes
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>No
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>Walls - Clean, no scuffs or marks, touch-ups complete?
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>Yes
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>No
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>Windows - Clean inside and out, screens intact, blinds working?
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>Yes
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>No
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>Bathroom - Spotless, all fixtures working, no mold or mildew?
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>Yes
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>No
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>Kitchen - Clean counters, cabinets, sink, no food residue?
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>Yes
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>No
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>Closets - Clean, shelves wiped down, doors working properly?
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>Yes
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>No
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>Are there any other issues with the Cleanliness &amp; Presentation of the Unit?
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>
+<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>Smoke Detectors - Working, batteries fresh, no chirping?
+<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>Yes
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>No
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>Locks - All doors and windows lock properly?
+<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>Yes
+<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>No
+<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>
+<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>Key Access - Neighbor keys are able to open and lock the door?
+<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>Yes
+<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>No
+<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>
+<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>Electrical Outlets - All working, no exposed wiring?
+<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>Yes
+<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>No
+<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>
+<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>Are there any other issues with the Safety &amp; Functionality of the Unit?
+<a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a>
+<a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a>Is there anything else to report?
+<a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a>
+<a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a>Unit number?
+<a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a>
+<a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>Move-in date?
+</code></pre></div></p>
+<blockquote>
+<p>🔹 <strong>Note:</strong> All three typeforms automatically post responses to Slack and update Neighbor CRM &amp; Move-in Tracker via Google Scripts</p>
+</blockquote>
+<hr />
+<h2 id="handoff-to-move-in-sop">Handoff to Move-In SOP<a class="headerlink" href="#handoff-to-move-in-sop" title="Permanent link">&para;</a></h2>
+<p><strong>Unit Ready Checklist</strong> (confirmed in Neighbor CRM &amp; favors status in Yardi):
+1. All Waves work orders completed ✓
+2. Post-maintenance inspection passed ✓
+3. Cleaning completed and confirmed ✓
+4. Final inspections passed (AGM &amp; Leasing) ✓
+5. Unit status updated to "Ready" in Yardi ✓</p>
+<p>Once all items are complete, unit status is updated in Yardi and move-in can proceed per Move-In SOP.</p>
+<hr />
+<h2 id="quality-standards-metrics">Quality Standards &amp; Metrics<a class="headerlink" href="#quality-standards-metrics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Metric</strong></th>
+<th><strong>Target</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Readiness</strong></td>
+<td>Units marked "Ready" before move-in date</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Completeness</strong></td>
+<td>All three dimensions complete before "Ready" status</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Satisfaction</strong></td>
+<td>Zero complaints from new move-ins</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Timeliness</strong></td>
+<td>Average time to complete all three dimensions</td>
+<td>≤ 48 hours</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>All typeform inspections completed for each unit</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resources-templates">Resources &amp; Templates<a class="headerlink" href="#resources-templates" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[Maintenance Inspection Typeform]</li>
+<li>[Cleaning Completion Typeform]</li>
+<li>[Final Unit Inspection Typeform]</li>
+<li>[Unit Readiness Checklist]</li>
+<li>[Maintenance Punch List Template]</li>
+<li>[Housekeeping Standards Guide]</li>
+</ul>
+<hr />
+<h2 id="screenshots-visuals">Screenshots &amp; Visuals<a class="headerlink" href="#screenshots-visuals" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[Placeholder: Neighbor CRM &amp; Move-in Tracker - Unit readiness status view]</li>
+<li>[Placeholder: Waves - Work order interface]</li>
+<li>[Placeholder: Typeform - Inspection forms]</li>
+<li>[Placeholder: Slack - Typeform notifications]</li>
+</ul>
+<hr />
+<blockquote>
+<p>Delivering this SOP ensures that every Neighbor's first moment in their Flow home feels like coming home — not moving house.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../move-in-sop/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Move-in SOP">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Move-in SOP
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../care-everyday-moments/front-desk-shifts-sop/" class="md-footer__link md-footer__link--next" aria-label="Next: Front Desk Shifts SOP">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Front Desk Shifts SOP
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.sections", "navigation.indexes", "navigation.tracking", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

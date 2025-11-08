@@ -1,0 +1,3875 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive guide to how Flow uses Zendesk across all onsite teams and functions">
+      
+      
+        <meta name="author" content="Flow">
+      
+      
+        <link rel="canonical" href="https://hsmith99.github.io/oneflow-operating-playbook/team-and-systems/zendesk-operational-guide/">
+      
+      
+        <link rel="prev" href="../yardi-operational-guide/">
+      
+      
+        <link rel="next" href="../../operating-practices/foundational-neighbor-journey/">
+      
+      
+      <link rel="icon" href="../../images/flow-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Zendesk Operational Guide - One Flow Operating Playbook</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Flow Brand Colors - Minimalist and Clean */
+        :root {
+            --moonlight: #F3EDDF;        /* Original Moonlight */
+            --moonlight-light: #FDFCF9;  /* Very light, almost white Moonlight */
+            --moonlight-subtle: #F9F7F3; /* Subtle Moonlight for sidebar */
+            --moonlight-minimal: #FEFEFD; /* Minimal Moonlight for main content */
+            --midnight: #3D3D3D;         /* Midnight for all text */
+        }
+
+        /* Force override of default Material theme colors */
+        [data-md-color-scheme] {
+            --md-primary-fg-color: var(--midnight) !important;
+            --md-primary-bg-color: var(--moonlight-subtle) !important;
+            --md-default-fg-color: var(--midnight) !important;
+            --md-default-bg-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Minimalist background - full width */
+        body {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-container {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Main content area - Minimalist style */
+        .md-main,
+        .md-main[data-md-state="open"] {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        .md-main__inner,
+        .md-main[data-md-state="open"] .md-main__inner {
+            background-color: var(--moonlight-minimal) !important;
+            max-width: none !important;
+        }
+
+        .md-content,
+        .md-main[data-md-state="open"] .md-content {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Force override for all content areas */
+        .md-content__inner,
+        .md-typeset {
+            background-color: var(--moonlight-minimal) !important;
+        }
+
+        /* Ensure the main grid layout uses full width */
+        .md-grid {
+            max-width: none !important;
+        }
+
+        /* Flow text colors */
+        body, .md-content, .md-typeset {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset h1, .md-typeset h2, .md-typeset h3, 
+        .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+            color: var(--midnight) !important;
+        }
+
+        .md-typeset p, .md-typeset li, .md-typeset blockquote {
+            color: var(--midnight) !important;
+        }
+
+        /* Typography - Poppins for navigation, Inter for content */
+        .md-header,
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title,
+        .md-sidebar--primary,
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar--primary .md-nav__link,
+        .md-footer {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        /* Inter for main content */
+        .md-main__inner,
+        .md-content,
+        .md-typeset,
+        .md-typeset h1,
+        .md-typeset h2,
+        .md-typeset h3,
+        .md-typeset h4,
+        .md-typeset h5,
+        .md-typeset h6,
+        .md-typeset p,
+        .md-typeset li,
+        .md-typeset table,
+        .md-typeset blockquote {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Header (top nav) - Minimalist style */
+        .md-header {
+            background-color: var(--moonlight-subtle) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            width: 100% !important;
+        }
+
+        .md-header__inner {
+            background-color: var(--moonlight-subtle) !important;
+        }
+
+        .md-header__topic,
+        .md-header__button,
+        .md-header__title {
+            color: var(--midnight) !important;
+        }
+
+        /* Logo styling */
+        .md-header__button.md-logo {
+            padding: 0.2rem 0.4rem;
+        }
+
+        .md-header__button.md-logo img,
+        .md-header__button.md-logo svg {
+            height: 2rem;
+            width: auto;
+        }
+
+        /* Left sidebar - Minimalist style matching top menu color */
+        .md-sidebar--primary,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary {
+            background-color: var(--moonlight-subtle) !important; /* Same as top menu */
+            border-right: 1px solid rgba(61, 61, 61, 0.1);
+        }
+        
+        /* Remove strange top spacing and tighten title */
+        .md-sidebar--primary .md-nav__title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+            padding-top: 0.8rem !important;
+            padding-bottom: 0.6rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Tighten spacing for all navigation links */
+        .md-sidebar--primary .md-nav__link,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link {
+            color: var(--midnight) !important;
+            padding: 4px 16px !important;
+            margin: 0 !important;
+        }
+        
+        /* Remove extra spacing from navigation items */
+        .md-sidebar--primary .md-nav__item {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link:hover,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link:hover {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+        
+        .md-sidebar--primary .md-nav__link--active,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__link--active {
+            background-color: rgba(61, 61, 61, 0.08) !important;
+            color: var(--midnight) !important;
+            font-weight: 600;
+        }
+
+        /* Nested navigation items - Flow style */
+        .md-sidebar--primary .md-nav__item .md-nav__link {
+            padding-left: 32px;
+            color: var(--midnight) !important;
+        }
+
+        .md-sidebar--primary .md-nav__item .md-nav__item .md-nav__link {
+            padding-left: 48px;
+        }
+
+        /* Footer - Minimalist style */
+        .md-footer {
+            background-color: var(--moonlight-subtle) !important;
+            border-top: 1px solid rgba(61, 61, 61, 0.1);
+            color: var(--midnight) !important;
+        }
+
+        .md-footer-nav__link {
+            color: var(--midnight) !important;
+        }
+
+        /* Code blocks - Minimalist style */
+        .md-typeset code {
+            background-color: rgba(61, 61, 61, 0.05) !important;
+            color: var(--midnight) !important;
+        }
+
+        /* Tables - Minimalist clean styling */
+        .md-typeset table {
+            border: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table th {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+            border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+        }
+
+        .md-typeset table td {
+            border-bottom: 1px solid rgba(61, 61, 61, 0.05);
+        }
+
+        /* Admonitions - Minimalist style */
+        .md-typeset .admonition {
+            background-color: var(--moonlight-minimal) !important;
+            border-left: 4px solid rgba(61, 61, 61, 0.2) !important;
+        }
+
+        .md-typeset .admonition-title {
+            background-color: var(--moonlight-subtle) !important;
+            color: var(--midnight) !important;
+        }
+        
+        /* Hide the sidebar title completely - multiple selectors for persistence */
+        .md-sidebar--primary .md-nav__title,
+        .md-sidebar[data-md-state="open"] .md-sidebar--primary .md-nav__title,
+        [dir] .md-sidebar--primary .md-nav__title {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Make section headers collapsible */
+        .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+            cursor: pointer !important;
+        }
+
+        /* SOP Agent Button Styling */
+        .sop-agent-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 1rem;
+            margin-right: 0.5rem;
+            background-color: var(--midnight) !important;
+            color: var(--moonlight-minimal) !important;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .sop-agent-button:hover {
+            background-color: rgba(61, 61, 61, 0.9) !important;
+            color: var(--moonlight-minimal) !important;
+        }
+    </style>
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zendesk-operational-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="One Flow Operating Playbook" class="md-header__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            One Flow Operating Playbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Zendesk Operational Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <script>
+        // Add SOP Agent button to header after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const headerInner = document.querySelector('.md-header__inner');
+            if (headerInner) {
+                const sopButton = document.createElement('a');
+                sopButton.className = 'sop-agent-button';
+                sopButton.textContent = 'SOP Agent';
+                sopButton.href = '#';
+                sopButton.onclick = function(e) {
+                    e.preventDefault();
+                    // Fake button - no action
+                    return false;
+                };
+                
+                // Insert button in the header navigation area (right side)
+                const headerNav = headerInner.querySelector('.md-header__nav');
+                if (headerNav) {
+                    headerNav.insertBefore(sopButton, headerNav.firstChild);
+                } else {
+                    // Fallback: append to header inner
+                    headerInner.appendChild(sopButton);
+                }
+            }
+        });
+    </script>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="One Flow Operating Playbook" class="md-nav__button md-logo" aria-label="One Flow Operating Playbook" data-md-component="logo">
+      
+  <img src="../../images/flow-logo.svg" alt="logo">
+
+    </a>
+    One Flow Operating Playbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hsmith99/oneflow-operating-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hsmith99/oneflow-operating-playbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/mission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mission
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/brand-values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brand Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/leadership-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Leadership Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/the-flow-experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Flow Experience
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Team & Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Team & Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onsite-staffing-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Staffing Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onsite-technology-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onsite Technology Stack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yardi-operational-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Yardi Operational Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Zendesk Operational Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zendesk Operational Guide
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#most-common-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Most Common Tasks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-contacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emergency Contacts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zendesk-ecosystem-at-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk Ecosystem at Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zendesk Ecosystem at Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Points
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Usage Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Team Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Front Desk Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Front Desk Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Desk Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-leads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Desk Leads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏠 Operations Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏠 Operations Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operations-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations Managers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistant-general-managers-agms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assistant General Managers (AGMs)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏠 Leasing Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏠 Leasing Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasing-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Managers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Maintenance Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Maintenance Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-technicians" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Technicians
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-directors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Directors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-engagement-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Community Engagement Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎉 Community Engagement Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#community-engagement-leads-cels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Engagement Leads (CELs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-in-experience-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Experience Agents
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ticket-management-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Management System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ticket Management System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ticket-types-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Types &amp; Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ticket Types &amp; Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incident" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incident
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket-status-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Status Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ticket Status Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    <span class="md-ellipsis">
+      New
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pending
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solved
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priority-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority Levels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Priority Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#low" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high" class="md-nav__link">
+    <span class="md-ellipsis">
+      High
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urgent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Urgent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Standards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tone-voice-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tone &amp; Voice Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Communication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internal Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalation Protocol
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zendesk-slack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk ↔ Slack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zendesk-carsonflow-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk ↔ Carson/Flow App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zendesk-yardi-voyager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk ↔ Yardi Voyager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zendesk-moved" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk ↔ Moved
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-standards-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Standards &amp; Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Standards &amp; Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-time-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Time Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#satisfaction-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Satisfaction Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daily-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daily Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-excellence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Excellence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training &amp; Onboarding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training &amp; Onboarding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-team-member-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Team Member Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-development-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Development Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting &amp; Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting &amp; Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket-assignment-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Assignment Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalation Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Improvements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Improvements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Opportunities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources &amp; Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources &amp; Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-reference-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#templates-macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates &amp; Macros
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Practices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-practices/foundational-neighbor-journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundational Neighbor Journey
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-practices/care-everyday-moments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-practices/belong-cultivated-community/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operating Manual - SOPs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Operating Manual - SOPs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundational Journey
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Foundational Journey
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/foundational-journey/move-in-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move-in SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/foundational-journey/unit-move-in-readiness-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unit Move-in Readiness SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Care – Everyday Moments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Care – Everyday Moments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/front-desk-shifts-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Front Desk Shifts SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/gm-weekly-reporting-dashboard-review-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GM Weekly Reporting Dashboard Review SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/neighbor-communication-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbor Communication SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/fair-housing-act-compliance-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fair Housing Act Compliance SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/care-everyday-moments/flow-minibar-experience-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow Minibar Experience SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Belong – Cultivated Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Belong – Cultivated Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operating-manual-sops/belong-cultivated-community/ambassador-program-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ambassador Program SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#most-common-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Most Common Tasks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-contacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emergency Contacts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zendesk-ecosystem-at-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk Ecosystem at Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zendesk Ecosystem at Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Points
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Usage Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Team Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Front Desk Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Front Desk Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Desk Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#front-desk-leads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Desk Leads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏠 Operations Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏠 Operations Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operations-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations Managers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistant-general-managers-agms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assistant General Managers (AGMs)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏠 Leasing Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏠 Leasing Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasing-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leasing Managers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Maintenance Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Maintenance Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-technicians" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Technicians
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-directors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Directors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-engagement-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Community Engagement Teams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎉 Community Engagement Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#community-engagement-leads-cels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Engagement Leads (CELs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-in-experience-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move-In Experience Agents
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ticket-management-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Management System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ticket Management System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ticket-types-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Types &amp; Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ticket Types &amp; Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incident" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incident
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket-status-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Status Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ticket Status Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    <span class="md-ellipsis">
+      New
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pending
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solved
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priority-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority Levels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Priority Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#low" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high" class="md-nav__link">
+    <span class="md-ellipsis">
+      High
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urgent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Urgent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Standards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tone-voice-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tone &amp; Voice Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Communication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internal Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalation Protocol
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zendesk-slack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk ↔ Slack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zendesk-carsonflow-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk ↔ Carson/Flow App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zendesk-yardi-voyager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk ↔ Yardi Voyager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zendesk-moved" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zendesk ↔ Moved
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-standards-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Standards &amp; Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Standards &amp; Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-time-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Time Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#satisfaction-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Satisfaction Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daily-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daily Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-excellence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Excellence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training &amp; Onboarding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training &amp; Onboarding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-team-member-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Team Member Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-development-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Development Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting &amp; Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting &amp; Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket-assignment-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ticket Assignment Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalation-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalation Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Improvements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Improvements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Opportunities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources &amp; Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources &amp; Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-reference-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#templates-macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates &amp; Macros
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots &amp; Visuals
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="zendesk-operational-guide">Zendesk Operational Guide<a class="headerlink" href="#zendesk-operational-guide" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Zendesk serves as Flow's central customer support platform, enabling seamless communication between Neighbors and onsite teams while maintaining operational excellence and hospitality standards. This guide documents how each onsite team member leverages Zendesk to deliver the Flow Experience through consistent, caring, and efficient support.</p>
+<p><strong>Key Principle:</strong> "Every ticket is an opportunity to demonstrate Flow's hospitality and care." — Flow's commitment to Neighbor satisfaction</p>
+<hr />
+<h2 id="quick-reference">Quick Reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
+<h3 id="most-common-tasks">Most Common Tasks<a class="headerlink" href="#most-common-tasks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Module</th>
+<th>Path</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Respond to Neighbor inquiry</td>
+<td>Support</td>
+<td>Views → Unassigned</td>
+<td>Front Desk</td>
+</tr>
+<tr>
+<td>Create maintenance ticket</td>
+<td>Support</td>
+<td>New Ticket → Problem</td>
+<td>Front Desk</td>
+</tr>
+<tr>
+<td>Escalate complex issue</td>
+<td>Support</td>
+<td>Ticket → Assign</td>
+<td>Operations Manager</td>
+</tr>
+<tr>
+<td>Track community activity</td>
+<td>Support</td>
+<td>Views → Community</td>
+<td>CEL</td>
+</tr>
+<tr>
+<td>Process move-in support</td>
+<td>Support</td>
+<td>Views → Move-ins</td>
+<td>Move-In Agent</td>
+</tr>
+<tr>
+<td>Handle amenity booking</td>
+<td>Support</td>
+<td>Views → Amenities</td>
+<td>Front Desk</td>
+</tr>
+</tbody>
+</table>
+<h3 id="emergency-contacts">Emergency Contacts<a class="headerlink" href="#emergency-contacts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Zendesk Technical Issues:</strong> Product Operations Team (Slack #product-ops)</li>
+<li><strong>System Down:</strong> Regional Operations</li>
+<li><strong>Training Questions:</strong> Department Lead</li>
+<li><strong>Escalation Support:</strong> GM/AGM</li>
+</ul>
+<hr />
+<h2 id="zendesk-ecosystem-at-flow">Zendesk Ecosystem at Flow<a class="headerlink" href="#zendesk-ecosystem-at-flow" title="Permanent link">&para;</a></h2>
+<h3 id="core-functions">Core Functions<a class="headerlink" href="#core-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Multi-channel Support</strong> — Email, Chat, Phone, and internal ticket creation</li>
+<li><strong>Knowledge Base</strong> — Self-service resources for Neighbors</li>
+<li><strong>Reporting &amp; Analytics</strong> — Performance insights and service quality metrics</li>
+<li><strong>Integration Hub</strong> — Connects with Slack, Carson, Yardi, and other Flow systems</li>
+</ul>
+<h3 id="integration-points">Integration Points<a class="headerlink" href="#integration-points" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Slack</strong> — Internal team notifications and escalations</li>
+<li><strong>Carson/Flow App</strong> — Neighbor portal integration and access management</li>
+<li><strong>Yardi Voyager</strong> — Resident data and ledger information</li>
+<li><strong>Moved</strong> — Move-in/move-out support coordination</li>
+<li><strong>Sigma</strong> — Analytics and performance dashboards</li>
+</ul>
+<hr />
+<h2 id="team-usage-patterns">Team Usage Patterns<a class="headerlink" href="#team-usage-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="front-desk-teams">🏢 <strong>Front Desk Teams</strong><a class="headerlink" href="#front-desk-teams" title="Permanent link">&para;</a></h3>
+<h4 id="front-desk-agents">Front Desk Agents<a class="headerlink" href="#front-desk-agents" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Support Views, Ticket Management, Macros</p>
+<p><strong>Daily Workflow:</strong>
+- Start with <strong>Unassigned Tickets</strong> view for new Neighbor inquiries
+- Check <strong>Your Unsolved Tickets</strong> for ongoing support needs
+- Use <strong>Recently Solved Tickets</strong> to follow up on resolved issues
+- Monitor <strong>Rated Tickets</strong> for feedback and service improvement
+- Process <strong>Amenity Booking</strong> requests and access issues
+- Handle <strong>Package Delivery</strong> notifications and coordination</p>
+<p><strong>Key Functions:</strong>
+- <strong>First Response</strong> — Initial Neighbor contact and issue triage
+- <strong>Routine Support</strong> — Package pickup, amenity access, general inquiries
+- <strong>Escalation</strong> — Complex issues requiring specialized team support
+- <strong>Follow-up</strong> — Ensuring resolution and Neighbor satisfaction</p>
+<p><strong>Ticket Types Handled:</strong>
+- <strong>Questions</strong> — General inquiries about policies, amenities, services
+- <strong>Problems</strong> — Individual issues affecting specific Neighbors
+- <strong>Tasks</strong> — Specific actions requiring completion (key requests, access issues)</p>
+<h4 id="front-desk-leads">Front Desk Leads<a class="headerlink" href="#front-desk-leads" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Team Views, Analytics, Escalation Management</p>
+<p><strong>Daily Workflow:</strong>
+- Review <strong>Team Performance</strong> metrics and ticket distribution
+- Monitor <strong>Escalation Queue</strong> for complex issues requiring management attention
+- Analyze <strong>Customer Satisfaction</strong> scores and feedback trends
+- Coordinate <strong>Cross-team Communication</strong> for multi-department issues
+- Train <strong>New Team Members</strong> on Zendesk workflows and best practices</p>
+<p><strong>Key Functions:</strong>
+- <strong>Team Oversight</strong> — Ensuring consistent service delivery across shifts
+- <strong>Quality Assurance</strong> — Reviewing ticket responses for hospitality standards
+- <strong>Training &amp; Development</strong> — Onboarding new team members and skill development
+- <strong>Process Improvement</strong> — Identifying workflow optimizations and best practices</p>
+<hr />
+<h3 id="operations-teams">🏠 <strong>Operations Teams</strong><a class="headerlink" href="#operations-teams" title="Permanent link">&para;</a></h3>
+<h4 id="operations-managers">Operations Managers<a class="headerlink" href="#operations-managers" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Management Views, Analytics, Escalation Handling</p>
+<p><strong>Daily Workflow:</strong>
+- Review <strong>High Priority Tickets</strong> requiring management attention
+- Monitor <strong>Service Level Agreements</strong> and response time metrics
+- Handle <strong>Escalated Issues</strong> from Front Desk and other departments
+- Coordinate <strong>Cross-functional Support</strong> for complex Neighbor needs
+- Analyze <strong>Trend Reports</strong> for operational improvements</p>
+<p><strong>Key Functions:</strong>
+- <strong>Escalation Management</strong> — Resolving complex issues and complaints
+- <strong>Process Coordination</strong> — Ensuring smooth handoffs between departments
+- <strong>Performance Monitoring</strong> — Tracking team metrics and service quality
+- <strong>Strategic Support</strong> — Addressing systemic issues and process improvements</p>
+<h4 id="assistant-general-managers-agms">Assistant General Managers (AGMs)<a class="headerlink" href="#assistant-general-managers-agms" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Executive Views, Strategic Analytics, Policy Decisions</p>
+<p><strong>Daily Workflow:</strong>
+- Review <strong>Executive Dashboard</strong> for property-wide support trends
+- Handle <strong>Policy-level Issues</strong> requiring management decisions
+- Monitor <strong>Neighbor Satisfaction</strong> scores and retention impact
+- Coordinate <strong>Major Incidents</strong> affecting multiple Neighbors
+- Analyze <strong>Support ROI</strong> and resource allocation</p>
+<p><strong>Key Functions:</strong>
+- <strong>Strategic Oversight</strong> — Ensuring support aligns with Flow's mission
+- <strong>Policy Decisions</strong> — Resolving issues requiring management authority
+- <strong>Resource Management</strong> — Optimizing team allocation and support capacity
+- <strong>Quality Standards</strong> — Maintaining Flow's hospitality excellence</p>
+<hr />
+<h3 id="leasing-teams">🏠 <strong>Leasing Teams</strong><a class="headerlink" href="#leasing-teams" title="Permanent link">&para;</a></h3>
+<h4 id="leasing-agents">Leasing Agents<a class="headerlink" href="#leasing-agents" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Leasing Views, Prospect Management, Application Support</p>
+<p><strong>Daily Workflow:</strong>
+- Monitor <strong>Prospect Inquiries</strong> and application support requests
+- Handle <strong>Lease-related Questions</strong> and documentation issues
+- Process <strong>Move-in Coordination</strong> tickets and logistics support
+- Manage <strong>Application Status</strong> inquiries and updates
+- Coordinate <strong>Tour Scheduling</strong> and prospect communication</p>
+<p><strong>Key Functions:</strong>
+- <strong>Prospect Support</strong> — Assisting potential Neighbors through the leasing process
+- <strong>Application Management</strong> — Supporting document collection and verification
+- <strong>Move-in Coordination</strong> — Ensuring smooth transition from prospect to Neighbor
+- <strong>Lease Support</strong> — Addressing questions about terms, policies, and procedures</p>
+<h4 id="leasing-managers">Leasing Managers<a class="headerlink" href="#leasing-managers" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Management Views, Team Analytics, Strategic Support</p>
+<p><strong>Daily Workflow:</strong>
+- Review <strong>Leasing Team Performance</strong> and ticket resolution rates
+- Handle <strong>Complex Leasing Issues</strong> requiring management intervention
+- Monitor <strong>Prospect Satisfaction</strong> and conversion metrics
+- Analyze <strong>Leasing Support Trends</strong> for process improvements
+- Coordinate <strong>Cross-team Support</strong> for move-in and onboarding</p>
+<p><strong>Key Functions:</strong>
+- <strong>Team Management</strong> — Overseeing leasing support quality and efficiency
+- <strong>Strategic Support</strong> — Addressing complex leasing scenarios and policies
+- <strong>Performance Analysis</strong> — Tracking support impact on leasing success
+- <strong>Process Optimization</strong> — Improving leasing support workflows</p>
+<hr />
+<h3 id="maintenance-teams">🛠️ <strong>Maintenance Teams</strong><a class="headerlink" href="#maintenance-teams" title="Permanent link">&para;</a></h3>
+<h4 id="maintenance-technicians">Maintenance Technicians<a class="headerlink" href="#maintenance-technicians" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Maintenance Views, Work Order Integration, Mobile Support</p>
+<p><strong>Daily Workflow:</strong>
+- Monitor <strong>Maintenance Request Tickets</strong> for work order coordination
+- Handle <strong>Emergency Maintenance</strong> issues requiring immediate attention
+- Process <strong>Preventive Maintenance</strong> scheduling and coordination
+- Manage <strong>Vendor Coordination</strong> tickets for third-party work
+- Update <strong>Work Order Status</strong> and completion documentation</p>
+<p><strong>Key Functions:</strong>
+- <strong>Work Order Support</strong> — Coordinating maintenance requests and scheduling
+- <strong>Emergency Response</strong> — Handling urgent maintenance issues
+- <strong>Vendor Management</strong> — Coordinating third-party maintenance services
+- <strong>Documentation</strong> — Maintaining work order status and completion records</p>
+<h4 id="maintenance-directors">Maintenance Directors<a class="headerlink" href="#maintenance-directors" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Management Views, Analytics, Strategic Planning</p>
+<p><strong>Daily Workflow:</strong>
+- Review <strong>Maintenance Team Performance</strong> and response metrics
+- Monitor <strong>Preventive Maintenance</strong> scheduling and completion rates
+- Analyze <strong>Maintenance Trends</strong> for resource planning and improvements
+- Handle <strong>Complex Maintenance Issues</strong> requiring management decisions
+- Coordinate <strong>Vendor Management</strong> and service level agreements</p>
+<p><strong>Key Functions:</strong>
+- <strong>Team Oversight</strong> — Ensuring maintenance support meets Flow standards
+- <strong>Strategic Planning</strong> — Optimizing maintenance schedules and resource allocation
+- <strong>Quality Assurance</strong> — Maintaining high standards for maintenance support
+- <strong>Vendor Relations</strong> — Managing third-party maintenance service providers</p>
+<hr />
+<h3 id="community-engagement-teams">🎉 <strong>Community Engagement Teams</strong><a class="headerlink" href="#community-engagement-teams" title="Permanent link">&para;</a></h3>
+<h4 id="community-engagement-leads-cels">Community Engagement Leads (CELs)<a class="headerlink" href="#community-engagement-leads-cels" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Community Views, Event Management, Engagement Analytics</p>
+<p><strong>Daily Workflow:</strong>
+- Monitor <strong>Community Event</strong> inquiries and support requests
+- Handle <strong>Flow Groups</strong> and <strong>Flow Clubs</strong> coordination tickets
+- Process <strong>Ambassador Program</strong> support and community leadership issues
+- Manage <strong>Event Logistics</strong> and amenity booking coordination
+- Analyze <strong>Community Engagement</strong> metrics and satisfaction trends</p>
+<p><strong>Key Functions:</strong>
+- <strong>Event Support</strong> — Coordinating community events and activities
+- <strong>Community Building</strong> — Supporting Flow Groups and Ambassador initiatives
+- <strong>Engagement Analytics</strong> — Tracking community participation and satisfaction
+- <strong>Relationship Management</strong> — Building connections between Neighbors and community</p>
+<h4 id="move-in-experience-agents">Move-In Experience Agents<a class="headerlink" href="#move-in-experience-agents" title="Permanent link">&para;</a></h4>
+<p><strong>Primary Tools:</strong> Move-in Views, Personalization Support, Integration Coordination</p>
+<p><strong>Daily Workflow:</strong>
+- Monitor <strong>Move-in Support</strong> tickets and coordination requests
+- Handle <strong>Personalization</strong> inquiries and Design Your Flow support
+- Process <strong>Community Integration</strong> tickets and Ambassador connections
+- Manage <strong>Welcome Experience</strong> coordination and special requests
+- Track <strong>Move-in Satisfaction</strong> and integration success metrics</p>
+<p><strong>Key Functions:</strong>
+- <strong>Move-in Coordination</strong> — Ensuring seamless transition for new Neighbors
+- <strong>Personalization Support</strong> — Delivering customized welcome experiences
+- <strong>Community Integration</strong> — Connecting new Neighbors to community resources
+- <strong>Experience Optimization</strong> — Continuously improving the move-in journey</p>
+<hr />
+<h2 id="ticket-management-system">Ticket Management System<a class="headerlink" href="#ticket-management-system" title="Permanent link">&para;</a></h2>
+<h3 id="ticket-types-usage">Ticket Types &amp; Usage<a class="headerlink" href="#ticket-types-usage" title="Permanent link">&para;</a></h3>
+<h4 id="question"><strong>Question</strong><a class="headerlink" href="#question" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose:</strong> General inquiries and information requests</li>
+<li><strong>Examples:</strong> Policy questions, amenity information, service details</li>
+<li><strong>Response Time:</strong> 4 hours</li>
+<li><strong>Owner:</strong> Front Desk Agent</li>
+</ul>
+<h4 id="problem"><strong>Problem</strong><a class="headerlink" href="#problem" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose:</strong> Issues affecting individual Neighbors</li>
+<li><strong>Examples:</strong> Maintenance requests, access issues, service problems</li>
+<li><strong>Response Time:</strong> 2 hours</li>
+<li><strong>Owner:</strong> Front Desk Agent (with escalation to Operations Manager)</li>
+</ul>
+<h4 id="incident"><strong>Incident</strong><a class="headerlink" href="#incident" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose:</strong> Issues affecting multiple Neighbors</li>
+<li><strong>Examples:</strong> Building-wide maintenance, system outages, emergency situations</li>
+<li><strong>Response Time:</strong> 1 hour</li>
+<li><strong>Owner:</strong> Operations Manager (with GM notification)</li>
+</ul>
+<h4 id="task"><strong>Task</strong><a class="headerlink" href="#task" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose:</strong> Specific actions requiring completion</li>
+<li><strong>Examples:</strong> Key requests, access provisioning, special accommodations</li>
+<li><strong>Response Time:</strong> 4 hours</li>
+<li><strong>Owner:</strong> Assigned team member based on task type</li>
+</ul>
+<h3 id="ticket-status-workflow">Ticket Status Workflow<a class="headerlink" href="#ticket-status-workflow" title="Permanent link">&para;</a></h3>
+<h4 id="new"><strong>New</strong><a class="headerlink" href="#new" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Trigger:</strong> Ticket created by Neighbor or team member</li>
+<li><strong>Action:</strong> Automatic assignment to appropriate queue</li>
+<li><strong>Owner:</strong> System (auto-assignment)</li>
+</ul>
+<h4 id="open"><strong>Open</strong><a class="headerlink" href="#open" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Trigger:</strong> Neighbor replied or ticket reopened</li>
+<li><strong>Action:</strong> Assign to available team member</li>
+<li><strong>Owner:</strong> Front Desk Agent or designated team member</li>
+</ul>
+<h4 id="pending"><strong>Pending</strong><a class="headerlink" href="#pending" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Trigger:</strong> Waiting for Neighbor response or external action</li>
+<li><strong>Action:</strong> Set reminder for follow-up</li>
+<li><strong>Owner:</strong> Assigned team member</li>
+</ul>
+<h4 id="solved"><strong>Solved</strong><a class="headerlink" href="#solved" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Trigger:</strong> Issue resolved or no response within 4 days</li>
+<li><strong>Action:</strong> Close ticket and send satisfaction survey</li>
+<li><strong>Owner:</strong> Assigned team member</li>
+</ul>
+<h4 id="closed"><strong>Closed</strong><a class="headerlink" href="#closed" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Trigger:</strong> Ticket automatically closed after 7 days</li>
+<li><strong>Action:</strong> Archive for reference</li>
+<li><strong>Owner:</strong> System (auto-close)</li>
+</ul>
+<h3 id="priority-levels">Priority Levels<a class="headerlink" href="#priority-levels" title="Permanent link">&para;</a></h3>
+<h4 id="low"><strong>Low</strong><a class="headerlink" href="#low" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Examples:</strong> Printing requests, general information</li>
+<li><strong>Response Time:</strong> 24 hours</li>
+<li><strong>Owner:</strong> Front Desk Agent</li>
+</ul>
+<h4 id="normal"><strong>Normal</strong><a class="headerlink" href="#normal" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Examples:</strong> Parking inquiries, amenity bookings, general questions</li>
+<li><strong>Response Time:</strong> 4 hours</li>
+<li><strong>Owner:</strong> Front Desk Agent</li>
+</ul>
+<h4 id="high"><strong>High</strong><a class="headerlink" href="#high" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Examples:</strong> Maintenance requests, access issues, service problems</li>
+<li><strong>Response Time:</strong> 2 hours</li>
+<li><strong>Owner:</strong> Operations Manager</li>
+</ul>
+<h4 id="urgent"><strong>Urgent</strong><a class="headerlink" href="#urgent" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Examples:</strong> Emergency maintenance, security issues, escalated complaints</li>
+<li><strong>Response Time:</strong> 1 hour</li>
+<li><strong>Owner:</strong> GM/AGM with immediate notification</li>
+</ul>
+<hr />
+<h2 id="communication-standards">Communication Standards<a class="headerlink" href="#communication-standards" title="Permanent link">&para;</a></h2>
+<h3 id="tone-voice-guidelines"><strong>Tone &amp; Voice Guidelines</strong><a class="headerlink" href="#tone-voice-guidelines" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Always use Neighbor's name</strong> when known</li>
+<li><strong>Lead with empathy</strong> and understanding</li>
+<li><strong>Be specific and actionable</strong> in instructions</li>
+<li><strong>Acknowledge inconvenience</strong> and provide solutions</li>
+<li><strong>End with care</strong> and offer additional support</li>
+</ul>
+<h3 id="response-templates"><strong>Response Templates</strong><a class="headerlink" href="#response-templates" title="Permanent link">&para;</a></h3>
+<h4 id="initial-response"><strong>Initial Response</strong><a class="headerlink" href="#initial-response" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Hi [Neighbor Name],
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Thank you for reaching out to us. I&#39;ve received your [ticket type] about [issue] and I&#39;m here to help resolve this for you.
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>[Specific response to their inquiry]
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>I&#39;ll keep you updated on any progress and let you know once this is resolved.
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Is there anything else I can help you with today?
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Best regards,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>[Your Name]
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>[Your Title]
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Flow [Property Name]
+</code></pre></div>
+<h4 id="resolution-response"><strong>Resolution Response</strong><a class="headerlink" href="#resolution-response" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Hi [Neighbor Name],
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Great news! I&#39;ve [resolved/completed] your [request/issue]. [Specific details about resolution].
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>[Next steps if applicable]
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Thank you for your patience, and please don&#39;t hesitate to reach out if you need anything else.
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Best regards,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>[Your Name]
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>[Your Title]
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Flow [Property Name]
+</code></pre></div>
+<h3 id="internal-communication"><strong>Internal Communication</strong><a class="headerlink" href="#internal-communication" title="Permanent link">&para;</a></h3>
+<h4 id="internal-notes"><strong>Internal Notes</strong><a class="headerlink" href="#internal-notes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Use for team coordination without notifying Neighbor</li>
+<li>Include relevant context and next steps</li>
+<li>Tag appropriate team members with @mentions</li>
+<li>Document decisions and rationale</li>
+</ul>
+<h4 id="escalation-protocol"><strong>Escalation Protocol</strong><a class="headerlink" href="#escalation-protocol" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Level 1:</strong> Front Desk Agent handles routine inquiries</li>
+<li><strong>Level 2:</strong> Operations Manager handles complex issues</li>
+<li><strong>Level 3:</strong> AGM handles complaints and policy decisions</li>
+<li><strong>Level 4:</strong> GM handles major issues and strategic decisions</li>
+</ol>
+<hr />
+<h2 id="integration-workflows">Integration Workflows<a class="headerlink" href="#integration-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="zendesk-slack"><strong>Zendesk ↔ Slack</strong><a class="headerlink" href="#zendesk-slack" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose:</strong> Internal team notifications and escalations</li>
+<li><strong>Triggers:</strong> New tickets, escalations, urgent issues</li>
+<li><strong>Channels:</strong> #front-desk, #operations, #maintenance, #community</li>
+</ul>
+<h3 id="zendesk-carsonflow-app"><strong>Zendesk ↔ Carson/Flow App</strong><a class="headerlink" href="#zendesk-carsonflow-app" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose:</strong> Neighbor portal integration and access management</li>
+<li><strong>Triggers:</strong> Access issues, amenity bookings, delivery notifications</li>
+<li><strong>Data Flow:</strong> Bidirectional sync for resident information</li>
+</ul>
+<h3 id="zendesk-yardi-voyager"><strong>Zendesk ↔ Yardi Voyager</strong><a class="headerlink" href="#zendesk-yardi-voyager" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose:</strong> Resident data and ledger information</li>
+<li><strong>Triggers:</strong> Billing inquiries, payment issues, account questions</li>
+<li><strong>Data Flow:</strong> Read-only access to resident profiles and ledgers</li>
+</ul>
+<h3 id="zendesk-moved"><strong>Zendesk ↔ Moved</strong><a class="headerlink" href="#zendesk-moved" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose:</strong> Move-in/move-out support coordination</li>
+<li><strong>Triggers:</strong> Move-in support, logistics coordination, special requests</li>
+<li><strong>Data Flow:</strong> Integration for move-in checklist and status updates</li>
+</ul>
+<hr />
+<h2 id="quality-standards-metrics">Quality Standards &amp; Metrics<a class="headerlink" href="#quality-standards-metrics" title="Permanent link">&para;</a></h2>
+<h3 id="response-time-standards"><strong>Response Time Standards</strong><a class="headerlink" href="#response-time-standards" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Priority</strong></th>
+<th><strong>Response Time</strong></th>
+<th><strong>Owner</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Urgent</td>
+<td>1 hour</td>
+<td>GM/AGM</td>
+</tr>
+<tr>
+<td>High</td>
+<td>2 hours</td>
+<td>Operations Manager</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>4 hours</td>
+<td>Front Desk Agent</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>24 hours</td>
+<td>Front Desk Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resolution-standards"><strong>Resolution Standards</strong><a class="headerlink" href="#resolution-standards" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Ticket Type</strong></th>
+<th><strong>Resolution Time</strong></th>
+<th><strong>Target</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questions</td>
+<td>24 hours</td>
+<td>95%</td>
+</tr>
+<tr>
+<td>Problems</td>
+<td>48 hours</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>Incidents</td>
+<td>72 hours</td>
+<td>85%</td>
+</tr>
+<tr>
+<td>Tasks</td>
+<td>24 hours</td>
+<td>95%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="satisfaction-metrics"><strong>Satisfaction Metrics</strong><a class="headerlink" href="#satisfaction-metrics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Metric</strong></th>
+<th><strong>Target</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Response Time</strong></td>
+<td>Average response time to Neighbor inquiries</td>
+<td>≤ 4 hours</td>
+</tr>
+<tr>
+<td><strong>Satisfaction</strong></td>
+<td>Neighbor satisfaction score</td>
+<td>≥ 90% positive</td>
+</tr>
+<tr>
+<td><strong>Resolution</strong></td>
+<td>First-contact issue resolution</td>
+<td>≥ 80%</td>
+</tr>
+<tr>
+<td><strong>Escalation</strong></td>
+<td>Tickets requiring escalation</td>
+<td>≤ 15%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="daily-workflow"><strong>Daily Workflow</strong><a class="headerlink" href="#daily-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Morning Check-in</strong> — Review unassigned tickets and prioritize urgent issues</li>
+<li><strong>Regular Monitoring</strong> — Check ticket queues every 2 hours during business hours</li>
+<li><strong>End-of-Day Review</strong> — Ensure all tickets are properly assigned and documented</li>
+<li><strong>Follow-up</strong> — Check pending tickets and send reminders as needed</li>
+</ol>
+<h3 id="ticket-management"><strong>Ticket Management</strong><a class="headerlink" href="#ticket-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Assign Immediately</strong> — Don't leave tickets unassigned for more than 1 hour</li>
+<li><strong>Use Tags</strong> — Categorize tickets for easy filtering and reporting</li>
+<li><strong>Update Status</strong> — Keep ticket status current and accurate</li>
+<li><strong>Document Everything</strong> — Include all relevant information in ticket notes</li>
+</ul>
+<h3 id="communication-excellence"><strong>Communication Excellence</strong><a class="headerlink" href="#communication-excellence" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Personalize Responses</strong> — Use Neighbor's name and reference past interactions</li>
+<li><strong>Be Proactive</strong> — Anticipate follow-up needs and provide additional support</li>
+<li><strong>Follow Through</strong> — Ensure resolutions are complete and satisfactory</li>
+<li><strong>Learn Continuously</strong> — Use feedback to improve service delivery</li>
+</ul>
+<hr />
+<h2 id="training-onboarding">Training &amp; Onboarding<a class="headerlink" href="#training-onboarding" title="Permanent link">&para;</a></h2>
+<h3 id="new-team-member-checklist"><strong>New Team Member Checklist</strong><a class="headerlink" href="#new-team-member-checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>Zendesk Account Setup</strong> — User account and permissions</li>
+<li>[ ] <strong>Role-Specific Training</strong> — Department-specific workflows</li>
+<li>[ ] <strong>System Access</strong> — All required views and functions</li>
+<li>[ ] <strong>Communication Standards</strong> — Tone, templates, and best practices</li>
+<li>[ ] <strong>Escalation Procedures</strong> — When and how to escalate issues</li>
+</ul>
+<h3 id="skill-development-path"><strong>Skill Development Path</strong><a class="headerlink" href="#skill-development-path" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Basic User</strong> — Essential functions for role</li>
+<li><strong>Intermediate User</strong> — Advanced features and reporting</li>
+<li><strong>Power User</strong> — Cross-functional knowledge and training</li>
+<li><strong>System Admin</strong> — Product Operations Team level access</li>
+</ol>
+<h3 id="training-resources"><strong>Training Resources</strong><a class="headerlink" href="#training-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Product Operations Team</strong> — System setup and basic training</li>
+<li><strong>Department Leads</strong> — Role-specific workflows</li>
+<li><strong>Zendesk Knowledge Base</strong> — Self-service support and documentation</li>
+<li><strong>Internal Documentation</strong> — Flow-specific processes and standards</li>
+</ul>
+<hr />
+<h2 id="troubleshooting-support">Troubleshooting &amp; Support<a class="headerlink" href="#troubleshooting-support" title="Permanent link">&para;</a></h2>
+<h3 id="common-issues"><strong>Common Issues</strong><a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
+<h4 id="login-problems"><strong>Login Problems</strong><a class="headerlink" href="#login-problems" title="Permanent link">&para;</a></h4>
+<p><strong>Issue:</strong> Can't access Zendesk account
+<strong>Solution:</strong>
+1. Reset password via email link
+2. Check if account is locked
+3. Contact Product Operations Team for account issues
+4. Verify correct URL and property access</p>
+<h4 id="ticket-assignment-issues"><strong>Ticket Assignment Issues</strong><a class="headerlink" href="#ticket-assignment-issues" title="Permanent link">&para;</a></h4>
+<p><strong>Issue:</strong> Tickets not appearing in assigned views
+<strong>Solution:</strong>
+1. Check user permissions and role assignments
+2. Verify property access rights
+3. Contact Department Lead for role verification
+4. Contact Product Operations Team for system issues</p>
+<h4 id="integration-problems"><strong>Integration Problems</strong><a class="headerlink" href="#integration-problems" title="Permanent link">&para;</a></h4>
+<p><strong>Issue:</strong> Data not syncing between Zendesk and other systems
+<strong>Solution:</strong>
+1. Check integration status in system settings
+2. Contact Product Operations Team for sync issues
+3. Use manual processes as backup
+4. Document issues for system improvement</p>
+<h3 id="escalation-procedures"><strong>Escalation Procedures</strong><a class="headerlink" href="#escalation-procedures" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Technical Issues</strong> — Contact Product Operations Team</li>
+<li><strong>Process Questions</strong> — Contact Department Lead</li>
+<li><strong>Policy Decisions</strong> — Contact Operations Manager or AGM</li>
+<li><strong>System Outages</strong> — Contact Regional Operations</li>
+</ol>
+<hr />
+<h2 id="future-improvements">Future Improvements<a class="headerlink" href="#future-improvements" title="Permanent link">&para;</a></h2>
+<h3 id="planned-enhancements"><strong>Planned Enhancements</strong><a class="headerlink" href="#planned-enhancements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Mobile App Integration</strong> — Better mobile experience for field teams</li>
+<li><strong>AI-Powered Routing</strong> — Automatic ticket assignment based on content</li>
+<li><strong>Enhanced Analytics</strong> — Deeper insights into service quality and trends</li>
+<li><strong>Workflow Automation</strong> — Streamlined processes for common requests</li>
+</ul>
+<h3 id="integration-opportunities"><strong>Integration Opportunities</strong><a class="headerlink" href="#integration-opportunities" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Real-time Sync</strong> — Improved data consistency across systems</li>
+<li><strong>Predictive Analytics</strong> — Proactive issue identification and resolution</li>
+<li><strong>Self-service Expansion</strong> — Enhanced knowledge base and automation</li>
+<li><strong>Community Integration</strong> — Better connection between support and community engagement</li>
+</ul>
+<hr />
+<h2 id="resources-templates">Resources &amp; Templates<a class="headerlink" href="#resources-templates" title="Permanent link">&para;</a></h2>
+<h3 id="quick-reference-links"><strong>Quick Reference Links</strong><a class="headerlink" href="#quick-reference-links" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://lifeinflow.zendesk.com/agent/dashboard">Zendesk Agent Dashboard</a></li>
+<li><a href="https://apps.apple.com/us/app/zendesk-support/id1174276185">Zendesk Mobile App</a></li>
+<li><a href="https://app.sigmacomputing.com/fol/workbook/workbook-4s7do0TYaCnaH7CLJiuQUU?">Sigma Analytics Dashboard</a></li>
+<li><a href="https://lifeinflow.slack.com/channels/zendesk-support">Slack Integration</a></li>
+</ul>
+<h3 id="templates-macros"><strong>Templates &amp; Macros</strong><a class="headerlink" href="#templates-macros" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[Placeholder: Link to Response Templates]</li>
+<li>[Placeholder: Link to Escalation Procedures]</li>
+<li>[Placeholder: Link to Communication Guidelines]</li>
+<li>[Placeholder: Link to Training Materials]</li>
+</ul>
+<hr />
+<h2 id="screenshots-visuals">Screenshots &amp; Visuals<a class="headerlink" href="#screenshots-visuals" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[Placeholder: Zendesk - Agent Dashboard view]</li>
+<li>[Placeholder: Zendesk - Ticket management interface]</li>
+<li>[Placeholder: Zendesk - Analytics dashboard]</li>
+<li>[Placeholder: Slack - Integration notifications]</li>
+<li>[Placeholder: Mobile - Zendesk app interface]</li>
+</ul>
+<hr />
+<blockquote>
+<p>This guide ensures that every Zendesk interaction reflects Flow's commitment to hospitality, care, and operational excellence. For technical questions or system issues, contact the Product Operations Team or refer to Zendesk's knowledge base for additional resources.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../yardi-operational-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Yardi Operational Guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.58 10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Yardi Operational Guide
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../operating-practices/foundational-neighbor-journey/" class="md-footer__link md-footer__link--next" aria-label="Next: Foundational Neighbor Journey">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Foundational Neighbor Journey
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.sections", "navigation.indexes", "navigation.tracking", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
